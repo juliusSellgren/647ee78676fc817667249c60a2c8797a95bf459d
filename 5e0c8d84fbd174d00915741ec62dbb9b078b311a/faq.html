@@ -1,0 +1,1973 @@
+﻿<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanliga frågor – Parkman</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-32x32.png"
+      size="32"
+    />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-180x180.png"
+      sizes="180x180"
+    />
+  </head>
+  <body class="pg-faq">
+    <nav id="main-nav">
+      <div class="nav-orb"></div>
+      <a href="index.html"
+        ><img
+          src="Brand_assets/Logo.png"
+          alt="Parkman"
+          class="nav-logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="parkeringar.html">Våra parkeringar</a></li>
+        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+        <li><a href="autopay.html">Autopay</a></li>
+        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li class="nav-has-dropdown">
+          <a href="kontakt.html">Kontakt</a>
+          <ul class="nav-dropdown">
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="kvitton.html">Kvitto</a></li>
+        <li class="nav-has-dropdown">
+          <a href="mina-sidor.html">Mina sidor</a>
+          <ul class="nav-dropdown">
+            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li>
+              <a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a>
+            </li>
+          </ul>
+        </li>
+        <li class="lang-switcher">
+          <div class="lang-toggle" translate="no">
+            <button
+              class="lang-opt lang-se lang-active"
+              onclick="setLang('sv')"
+            >
+              SE
+            </button>
+            <span class="lang-divider">|</span>
+            <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="section-label">Support</p>
+        <h1>Vanliga frågor</h1>
+        <p>
+          Svar på det du undrar om avtal, Autopay och parkering hos Parkman.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ content -->
+    <section class="faq-page">
+      <div class="faq-page-inner">
+        <!-- Filter cards -->
+        <div class="faq-tabs" role="tablist" aria-label="FAQ-kategorier">
+          <button
+            class="faq-tab-btn active"
+            data-filter="avtal"
+            role="tab"
+            aria-selected="true"
+          >
+            <span class="faq-tab-icon"
+              ><img src="images/avtal.svg" alt=""
+            /></span>
+            <span class="faq-tab-label">Avtal</span>
+          </button>
+          <button
+            class="faq-tab-btn"
+            data-filter="autopay"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="faq-tab-icon"
+              ><img src="images/autopayikon.svg" alt=""
+            /></span>
+            <span class="faq-tab-label">Autopay</span>
+          </button>
+          <button
+            class="faq-tab-btn"
+            data-filter="ovriga"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="faq-tab-icon"
+              ><img src="images/ovrigaparkfragor.svg" alt=""
+            /></span>
+            <span class="faq-tab-label">Övriga parkeringsfrågor</span>
+          </button>
+        </div>
+
+        <!-- ── AVTAL ── -->
+        <div class="faq-group" data-category="avtal">
+          <h2 class="faq-category-title">Avtal</h2>
+          <ul class="faq-list" role="list">
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur hyr jag en parkeringsplats?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Besök "Våra parkeringar" på webbplatsen, fyll i en
+                  intresseanmälan för din önskade anläggning och Parkman
+                  kontaktar dig med mer information.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur lägger jag till mitt registreringsnummer i Park46?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in via Park46-appen eller
+                  <a
+                    href="https://minparkering.parkman.nu"
+                    target="_blank"
+                    rel="noopener"
+                    >minparkering.parkman.nu</a
+                  >. Klicka på profilikonen → "Mina sidor" → välj ditt
+                  namn/företag → "Användarprofil". Under "Mina fordon" kan du
+                  uppdatera registreringsnummer samt lägga till eller ta bort
+                  fordon.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag beställa ett extra parkeringstillstånd?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja, extra tillstånd kostar 300 kr (engångsavgift). Flera
+                  tillstånd kan beställas per plats, men om du hyr en enskild
+                  plats kan endast ett tillstånd vara incheckade samtidigt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har tappat mitt parkeringstillstånd eller nyckelbricka.
+                  Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kontakta
+                  <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a>
+                  för att spärra kortet och beställa ett ersättningstillstånd.
+                  En avgift tillkommer vid förlust.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur ändrar jag mitt betalningssätt?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Gå till kundportalen via Park46-appen eller
+                  minparkering.parkman.nu. Klicka på profilikonen → "Mina sidor"
+                  → ditt namn → "Avtalstagaruppgifter" → "Betalmetod" för att
+                  ändra betalningsinformation.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag betala via e-faktura?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej. Tillgängliga betalningsalternativ är digital faktura,
+                  pappersfaktura eller autogiro.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vi hyr ett Autopay-tillstånd men flera användare behöver
+                  tillgång. Är det möjligt?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja. Skapa en bilpool och skicka tillstånd till alla användare
+                  som registrerar sig på autopay.io med sina fordon. När poolen
+                  når kapacitetsgränsen debiteras ytterligare fordon
+                  korttidspris.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Behöver jag ett fysiskt tillstånd i bilen på
+                  Autopay-anläggningar?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej. Autopay-tillstånd är helt digitala och skickas via e-post
+                  när avtalet tecknas. Inget fysiskt kort behövs i bilen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag hyr på en Autopay-anläggning och behöver byta fordon. Hur
+                  gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in på
+                  <a href="https://autopay.io" target="_blank" rel="noopener"
+                    >autopay.io</a
+                  >
+                  med din e-postadress och ditt lösenord, och ändra sedan
+                  fordonsinformation under fliken "Fordon". Ändringen träder i
+                  kraft omedelbart.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text">Kan jag pausa mitt avtal?</span>
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej, det är tyvärr inte möjligt att pausa ett avtal.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vilken uppsägningstid har jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Du hittar dina avtal och uppsägningstider i Park46 eller via
+                  minparkering.parkman.nu. Klicka på profilikonen → "Mina sidor"
+                  och kontrollera sektionen "Avtal".
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vad gör jag med mitt tillstånd när avtalet löper ut?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Returnera parkeringstillstånd, passerkort och nyckelbrickor
+                  till: Parkman i Sverige, Box 2895, 187 28 Täby.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur avslutar jag mitt avtal?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in i Park46 eller minparkering.parkman.nu, klicka på
+                  profilikonen → "Mina sidor", välj ditt avtal och klicka på
+                  "Säg upp".
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Har avtalet en bindningstid?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Avtal löper tillsvidare utan bindningstid, om inget annat
+                  anges i ditt specifika kontrakt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag avsluta mitt avtal mitt i månaden?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej. Uppsägningstider gäller alltid till kalendermånadens slut
+                  — avtalet avslutas alltså vid utgången av en månad.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag hittar inte mina fakturor. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Öppna Park46 eller minparkering.parkman.nu, klicka på
+                  profilikonen → "Mina sidor" → "Fakturor" för att se
+                  betalningshistorik och ladda ned fakturor.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >När förfaller betalningen?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Månadsbetalning förfaller den 28:e varje månad. Betalning sker
+                  i förskott och måste nå Parkman senast sista bankdagen innan
+                  nästkommande period.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Garaget är fullt — kan jag stå i kö?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja. Skicka en intresseanmälan för ditt önskade garage eller
+                  kontakta
+                  <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a
+                  >. Du får bekräftelse på köregistreringen och aviseras när en
+                  plats frigörs.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vad innebär en icke-reserverad parkeringsplats?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ett icke-reserverat tillstånd ger rätten att parkera inom ett
+                  område utan en fast, dedikerad plats. Plats erbjuds baserat på
+                  tillgänglighet. Parkman övervakar beläggningen och säljer
+                  aldrig fler tillstånd än vad som ryms i anläggningen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Någon har parkerat på min reserverade plats. Vad gör
+                  jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kontakta Parkman omedelbart så att personalen kan hjälpa till
+                  och nå den obehörige föraren.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vad kostar månadsparkeringen?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Priser för korttids- och hyresparkering finns på webbplatsen
+                  för respektive garage. Kontakta Parkman för ytterligare
+                  information.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur ser jag vilka fakturor som är betalda eller
+                  obetalda?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  I Park46 eller minparkering.parkman.nu klickar du på
+                  profilikonen → "Mina sidor" → "Fakturor" för att se
+                  betalningsstatus och obetalda fakturor.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag börja använda mitt tillstånd direkt efter att ha
+                  skickat in mina uppgifter?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej. Ditt tillstånd är giltigt först efter att båda parter har
+                  undertecknat avtalet och Parkman bekräftat att tillståndet
+                  levererats.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Finns det laddplatser för elbil?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Parkman arbetar aktivt för att möta efterfrågan på laddplatser
+                  för hyresgäster och korttidsparkering. Se webbplatsen för
+                  information om respektive anläggning.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag få en kopia av min faktura?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja, fakturor finns tillgängliga via Park46-appen eller genom
+                  att logga in på minparkering.parkman.nu.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Tecknar jag avtal mitt i månaden — när betalas den första
+                  fakturan?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Den första fakturan skickas den 1:a nästkommande månad och
+                  täcker dagarna från avtalstecknandet till slutet av
+                  nästkommande månad, beräknat utifrån förskottsprincipen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag säga upp mitt Autopay-hyrestillstånd?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Fordonshantering sker på ditt Autopay-konto. För uppsägning av
+                  hyresavtalet, kontakta Parkman via kontaktformuläret eller via
+                  <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a
+                  >.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── AUTOPAY ── -->
+        <div class="faq-group" data-category="autopay">
+          <h2 class="faq-category-title">Autopay</h2>
+          <ul class="faq-list" role="list">
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vad är Autopay och hur fungerar det?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Autopay är ett heldigitalt system där kameror automatiskt
+                  läser av ditt registreringsnummer vid in- och utfart.
+                  Betalning sker via registrerat kort eller faktura — ingen
+                  biljett, ingen app behövs.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Måste man betala parkeringsavgift med ett
+                  rörelsehindertillstånd?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja. Tillståndet ger rätt att använda reserverade platser för
+                  rörelsehindrade, men parkeringsavgifter gäller fortfarande.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag kan inte registrera mitt kort på mitt Autopay-konto. Hur
+                  går jag vidare?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kontrollera med din bank att kortet är aktiverat för onlineköp
+                  och att inga begränsningar gäller.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag ändra min faktureringsadress?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nej. Fakturor skickas alltid till fordonsägaren och adressen
+                  kan inte ändras.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Varför debiterades jag en fakturaavgift?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Fakturaavgifter tillkommer när parkeringsavgiften inte betalas
+                  på annat sätt och Parkman behöver skicka en formell faktura
+                  till fordonsägaren.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag registrera flera fordon på ett Autopay-konto?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja, men registrerade fordon delar på den kostnadsfria
+                  parkeringstiden i garaget.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Mitt fordon debiterades trots att jag har ett tillstånd.
+                  Varför?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Endast ett fordon per tillstånd kan vara incheckade åt gången.
+                  Om flera fordon kör in används tillståndet för det första och
+                  övriga debiteras. Kontakta Parkman om du anser att
+                  debiteringen är felaktig.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag hittar inte min avgift på Autopay.io trots att jag har en
+                  obetald notering.</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Avgifter syns på webbplatsen i 48 timmar efter att du lämnat
+                  anläggningen. Därefter faktureras parkeringskostnaden direkt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har blivit felaktigt debiterad. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Fyll i kontaktformuläret under "Kontakta oss" på webbplatsen
+                  så utreder vi ärendet.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Var ser jag om jag är medlem i lojalitetsklubben?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Det framgår under "Tillstånd" på ditt Autopay-konto.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har inte accepterat era villkor — hur kan ni debitera
+                  mig?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Att köra in på en avgiftsbelagd parkeringsanläggning innebär
+                  att man accepterar de allmänna villkoren, som finns
+                  tillgängliga på webbplatsen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Ni fotograferar min registreringsskylt — kan jag begära ut
+                  den informationen?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Som fordonsägare har du rätt att begära ut denna information
+                  enligt lag. Kontakta kundservice på
+                  <a href="mailto:info@parkman.nu">info@parkman.nu</a>.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har en hyrbil och vill att betalningen ska ske
+                  automatiskt via Autopay.</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Registrera hyrbilen under "Fordon" på ditt Autopay-konto. Kom
+                  ihåg att ta bort den när du lämnar tillbaka bilen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur avslutar jag mitt Autopay-konto?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in på autopay.io och radera ditt konto under "Profil".
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Varför debiterades avgifter för en bil jag har sålt?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Du ansvarar själv för att hålla uppgifterna på ditt
+                  Autopay-konto aktuella. Uppdatera autopay.io när du säljer ett
+                  fordon.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Varför fick jag en faktura trots att jag har ett registrerat
+                  kort?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Om kortet är ogiltigt eller saknar täckning kan Parkman inte
+                  genomföra betalningen. Du får ett e-postmeddelande om
+                  misslyckade försök innan fakturering sker.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Var hittar jag mina kvitton om mitt kort är registrerat på
+                  Autopay?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in på autopay.io och hitta betalningar och kvitton under
+                  "Kvitton".
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har angett felaktiga uppgifter på mitt Autopay-konto. Hur
+                  rättar jag det?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Logga in på autopay.io och korrigera uppgifterna direkt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag fick inkassokrav utan att ha fått någon faktura
+                  först.</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Parkerare ansvarar själva för att betala sina
+                  parkeringsavgifter. För att överklaga, kontakta Intrum på
+                  <a href="tel:0861676666">08-616 76 66</a>.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Vilka regler gäller för motorcyklar, mopeder och
+                  släpvagnar?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Systemet registrerar alla fordon och debiterar i enlighet med
+                  detta. Släpvagnar och fordon debiteras var för sig eftersom
+                  kamerorna läser av både för- och bakre registreringsskyltar.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag kunde inte betala vid kiosken. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Betalning kan göras inom 48 timmar på autopay.io. Rapportera
+                  felet till Parkman och uppge kioskens ID-nummer (nere till
+                  höger på maskinen).
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag fick en faktura trots att jag parkerade under den
+                  kostnadsfria tidsgränsen.</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Troligtvis har ditt fordon kört in i samma garage två gånger
+                  inom 24 timmar. Maila
+                  <a href="mailto:info@parkman.nu">info@parkman.nu</a> för
+                  statusverifiering.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag ser inget OCR-nummer på min faktura.</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  OCR-numret anges som betalningsreferens på din faktura.
+                  Kontrollera fältet "Referens" eller "Meddelande".
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Varför fick jag en faktura?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Fakturan avser obetalda parkeringsavgifter på
+                  Parkman-anläggningar och ersätter parkeringsanmärkningar.
+                  Kontakta Parkman om uppgifterna verkar felaktiga.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag syntes inte på utfartsbilden när jag lämnade. Hur vet jag
+                  att jag checkade ut?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kamerorna checkar vanligtvis ut fordon korrekt — skärmar kan
+                  ha fördröjning. Kontakta Parkman via formuläret, telefon eller
+                  e-post om du är osäker på din parkeringsstatus.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── ÖVRIGA ── -->
+        <div class="faq-group" data-category="ovriga">
+          <h2 class="faq-category-title">Övriga parkeringsfrågor</h2>
+          <ul class="faq-list" role="list">
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag förlänga parkeringen via en parkeringsapp?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja, öppna appen och förläng parkeringstiden direkt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag avsluta parkeringen i förtid och bara betala för
+                  faktisk tid?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja. Avsluta parkeringen i appen och betala bara för den
+                  faktiska parkeringstiden.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text">Vad är Linky?</span>
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Parkman samarbetar med Linky, vilket gör det möjligt att
+                  betala Parkman-parkering direkt via Linky-appen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag fick en gratisbiljett från en verksamhet i fastigheten.
+                  Hur använder jag den?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Använd din biljett först, sätt sedan in kupongen. Om
+                  parkeringen blir gratis öppnas bommen. Annars visar skärmen
+                  det resterande beloppet som du behöver betala.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Kan jag betala med drivmedelskort?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja, betalning med drivmedelskort accepteras.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Grinden öppnar inte. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Under garagets öppettider — kör lite närmre grinden och den
+                  bör öppnas automatiskt.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Bommen öppnar inte. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Tryck på hjälpknappen vid bommen för att nå support.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Det fanns inga lediga platser. Behöver jag ändå betala?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Du har 15 minuter på dig att hitta en plats. Om det inte
+                  lyckas parkerar du gratis.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Hur tar jag mig in i ett garage med låsta dörrar?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Om du tog en biljett vid infarten finns en kod på biljetten
+                  för dörrarna. Om du körde in med kort är de fyra sista
+                  siffrorna på kortet din kod.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag tappade min infartsbiljett. Hur tar jag mig ut?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Förlorade biljetter medför en heldagstaxa för garaget, som
+                  debiteras via hjälpknappen vid utfarten.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Biljettmaskinen gav inget utskrivet biljett. Vad gör
+                  jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kontakta Parkman för att rapportera felet.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag har ett rörelsehindertillstånd. Behöver jag betala
+                  parkeringsavgift?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Ja. Tillståndet ger rätt att använda reserverade platser för
+                  rörelsehindrade, men parkeringsavgifter gäller ändå.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag fick inget kvitto efter betalning. Vad gör jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Fyll i kontaktformuläret under "Kontakta oss" på webbplatsen,
+                  så skickar Parkman ditt kvitto via e-post.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Var hittar jag information om laddplatser för elbil?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Se information om det specifika garaget under "Våra
+                  parkeringar" på webbplatsen.
+                </div>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-question-text"
+                  >Jag fick en parkeringsanmärkning. Hur överklagar jag?</span
+                >
+                <span class="faq-icon" aria-hidden="true"
+                  ><svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 1v10M1 6h10"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    /></svg
+                ></span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Kontakta Hojab på <a href="tel:08735299">08-735 29 99</a> för
+                  att överklaga en parkeringsanmärkning.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact prompt -->
+        <div class="faq-contact-prompt">
+          <h3>Hittar du inte svaret du söker?</h3>
+          <p>Vårt supportteam finns tillgängligt måndag–fredag 08:00–20:00.</p>
+          <a href="kontakt.html" class="faq-contact-btn">Kontakta oss</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="Brand_assets/Logo.png"
+              alt="Parkman"
+              class="footer-logo"
+            />
+            <p class="footer-tagline">
+              Sveriges ledande parkeringsförvaltare — vi sköter hela kedjan från
+              installation till kundservice.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://sv-se.facebook.com/parkmanisverigeab/"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/parkman-i-sverige-ab/"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tjänster -->
+          <div class="footer-col">
+            <h6>Tjänster</h6>
+            <ul>
+              <li><a href="parkeringar.html">Våra parkeringar</a></li>
+              <li><a href="anpr.html">ANPR</a></li>
+              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+            </ul>
+          </div>
+
+          <!-- Företaget -->
+          <div class="footer-col">
+            <h6>Företaget</h6>
+            <ul>
+              <li><a href="om-oss.html">Om oss</a></li>
+              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontakt -->
+          <div class="footer-col">
+            <h6>Kontakt</h6>
+            <div class="footer-contact-list">
+              <a href="tel:0873490000" class="footer-contact-item">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>08 734 90 00</span>
+              </a>
+              <a href="mailto:info@parkman.nu" class="footer-contact-item">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>info@parkman.nu</span>
+              </a>
+              <div class="footer-contact-item footer-contact-muted">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+                <span>Mån–fre 08:00–20:00</span>
+              </div>
+            </div>
+            <div class="footer-badge">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span>Auktoriserat parkeringsbolag</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
+          <div class="footer-bottom-links">
+            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
+            <a href="integritetspolicy.html">Integritetspolicy</a>
+            <a href="cookies.html">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Accordion
+      document.querySelectorAll(".faq-question").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var answer = item.querySelector(".faq-answer");
+          var isOpen = item.classList.contains("is-open");
+          document
+            .querySelectorAll(".faq-item.is-open")
+            .forEach(function (open) {
+              open.classList.remove("is-open");
+              open.querySelector(".faq-answer").style.maxHeight = "0";
+              open
+                .querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+            });
+          if (!isOpen) {
+            item.classList.add("is-open");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      // Category filter
+      var allGroups = document.querySelectorAll(".faq-group");
+
+      function showFilter(filter) {
+        allGroups.forEach(function (g) {
+          if (g.dataset.category === filter) {
+            delete g.dataset.hidden;
+          } else {
+            g.dataset.hidden = "";
+            g.querySelectorAll(".faq-item.is-open").forEach(function (open) {
+              open.classList.remove("is-open");
+              open.querySelector(".faq-answer").style.maxHeight = "0";
+              open
+                .querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+            });
+          }
+        });
+      }
+
+      document.querySelectorAll(".faq-tab-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".faq-tab-btn").forEach(function (b) {
+            b.classList.remove("active");
+            b.setAttribute("aria-selected", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
+          showFilter(btn.dataset.filter);
+        });
+      });
+
+      // Show avtal by default
+      showFilter("avtal");
+    </script>
+    <script src="lang.js"></script>
+  </body>
+</html>

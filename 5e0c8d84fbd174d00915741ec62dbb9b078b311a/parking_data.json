@@ -1,0 +1,2397 @@
+﻿[
+    {
+        "id":  1,
+        "name":  "Odenplansgaraget",
+        "url":  "https://parkman.nu/parking/odenplansgaraget/",
+        "address":  "Gyldéngatan 8, Stockholm",
+        "parking_spaces":  306,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "55 kr per påbörjad halvtimme",
+                       "daily_max":  "550 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  6,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Car wash",
+                               "Autopay camera system",
+                               "Parkster app zone 7643",
+                               "Partial camera surveillance"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7643"
+    },
+    {
+        "id":  2,
+        "name":  "Drottninggaraget",
+        "url":  "https://parkman.nu/parking/drottninggaraget/",
+        "address":  "Rådmansgatan 63, 113 59 Stockholm",
+        "parking_spaces":  300,
+        "opening_hours":  "05:00–21:00",
+        "prices":  {
+                       "visitor":  "55 kr per påbörjad halvtimme",
+                       "daily_max":  "550 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  20,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Barrier system (bomsystem)",
+                               "Card payment at barrier",
+                               "Ticket-based entry",
+                               "24/7 help button"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  3,
+        "name":  "Sheratongaraget",
+        "url":  "https://parkman.nu/parking/sheratongaraget/",
+        "address":  "Vasagatan 2, 111 20 Stockholm",
+        "parking_spaces":  210,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "60 kr per påbörjad halvtimme",
+                       "daily_max":  "550 kr",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay camera system",
+                               "EasyPay app zone 7641",
+                               "Car rental available",
+                               "Less than 300m from Stockholm Central Station"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7641"
+    },
+    {
+        "id":  4,
+        "name":  "Hägern",
+        "url":  "https://parkman.nu/parking/hagern/",
+        "address":  "Klara Östra kyrkogata 4, 111 52 Stockholm",
+        "parking_spaces":  83,
+        "opening_hours":  "Locked garage – 24/7 access for permit holders",
+        "prices":  {
+                       "visitor":  "Contract parking only",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.3,
+        "other_features":  [
+                               "Passcard required for entry/exit",
+                               "Cameras at entry and exit",
+                               "Locked facility",
+                               "Contract/permit only"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  5,
+        "name":  "Torsgatan",
+        "url":  "https://parkman.nu/parking/torsgatan/",
+        "address":  "Torsgatan 10, 111 23 Stockholm",
+        "parking_spaces":  19,
+        "opening_hours":  "Locked garage – 24/7 access for contract holders via keycard",
+        "prices":  {
+                       "visitor":  "Contract parking only",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  1.9,
+        "other_features":  [
+                               "Keycard entry system",
+                               "Emergency assistance button at entry/exit",
+                               "Contract holders only",
+                               "Climate-controlled underground garage"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  6,
+        "name":  "Fridhemsgaraget",
+        "url":  "https://parkman.nu/parking/fridhemsgaraget/",
+        "address":  "Fridhemsgatan 24, 112 40 Stockholm",
+        "parking_spaces":  150,
+        "opening_hours":  "06:00–19:00",
+        "prices":  {
+                       "visitor":  "45 kr per påbörjad halvtimme",
+                       "daily_max":  "400 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Car wash (Clean Cars)",
+                               "Ticket machine",
+                               "Code required for exit"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  7,
+        "name":  "Liljeholmstorget Galleria",
+        "url":  "https://parkman.nu/parking/liljeholmstorget-galleria/",
+        "address":  "Nybohovsbacken 32, 117 63 Stockholm",
+        "parking_spaces":  900,
+        "opening_hours":  "06:00–22:00",
+        "prices":  {
+                       "visitor_weekday":  "35 kr per påbörjad timme, max 200 kr/day",
+                       "visitor_weekend":  "2 hours free, then 35 kr/hour, max 200 kr/day",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  8,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Car wash (EcoShine)",
+                               "Autopay system",
+                               "90 retail stores",
+                               "2 free hours with Willys/ICA purchase over 200 kr"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  8,
+        "name":  "Liljeholmsstranden",
+        "url":  "https://parkman.nu/parking/liljeholmsstranden/",
+        "address":  "Liljeholmsstranden 1–7, Stockholm",
+        "parking_spaces":  508,
+        "opening_hours":  {
+                              "Liljeholmsstrandgaraget":  "Locked garage",
+                              "Stora Katrinebergsgaraget":  "Locked garage",
+                              "Lustigkulla garaget":  "07:00–23:00",
+                              "Surface parking":  "24 hours"
+                          },
+        "prices":  {
+                       "visitor":  "40 kr/timme",
+                       "max_under_24h":  "150 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  175,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "Liljeholmsstrand":  1.85,
+                                     "Stora Katrineberg":  1.75,
+                                     "Lustigkulla":  2.0
+                                 },
+        "other_features":  [
+                               "Multiple surface lots",
+                               "Payment machine at Katrinebergsvägen 8",
+                               "App code 17534",
+                               "Waterfront location"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "17534"
+    },
+    {
+        "id":  9,
+        "name":  "Allégaraget",
+        "url":  "https://parkman.nu/parking/allegaraget/",
+        "address":  "Hammarby Kajgata 10, Stockholm",
+        "parking_spaces":  270,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "35 kr per påbörjad halvtimme",
+                       "daily_max":  "350 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  1.9,
+        "other_features":  [
+                               "Autopay system",
+                               "Parkster app zone 7649",
+                               "1 hour free with ICA MAXI purchase over 100 kr",
+                               "Hammarby Sjöstad location"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7649"
+    },
+    {
+        "id":  10,
+        "name":  "Proppen 6",
+        "url":  "https://parkman.nu/parking/proppen-6/",
+        "address":  "Redargatan 4, 120 61 Stockholm",
+        "parking_spaces":  86,
+        "opening_hours":  "Locked garage",
+        "prices":  {
+                       "visitor":  "Contract parking only",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  "Available (number not specified)",
+        "accessibility":  {
+                              "disabled_spaces":  null,
+                              "bicycle_parking":  "Yes"
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Locked secure facility",
+                               "BankID required via Park46",
+                               "Hammarby Sjöstad location"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  11,
+        "name":  "Maxi ICA Stormarknad Lindhagen",
+        "url":  "https://parkman.nu/parking/maxi-ica-stormarknad-lindhagen/",
+        "address":  "Lindhagensgatan 118, 112 51 Stockholm",
+        "parking_spaces":  241,
+        "opening_hours":  "07:00–22:30",
+        "prices":  {
+                       "visitor_weekday":  "20 kr för de två första timmarna per dag, därefter 50 kr per påbörjad timme",
+                       "visitor_weekend":  "2 hours free per day, thereafter 50 kr per started hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7622",
+                               "Payment machines on Levels 0, 1, 2"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7622"
+    },
+    {
+        "id":  12,
+        "name":  "Hemsö, Patienten 1",
+        "url":  "https://parkman.nu/parking/patienten-1/",
+        "address":  "Eugeniavägen 27, Stockholm",
+        "parking_spaces":  176,
+        "opening_hours":  {
+                              "weekdays":  "06:30–19:00",
+                              "weekends":  "07:30–16:00"
+                          },
+        "prices":  {
+                       "visitor":  "30 kr per påbörjad halvtimme",
+                       "daily_max":  "480 kr per 24-hour session",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  15,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "level_1":  2.9,
+                                     "level_2":  2.2
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "Adjacent to S:t Eriks Ögonsjukhus",
+                               "Near Nya Karolinska Universitetssjukhuset"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  13,
+        "name":  "Fruängen Centrum",
+        "url":  "https://parkman.nu/parking/fruangen-centrum/",
+        "address":  "Fruängstorget 4, 129 52 Hägersten",
+        "parking_spaces":  150,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "1 hour free, then 25 kr per påbörjad timme",
+                       "daily_max":  "150 kr",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  2
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Ticket machine",
+                               "App code 17551",
+                               "Near Fruängen subway station (red line)",
+                               "30 shops and restaurants nearby"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "17551"
+    },
+    {
+        "id":  14,
+        "name":  "Åkermyntan",
+        "url":  "https://parkman.nu/parking/akermyntan/",
+        "address":  "Lövkojsgränd 3, 165 75 Hässelby",
+        "parking_spaces":  270,
+        "opening_hours":  "06:00–23:00",
+        "prices":  {
+                       "front_Lövkojsgränd":  "2 hours free (parking disc), max 100 kr/day",
+                       "rear_Drivbänksvägen":  "3 hours free (parking disc), then 15 kr per half-hour, max 100 kr/day",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Parking disc required for free period",
+                               "Ticket machine",
+                               "App code 17557",
+                               "Apps: Linky, Parkster, EasyPark"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "17557"
+    },
+    {
+        "id":  15,
+        "name":  "Hangar 5",
+        "url":  "https://parkman.nu/parking/hangar-5/",
+        "address":  "Köpsvängen, Bromma (ICA Maxi Bromma)",
+        "parking_spaces":  null,
+        "opening_hours":  "07:00–23:00",
+        "prices":  {
+                       "visitor":  "2 hours free per day, then 20 kr per påbörjad halvtimme",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7701"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  "7701"
+    },
+    {
+        "id":  16,
+        "name":  "Bauhaus Bromma",
+        "url":  "https://parkman.nu/parking/bauhaus-bromma/",
+        "address":  "Karlbodavägen 2, Bromma",
+        "parking_spaces":  150,
+        "opening_hours":  {
+                              "Mon–Fri":  "06:00–20:00",
+                              "Sat–Sun":  "09:00–18:00"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free per day, then 20 kr per started half-hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Outdoor parking",
+                               "Autopay camera system",
+                               "48-hour payment option"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  17,
+        "name":  "Globen Shopping",
+        "url":  "https://parkman.nu/parking/globen-shopping/",
+        "address":  "Arenavägen 49, 121 77 Johanneshov",
+        "parking_spaces":  1000,
+        "opening_hours":  "04:30–23:30",
+        "prices":  {
+                       "visitor":  "First 2 hours free daily, then 35 kr per påbörjad halvtimme",
+                       "daily_max":  "350 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  16,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Car wash",
+                               "Autopay system",
+                               "EasyPark/Parkster zone 7548",
+                               "Payment terminals on Levels 2 \u0026 3",
+                               "Direct access to Globen Shopping and Tele2 Arena",
+                               "60+ retail/dining establishments"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7548"
+    },
+    {
+        "id":  18,
+        "name":  "Söderskansgaraget",
+        "url":  "https://parkman.nu/parking/soderskansgaraget/",
+        "address":  "Arenavägen 25, 121 77 Johanneshov",
+        "parking_spaces":  420,
+        "opening_hours":  "04:30–23:30",
+        "prices":  {
+                       "visitor":  "35 kr per påbörjad halvtimme",
+                       "daily_max":  "350 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  10,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Parkster zone 7549",
+                               "Payment terminal on Level 3",
+                               "Adjacent to Avicii Arena, Annexet, Hovet, Tele2 Arena"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7549"
+    },
+    {
+        "id":  19,
+        "name":  "Tumba Centrum",
+        "url":  "https://parkman.nu/parking/tumba-centrum/",
+        "address":  "Tumba torg 115, 147 30 Tumba",
+        "parking_spaces":  600,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "heated_cold_garage":  "2 hours free (3 hours for loyalty members), then 20 kr per half-hour, max 140 kr/24h",
+                       "night_rate":  "90 kr flat (22:00–09:00)",
+                       "outdoor":  "1 hour free, then 20 kr per half-hour, max 200 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  28,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "heated_garage":  1.9,
+                                     "cold_garage":  2.1
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7561",
+                               "Multiple garage types plus outdoor parking"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7561"
+    },
+    {
+        "id":  20,
+        "name":  "Port73",
+        "url":  "https://parkman.nu/parking/port73/",
+        "address":  "Nynäsvägen 21, 136 47 Handen",
+        "parking_spaces":  1000,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per half-hour, max 250 kr/24h",
+                       "night":  "500 kr (00:00–04:00)",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  "Available (outside Willys)",
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "Parkster app zone 7511",
+                               "Two major grocery stores + 20 other shops",
+                               "Adjacent to Highway 73"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7511"
+    },
+    {
+        "id":  21,
+        "name":  "Haninge Centrum",
+        "url":  "https://parkman.nu/parking/haninge-centrum/",
+        "address":  "Runstensvägen 1, 136 43 Handen",
+        "parking_spaces":  850,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 20 kr per half-hour, max 250 kr/24h",
+                       "member":  "3 hours free daily",
+                       "contract":  "Available for qualifying businesses"
+                   },
+        "ev_charging_stations":  5,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "90 retailers",
+                               "Rollers Bowls activity venue"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  22,
+        "name":  "Tyresö Centrum",
+        "url":  "https://parkman.nu/parking/tyreso-centrum/",
+        "address":  "Marknadsgränd 32, 135 40 Tyresö",
+        "parking_spaces":  648,
+        "opening_hours":  "05:00–01:00",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per half-hour",
+                       "bollmora_square":  "20 kr per half-hour from start",
+                       "contract":  "Available via BankID/Park46"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7630",
+                               "Car wash (Speedy Bilservice)",
+                               "76 shopping venues"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7630"
+    },
+    {
+        "id":  23,
+        "name":  "Nacka Forum",
+        "url":  "https://parkman.nu/parking/nacka-forum/",
+        "address":  "Forumvägen 14, 131 53 Nacka",
+        "parking_spaces":  1750,
+        "opening_hours":  "07:00–22:00",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per half-hour, max 250 kr/day",
+                       "club_members_evening":  "Free 18:00–22:00 weekdays; full-day free Sat–Sun",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  2,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.3,
+        "other_features":  [
+                               "Car wash (EcoShine)",
+                               "Autopay system",
+                               "Note: page shows 0 but also mentions 2 laddstationer"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  24,
+        "name":  "Sickla Köpkvarter",
+        "url":  "https://parkman.nu/parking/sickla-kopkvarter-2/",
+        "address":  "Simbagatan, 131 54 Nacka",
+        "parking_spaces":  1150,
+        "opening_hours":  "07:00–22:00",
+        "prices":  {
+                       "visitor":  "1 hour free daily, then 20 kr per started half-hour, max 200 kr/24h",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Outdoor facility",
+                               "Autopay system",
+                               "Post-payment model",
+                               "Retail, dining, cinema"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  25,
+        "name":  "Sickla Köpkvarter – Atlas Copco",
+        "url":  "https://parkman.nu/parking/sickla-kopkvarter-atlas-copco-garaget/",
+        "address":  "Sickla industriväg 19, 131 34 Nacka",
+        "parking_spaces":  120,
+        "opening_hours":  "07:00–22:00",
+        "prices":  {
+                       "visitor":  "20 kr per påbörjad halvtimme",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "Post-payment model",
+                               "Visitor parking facility"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  26,
+        "name":  "Sickla Köpkvarter – Marcusplatsen",
+        "url":  "https://parkman.nu/parking/sickla-kopkvarter-runda-p-huset/",
+        "address":  "Marcusplatsen 3, Nacka",
+        "parking_spaces":  365,
+        "opening_hours":  "05:30–00:00",
+        "prices":  {
+                       "visitor_weekday_peak":  "25 kr per påbörjad timme (07:00–17:00)",
+                       "visitor_off_peak":  "3 hours free daily, then 20 kr per half-hour, max 200 kr/24h",
+                       "contract":  "Available for businesses"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "Post-payment model"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  27,
+        "name":  "Sickla Köpkvarter – Front II",
+        "url":  "https://parkman.nu/parking/sickla-kopkvarter-sickla-front-ll/",
+        "address":  "Sicklastråket 1, 131 54 Nacka",
+        "parking_spaces":  358,
+        "opening_hours":  {
+                              "Mon–Fri":  "07:00–18:00",
+                              "Sat–Sun":  "Closed"
+                          },
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per 30 min, max 200 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "Weekdays only",
+                               "BankID required for contract"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  28,
+        "name":  "Sickla Köpkvarter – Magasinet",
+        "url":  "https://parkman.nu/parking/sickla-magasinet/",
+        "address":  "Siroccogatan 5, 131 54 Nacka",
+        "parking_spaces":  220,
+        "opening_hours":  "05:00–00:00",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per half-hour, max 200 kr/24h",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "lower_level":  2.2,
+                                     "upper_level":  2.1
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "Post-payment model"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  29,
+        "name":  "Bauhaus Sickla",
+        "url":  "https://parkman.nu/parking/bauhaus-sickla/",
+        "address":  "Sickla allé 2–4, 131 65 Nacka",
+        "parking_spaces":  390,
+        "opening_hours":  {
+                              "weekdays":  "06:00–22:00",
+                              "weekends":  "08:00–19:00"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 15 kr per half-hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  3.6,
+        "other_features":  [
+                               "Autopay camera system",
+                               "48-hour payment option"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  30,
+        "name":  "Spisbrödsgaraget",
+        "url":  "https://parkman.nu/parking/spisbrodsfabriken/",
+        "address":  "Kvarnholmsvägen 82, 131 31 Nacka",
+        "parking_spaces":  290,
+        "opening_hours":  "05:30–23:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad timme, max 75 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7566",
+                               "Keycard access outside hours for contract holders",
+                               "Kvarnholmen peninsula location"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7566"
+    },
+    {
+        "id":  31,
+        "name":  "Orminge Centrum",
+        "url":  "https://parkman.nu/parking/orminge-centrum/",
+        "address":  "Nacka, Sweden",
+        "parking_spaces":  279,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 60 kr per half-hour, max 900 kr/day",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Outdoor parking",
+                               "Autopay system",
+                               "App code 7512",
+                               "24/7 access"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7512"
+    },
+    {
+        "id":  32,
+        "name":  "Cylindergaraget",
+        "url":  "https://parkman.nu/parking/cylindergaraget/",
+        "address":  "Cylindervägen, Nacka Strand",
+        "parking_spaces":  300,
+        "opening_hours":  "06:00–22:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad timme (free weekdays 11:00–14:00)",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7507",
+                               "SATS gym members get 2 hours free"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7507"
+    },
+    {
+        "id":  33,
+        "name":  "Entrégaraget",
+        "url":  "https://parkman.nu/parking/entregaraget/",
+        "address":  "Augustendalsvägen 5a, Nacka Strand",
+        "parking_spaces":  300,
+        "opening_hours":  "06:00–22:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad timme, max 120 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7508"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7508"
+    },
+    {
+        "id":  34,
+        "name":  "Torggaraget",
+        "url":  "https://parkman.nu/parking/torggaraget/",
+        "address":  "Augustendalsvägen 18, Nacka Strand",
+        "parking_spaces":  null,
+        "opening_hours":  "06:00–22:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad timme, max 120 kr/day",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  "Available (number not specified)",
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "App code 5534",
+                               "Autopay system"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "5534"
+    },
+    {
+        "id":  35,
+        "name":  "Dalénum",
+        "url":  "https://parkman.nu/parking/dalenum/",
+        "address":  "Agavägen 11, 181 55 Lidingö",
+        "parking_spaces":  null,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "20 kr per påbörjad timme, max 350 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  16,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.3,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark app code 5521"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "5521"
+    },
+    {
+        "id":  36,
+        "name":  "Westfield Mall of Scandinavia",
+        "url":  "https://parkman.nu/parking/westfield-mall-of-scandinavia/",
+        "address":  "Stjärntorget 2, 169 79 Solna",
+        "parking_spaces":  3900,
+        "opening_hours":  "06:00–24:00",
+        "prices":  {
+                       "visitor":  "2 hours free (first visit), then 35 kr per started half-hour, max 550 kr/24h",
+                       "club_members":  "4 hours free (with registered vehicle)",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  159,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "standard":  2.3,
+                                     "level_0":  2.1
+                                 },
+        "other_features":  [
+                               "Car wash",
+                               "Autopay system",
+                               "244 stores and restaurants",
+                               "Scandinavia\u0027s largest shopping center",
+                               "Westfield Club membership benefits"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  37,
+        "name":  "Solna Centrum",
+        "url":  "https://parkman.nu/parking/solna-centrum/",
+        "address":  "Solna Torg 13, 171 45 Solna",
+        "parking_spaces":  540,
+        "opening_hours":  {
+                              "outdoor":  "00:00–24:00",
+                              "indoor":  "07:00–21:00"
+                          },
+        "prices":  {
+                       "visitor_weekday":  "2 hours free, then 25 kr per started hour",
+                       "visitor_weekend":  "3 hours free, then 25 kr per started hour",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "94 retail stores and 22 restaurants"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  38,
+        "name":  "Bikupan",
+        "url":  "https://parkman.nu/parking/bikupan/",
+        "address":  "Gustav III:s Boulevard 173, Solna",
+        "parking_spaces":  530,
+        "opening_hours":  "05:30–23:00",
+        "prices":  {
+                       "visitor":  "30 kr per started hour, max 250 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  268,
+        "accessibility":  {
+                              "disabled_spaces":  null,
+                              "bicycle_parking":  "Yes (cykelgarage)"
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Car wash",
+                               "Autopay system",
+                               "EasyPark/Parkster zone 7506",
+                               "Solar panel roof",
+                               "Motorcycle spaces: 8",
+                               "2,000+ hexagonal facade elements",
+                               "Opened early 2024",
+                               "Near Friends Arena"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7506"
+    },
+    {
+        "id":  39,
+        "name":  "Arenagaraget",
+        "url":  "https://parkman.nu/parking/arenagaraget/",
+        "address":  "Evenemangsgatan 32, Solna",
+        "parking_spaces":  850,
+        "opening_hours":  "05:30–23:30",
+        "prices":  {
+                       "visitor_first_2h":  "20 kr per påbörjad halvtimme",
+                       "visitor_after_2h":  "30 kr per påbörjad halvtimme",
+                       "daily_max":  "320 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  58,
+        "accessibility":  {
+                              "disabled_spaces":  54
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7560",
+                               "Motorcycle spaces: 54",
+                               "Near Friends Arena",
+                               "BankID required for contracts"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7560"
+    },
+    {
+        "id":  40,
+        "name":  "Ametisten",
+        "url":  "https://parkman.nu/parking/ametisten-huvudstagatan-1a-171-41-solna/",
+        "address":  "Huvudstagatan 1A, Solna",
+        "parking_spaces":  100,
+        "opening_hours":  "07:00–21:30 (24/7 access for rental holders)",
+        "prices":  {
+                       "visitor":  "40 kr/timme, max 200 kr/24h",
+                       "contract":  "Monthly rental available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "standard":  2.1,
+                                     "reserved_zone":  1.9
+                                 },
+        "other_features":  [
+                               "App code 17626",
+                               "Ticket machine",
+                               "Key fob access for rental holders",
+                               "Near Solna Centrum and blue subway line"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "17626"
+    },
+    {
+        "id":  41,
+        "name":  "Herrjärva",
+        "url":  "https://parkman.nu/parking/herrjarva/",
+        "address":  "Slåttervägen 26, 170 67 Solna",
+        "parking_spaces":  168,
+        "opening_hours":  "05:00–21:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad halvtimme, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  30,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7621",
+                               "NCC office complex location"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7621"
+    },
+    {
+        "id":  42,
+        "name":  "Frösundaviksparken",
+        "url":  "https://parkman.nu/parking/frosundaviksparken/",
+        "address":  "Frösundaviks allé 15, 169 70 Solna",
+        "parking_spaces":  280,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "35 kr per started hour, max 250 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  5,
+        "accessibility":  {
+                              "disabled_spaces":  2
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App codes: indoor 7562, outdoor 17563",
+                               "Adjacent to Radisson Blu Royal Park Hotel",
+                               "Near Haga Park"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7562, 17563"
+    },
+    {
+        "id":  43,
+        "name":  "Klackengaraget, Råsunda Södra",
+        "url":  "https://parkman.nu/parking/klackengaraget-rasunda-sodra/",
+        "address":  "Garvis Carlssons Gata 10, 169 51 Solna",
+        "parking_spaces":  120,
+        "opening_hours":  "06:00–21:00",
+        "prices":  {
+                       "visitor":  "30 kr per timme, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  10,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7644",
+                               "Near blue metro line"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7644"
+    },
+    {
+        "id":  44,
+        "name":  "Drottning Kristinas Esplanad",
+        "url":  "https://parkman.nu/parking/drottning-kristinas-esplanad/",
+        "address":  "Drottning Kristinas esplanad 12, 170 67 Solna",
+        "parking_spaces":  270,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "20 kr per påbörjad halvtimme, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  33,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "BankID required via Park46"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  45,
+        "name":  "Planen 4",
+        "url":  "https://parkman.nu/parking/planen-4/",
+        "address":  "Solnavägen 102, Solna",
+        "parking_spaces":  74,
+        "opening_hours":  "Locked garage – 24/7 access for renters",
+        "prices":  {
+                       "visitor":  "Contract/rental only",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Tag-based entry system",
+                               "BankID required",
+                               "Near Solna station",
+                               "Secured facility"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  46,
+        "name":  "Sadelplatsen 2",
+        "url":  "https://parkman.nu/parking/sadelplatsen-2/",
+        "address":  "Vallgatan 24, Solna",
+        "parking_spaces":  765,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad halvtimme, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  80,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7621",
+                               "BankID required for contract"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7621"
+    },
+    {
+        "id":  47,
+        "name":  "Huvudsta Centrum",
+        "url":  "https://parkman.nu/parking/huvdusta-centrum/",
+        "address":  "Storgatan 70, 171 52 Solna",
+        "parking_spaces":  230,
+        "opening_hours":  "07:00–22:00",
+        "prices":  {
+                       "visitor_day":  "2 hours free (09:00–19:00), then 30 kr per started hour, max 150 kr",
+                       "visitor_night":  "10 kr per started hour (19:00–09:00), max 50 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App codes: 7510 (garage), 17531 (outdoor)",
+                               "On-site dining, hair salon, beauty salon"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7510, 17531"
+    },
+    {
+        "id":  48,
+        "name":  "Maxi ICA Stormarknad Solna",
+        "url":  "https://parkman.nu/parking/maxi-ica-stormarknad-solna-2/",
+        "address":  "Svetsarvägen 18, 171 41 Solna",
+        "parking_spaces":  253,
+        "opening_hours":  "07:00–22:00",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 22 kr per påbörjad halvtimme",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.4,
+        "other_features":  [
+                               "Autopay system"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  49,
+        "name":  "Hallonbergen Centrum",
+        "url":  "https://parkman.nu/parking/hallonbergen-centrum/",
+        "address":  "Hallonbergsplan, Sundbyberg",
+        "parking_spaces":  234,
+        "opening_hours":  "06:00–21:00",
+        "prices":  {
+                       "visitor":  "1 hour free daily, then 15 kr per påbörjad halvtimme",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.9,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7639",
+                               "Near subway station",
+                               "Near Lötsjön lake"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7639"
+    },
+    {
+        "id":  50,
+        "name":  "Badstugan",
+        "url":  "https://parkman.nu/parking/badstugan/",
+        "address":  "Badhusgatan 2, Sundbyberg",
+        "parking_spaces":  null,
+        "opening_hours":  "Outdoor parking (hours not detailed)",
+        "prices":  {
+                       "contract":  "Available in multiple tiers for private individuals"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Contract/rental only",
+                               "BankID required via Park46",
+                               "Outdoor parking"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  51,
+        "name":  "Foderladan",
+        "url":  "https://parkman.nu/parking/foderladan/",
+        "address":  "Ladugårdsgatan 16, Sundbyberg",
+        "parking_spaces":  null,
+        "opening_hours":  "Locked garage (secured, port permit required)",
+        "prices":  {
+                       "contract":  "Available in multiple tiers for private individuals"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Locked garage",
+                               "Port permit required",
+                               "BankID required via Park46"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  52,
+        "name":  "Grand Central",
+        "url":  "https://parkman.nu/parking/grand-central/",
+        "address":  "Rosengatan 4, 172 70 Sundbyberg",
+        "parking_spaces":  200,
+        "opening_hours":  "06:00–21:00",
+        "prices":  {
+                       "visitor":  "13 kr per halvtimme, max 220 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  42,
+        "accessibility":  {
+                              "disabled_spaces":  5
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "CaCharge app required for EV charging",
+                               "Motorcycle spaces: 5",
+                               "Near Sundbyberg commuter rail and metro"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  53,
+        "name":  "Signalfabriken",
+        "url":  "https://parkman.nu/parking/signalfabriken/",
+        "address":  "Vasagatan 2, 172 65 Sundbyberg",
+        "parking_spaces":  78,
+        "opening_hours":  "05:00–22:30",
+        "prices":  {
+                       "visitor":  "20 kr per påbörjad timme, max 140 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  3,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "200m from Sundbyberg Center station",
+                               "SATS gym (3,000 sqm) nearby"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  54,
+        "name":  "Umami Park",
+        "url":  "https://parkman.nu/parking/umami-park/",
+        "address":  "Gesällvägen 15, 174 53 Sundbyberg",
+        "parking_spaces":  560,
+        "opening_hours":  "05:00–22:00",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 15 kr per half-hour, max 100 kr/24h",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  1.9,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7708",
+                               "Payment terminals on-site",
+                               "Modern camera system"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7708"
+    },
+    {
+        "id":  55,
+        "name":  "Kista Galleria",
+        "url":  "https://parkman.nu/parking/kista-galleria/",
+        "address":  "Hanstavägen 55, 164 53 Kista",
+        "parking_spaces":  1127,
+        "opening_hours":  {
+                              "north_south_garages":  "00:00–24:00",
+                              "east_garage":  "07:00–22:00"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 55 kr per started hour, max 400 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  4,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  1.9,
+        "other_features":  [
+                               "Car wash",
+                               "Car rental (Hertz)",
+                               "Car service/inspection (Mekonomen, Carspect, EcoShine on Level -2)",
+                               "Free parking with Carhub service",
+                               "EasyPark/Linky zone 7546"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7546"
+    },
+    {
+        "id":  56,
+        "name":  "Technopolis",
+        "url":  "https://parkman.nu/parking/technopolis/",
+        "address":  "Kronborgsgränd, Kista",
+        "parking_spaces":  1030,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "20 kr per started hour, max 100 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  "Only on rented spaces"
+                          },
+        "height_restriction_m":  {
+                                     "K3_cold_port2":  1.95,
+                                     "K3_cold_port3":  2.0,
+                                     "K3_heated_port1":  1.95,
+                                     "K3_heated_port4":  2.1,
+                                     "K4_cold":  2.0,
+                                     "K4_heated":  2.1
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "App codes: garage 7706, outdoor 17636",
+                               "Linky/Parkster/EasyPark apps",
+                               "Office hotel with restaurants"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7706, 17636"
+    },
+    {
+        "id":  57,
+        "name":  "Kista Science Tower",
+        "url":  "https://parkman.nu/parking/kista-science-tower/",
+        "address":  "Hanstavägen 31, Kista",
+        "parking_spaces":  800,
+        "opening_hours":  {
+                              "indoor":  "05:00–20:00",
+                              "outdoor":  "24/7"
+                          },
+        "prices":  {
+                       "visitor":  "15 kr per påbörjad timme",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.35,
+        "other_features":  [
+                               "Car wash (Arpix – includes free parking)",
+                               "Autopay system",
+                               "App code 7547"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7547"
+    },
+    {
+        "id":  58,
+        "name":  "ICA Maxi Barkarby",
+        "url":  "https://parkman.nu/parking/ica-maxi-barkarby/",
+        "address":  "Majorsvägen 4A, Järfälla",
+        "parking_spaces":  550,
+        "opening_hours":  "05:00–23:30",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 20 kr per started hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7648",
+                               "Payment machine"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7648"
+    },
+    {
+        "id":  59,
+        "name":  "BAS Barkarby",
+        "url":  "https://parkman.nu/parking/bas-barkarby/",
+        "address":  "Bällstaågatan 18, 177 45 Järfälla",
+        "parking_spaces":  150,
+        "opening_hours":  "08:00–20:00",
+        "prices":  {
+                       "visitor":  "1 hour free daily, then 20 kr per half-hour, max 120 kr/24h",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App codes: garage 7647, outdoor 17643"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7647"
+    },
+    {
+        "id":  60,
+        "name":  "Riddarplatsen, Jakobsberg",
+        "url":  "https://parkman.nu/parking/jakobsberg-centrum/",
+        "address":  "Drabantvägen, 177 50 Järfälla",
+        "parking_spaces":  210,
+        "opening_hours":  "05:00–23:00",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 20 kr per started hour, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7711",
+                               "Adjacent train station",
+                               "~100 retailers at Jakobsberg shopping center"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7711"
+    },
+    {
+        "id":  61,
+        "name":  "Sollentuna Centrum",
+        "url":  "https://parkman.nu/parking/sollentuna-centrum/",
+        "address":  "Sollentunavägen 163, 191 47 Sollentuna",
+        "parking_spaces":  1500,
+        "opening_hours":  {
+                              "Mon–Fri":  "06:00–22:00",
+                              "Sat–Sun":  "07:00–22:00"
+                          },
+        "prices":  {
+                       "visitor_weekday":  "2 hours free (4 for club members), then 15 kr per half-hour, max 250 kr/24h",
+                       "visitor_weekend":  "Free",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  20,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "94 shops and 22 restaurants"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  62,
+        "name":  "Westfield Täby Centrum",
+        "url":  "https://parkman.nu/parking/taby-centrum/",
+        "address":  "Stora Marknadsvägen 15, 183 70 Täby",
+        "parking_spaces":  2500,
+        "opening_hours":  {
+                              "south_garage":  "06:00–22:00",
+                              "north_garage":  "24 hours"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 20 kr per 30 min, max 350 kr/session",
+                       "westfield_club_members":  "4 hours free daily",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  25,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "south_garage":  2.1,
+                                     "north_garage":  2.3
+                                 },
+        "other_features":  [
+                               "Car wash",
+                               "181 shops and 40 restaurants/cafés",
+                               "Loading bays 1–12",
+                               "Autopay system",
+                               "Westfield Club membership benefits"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  63,
+        "name":  "Vällingby Centrum",
+        "url":  "https://parkman.nu/parking/vallingby-centrum/",
+        "address":  "Vällingby (address not specified)",
+        "parking_spaces":  {
+                               "Solursgaraget":  621,
+                               "Åregaraget":  733,
+                               "total":  1354
+                           },
+        "opening_hours":  "06:00–00:00",
+        "prices":  {
+                       "indoor_both_garages":  "3 hours free daily combined, then 20 kr per half-hour, max 250 kr/24h",
+                       "outdoor":  "1 hour free daily, then 20 kr per half-hour, max 250 kr/24h",
+                       "contract_unreserved":  "1,000 kr/month incl. VAT"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "Solursgaraget":  2.2,
+                                     "Åregaraget":  2.35
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "Two separate garages plus outdoor",
+                               "Payment terminal",
+                               "App payment"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  64,
+        "name":  "Väsby Centrum",
+        "url":  "https://parkman.nu/parking/vasby-centrum/",
+        "address":  "Drabantvägen 4, 194 70 Upplands Väsby",
+        "parking_spaces":  700,
+        "opening_hours":  "08:00–20:00",
+        "prices":  {
+                       "visitor":  "2 hours free daily (3 for loyalty members), then 20 kr per 30 min, max 250 kr/day",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "Near E4 highway between Stockholm and Arlanda"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  65,
+        "name":  "Åkersberga Centrum",
+        "url":  "https://parkman.nu/parking/akersberga-centrum/",
+        "address":  "Stationsvägen 23, 184 50 Åkersberga",
+        "parking_spaces":  900,
+        "opening_hours":  {
+                              "west_garage":  "06:00–22:00",
+                              "east_garage":  "06:00–23:00"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 15 kr per half-hour, max 180 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  {
+                                     "west_garage":  2.25,
+                                     "east_garage":  2.1
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7568",
+                               "~60 shops and restaurants nearby",
+                               "Österåker municipality"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7568"
+    },
+    {
+        "id":  66,
+        "name":  "Märsta Centrum",
+        "url":  "https://parkman.nu/parking/marsta-centrum/",
+        "address":  "Nymärsta kulle 4, Märsta",
+        "parking_spaces":  709,
+        "opening_hours":  "06:30–22:30",
+        "prices":  {
+                       "visitor":  "2 hours free daily (4 for club members), then 10 kr per half-hour, max 120 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  12,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.2,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Linky codes 7645 and 17647",
+                               "Near Arlanda airport, Sigtuna municipality"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "17647"
+    },
+    {
+        "id":  67,
+        "name":  "Aiden By Best Western",
+        "url":  "https://parkman.nu/parking/hotell-aiden/",
+        "address":  "Lindberghs gata 10, 195 61 Arlandastad",
+        "parking_spaces":  500,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor_hourly":  "30 kr per hour, max 350 kr/24h",
+                       "visitor_weekly":  "799 kr",
+                       "pre_booked_weekly":  "699 kr",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "24/7 staffed reception",
+                               "Free airport shuttle every 30 min (03:00–01:10)",
+                               "~6 min to airport terminals",
+                               "Enclosed, camera-monitored"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  68,
+        "name":  "Von Conow",
+        "url":  "https://parkman.nu/parking/von-conow/",
+        "address":  "Djäknegatan 19, 211 35 Malmö",
+        "parking_spaces":  null,
+        "opening_hours":  "06:00–21:00",
+        "prices":  {
+                       "visitor":  "18 kr per påbörjad halvtimme, max 320 kr/day",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  "Available (number not specified)",
+        "accessibility":  {
+                              "disabled_spaces":  null,
+                              "elevator":  "Yes",
+                              "climate_controlled":  "Yes"
+                          },
+        "height_restriction_m":  {
+                                     "level_minus1":  2.15,
+                                     "level_minus2":  1.8
+                                 },
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark zone 5537",
+                               "Indoor heated facility",
+                               "Camera surveillance"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  69,
+        "name":  "Citygaraget",
+        "url":  "https://parkman.nu/parking/citygaraget/",
+        "address":  "Djäknegatan 29, 21135 Malmö",
+        "parking_spaces":  278,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "12 kr per påbörjad 20 minuter (36 kr/tim), max 320 kr/day",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  10,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Car wash",
+                               "Autopay system",
+                               "EasyPark code 52505"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "52505"
+    },
+    {
+        "id":  70,
+        "name":  "Mobilia Köpcentrum",
+        "url":  "https://parkman.nu/parking/mobilia-kopcentrum/",
+        "address":  "Persborgsgatan 13B, 213 61 Malmö",
+        "parking_spaces":  1300,
+        "opening_hours":  {
+                              "south_building":  "06:00–21:30",
+                              "center_building_garage":  "06:00–00:00",
+                              "ground_level":  "24 hours"
+                          },
+        "prices":  {
+                       "above_ground_garage":  "5 hours free daily, then 10 kr per half-hour",
+                       "underground_garage":  "2 hours free daily, then 10 kr per half-hour",
+                       "outdoor":  "2 hours free daily, then 10 kr per half-hour",
+                       "contract":  "Available for businesses and residential"
+                   },
+        "ev_charging_stations":  77,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "5 payment terminals",
+                               "Parkster/Linky code 7700"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7700"
+    },
+    {
+        "id":  71,
+        "name":  "SöDER Gallerian",
+        "url":  "https://parkman.nu/parking/soder-helsingborg/",
+        "address":  "4 Nedre Holländaregatan, Helsingborg",
+        "parking_spaces":  240,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "20 kr per timme, max 250 kr/24h",
+                       "contract":  "Available through Jefast and SöDER"
+                   },
+        "ev_charging_stations":  10,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark zone 5244",
+                               "Payment machine on Level 2",
+                               "Cinema, gym, bowling nearby",
+                               "Minutes from Helsingborg Central Station"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "5244"
+    },
+    {
+        "id":  72,
+        "name":  "P-hus Avenyn",
+        "url":  "https://parkman.nu/parking/p-hus-avenyn/",
+        "address":  "Kristinelundsgatan 15, 411 37 Göteborg",
+        "parking_spaces":  500,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "60 kr per påbörjad timme, max 550 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  36,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  1.95,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark codes: 7514 (garage), 17516 (ground level)",
+                               "Payment machines at two stairwell entrances",
+                               "Recently renovated",
+                               "Adjacent to Avenyn"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7514, 17516"
+    },
+    {
+        "id":  73,
+        "name":  "Nordstan",
+        "url":  "https://parkman.nu/parking/nordstan/",
+        "address":  "Götgatan 10, 411 05 Göteborg",
+        "parking_spaces":  2600,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "daytime_06_18":  "30 kr per started hour",
+                       "evening_18_20":  "Free",
+                       "evening_20_22":  "30 kr per started hour",
+                       "night_22_06":  "5 kr per started hour",
+                       "sunday_jan_nov":  "First 3 hours free, then 30 kr/hour (09:00–22:00)",
+                       "sunday_december":  "30 kr per hour (06:00–18:00)",
+                       "daily_max":  "199 kr",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  77,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Car rental available",
+                               "Autopay system",
+                               "Parkster/Linky code 7704",
+                               "3 payment machines",
+                               "Central Gothenburg near main station"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "7704"
+    },
+    {
+        "id":  74,
+        "name":  "Eriksbergs Handelsplats",
+        "url":  "https://parkman.nu/parking/eriksbergs-handelsplats/",
+        "address":  "Kolhamnsgatan 19–21, Göteborg",
+        "parking_spaces":  565,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 30 kr per started hour, max 200 kr/session",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  "Available (number not specified)",
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "BankID required for contract"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  75,
+        "name":  "Kongahälla Center",
+        "url":  "https://parkman.nu/parking/kongahalla-center/",
+        "address":  "Älvebacken 1, 442 48 Kungälv",
+        "parking_spaces":  1200,
+        "opening_hours":  "07:00–23:00",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 15 kr per half-hour, max 150 kr/24h",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  11,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "Food Hall with 6 restaurants",
+                               "Modern automated gate cameras"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  76,
+        "name":  "Angered Centrum",
+        "url":  "https://parkman.nu/parking/angered-centrum/",
+        "address":  "Angereds torg 1, 424 65 Angered",
+        "parking_spaces":  1500,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "garage":  "3 hours free, then 10 kr per half-hour; night rate 22:30–05:30: 10 kr per half-hour",
+                       "south_lot":  "3 hours free, then 5 kr per half-hour",
+                       "north_lot":  "1 hour free (with ticket/app), then 5 kr per half-hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.0,
+        "other_features":  [
+                               "Autopay system",
+                               "Ticket machines",
+                               "~60 stores",
+                               "Train station (Angeredsbanan)",
+                               "App codes: outdoor 3801, 3802, 7509"
+                           ],
+        "easypark":  false,
+        "parkster":  true,
+        "area_code":  "3801, 3802, 7509"
+    },
+    {
+        "id":  77,
+        "name":  "Stenungstorg Centrum",
+        "url":  "https://parkman.nu/parking/stenungstorg-centrum/",
+        "address":  "Östra Köpmansgatan, Stenungsund",
+        "parking_spaces":  1034,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 20 kr per half-hour",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.25,
+        "other_features":  [
+                               "Autopay system",
+                               "65 stores, restaurants, cafés",
+                               "Near guest harbor",
+                               "West coast Sweden location"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  78,
+        "name":  "Bauhaus Sisjön",
+        "url":  "https://parkman.nu/parking/bauhaus-sisjon/",
+        "address":  "Södra Långebergsgatan 21, 436 32 Askim",
+        "parking_spaces":  294,
+        "opening_hours":  {
+                              "weekdays":  "06:00–20:00",
+                              "weekends_holidays":  "08:00–18:00"
+                          },
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 15 kr per half-hour",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7699"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  "7699"
+    },
+    {
+        "id":  79,
+        "name":  "Dockan",
+        "url":  "https://parkman.nu/parking/dockan/",
+        "address":  "Poseidongatan 1, Västerås",
+        "parking_spaces":  439,
+        "opening_hours":  "05:00–22:30",
+        "prices":  {
+                       "visitor_peak_08_20":  "15 kr/hour",
+                       "visitor_offpeak_20_08":  "4 kr/hour",
+                       "daily_max":  "80 kr",
+                       "permits":  "3-hour, 5-day, 30-day options available",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  22,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Parkster zone 7500",
+                               "Subscription garage (71 spaces, lower level)",
+                               "Near Öster Mälarstrand waterfront",
+                               "Adjacent to Däcket"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7500"
+    },
+    {
+        "id":  80,
+        "name":  "Däcket",
+        "url":  "https://parkman.nu/parking/dacket/",
+        "address":  "Bäckahästgatan 3, 723 58 Västerås",
+        "parking_spaces":  443,
+        "opening_hours":  "05:00–22:30",
+        "prices":  {
+                       "visitor_peak_08_20":  "15 kr/hour",
+                       "visitor_offpeak_20_08":  "4 kr/hour",
+                       "daily_max":  "120 kr",
+                       "free_1h_with_Hemköp_purchase":  true,
+                       "permits":  "3-hour, 5-day, 30-day options available",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  22,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Parkster code 7501",
+                               "Subscription level (73 spaces, lower level)",
+                               "Adjacent to Steam Hotel",
+                               "Near Hemköp supermarket"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7501"
+    },
+    {
+        "id":  81,
+        "name":  "Högne",
+        "url":  "https://parkman.nu/parking/hogne/",
+        "address":  "Lilla Nygatan 2, Västerås",
+        "parking_spaces":  344,
+        "opening_hours":  "05:00–22:30",
+        "prices":  {
+                       "visitor_peak_08_20":  "15 kr/hour",
+                       "visitor_offpeak_20_08":  "4 kr/hour",
+                       "daily_max":  "80 kr",
+                       "permits":  "3-hour, 5-day, 30-day options available",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  21,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Parkster app code 7503",
+                               "Subscription parking (81 spaces, lower level)",
+                               "Central location"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7503"
+    },
+    {
+        "id":  82,
+        "name":  "Oxen",
+        "url":  "https://parkman.nu/parking/oxen/",
+        "address":  "Hammarbygatan 3, Västerås",
+        "parking_spaces":  288,
+        "opening_hours":  "05:00–22:30",
+        "prices":  {
+                       "visitor_peak_08_20":  "15 kr/hour",
+                       "visitor_offpeak_20_08":  "4 kr/hour",
+                       "daily_max":  "80 kr",
+                       "permits":  "3-hour, 5-day, 30-day options available",
+                       "contract":  "Available via Park46"
+                   },
+        "ev_charging_stations":  30,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Parkster code 7502",
+                               "Subscription level (56 spaces, basement)",
+                               "Payment machines at entrance level"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7502"
+    },
+    {
+        "id":  83,
+        "name":  "ASECS",
+        "url":  "https://parkman.nu/parking/asecs/",
+        "address":  "Kompanigatan 36, 553 05 Jönköping",
+        "parking_spaces":  418,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor_weekday":  "2 hours free (09:45–20:30), then 8 kr per half-hour",
+                       "visitor_saturday":  "Free 09:30–18:30, then 8 kr per half-hour",
+                       "visitor_sunday":  "Free 10:30–17:30, then 8 kr per half-hour",
+                       "club_member":  "3 hours free daily",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Outdoor parking",
+                               "Autopay system",
+                               "EasyPark zone 7637",
+                               "Payment terminal near entrance C"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7637"
+    },
+    {
+        "id":  84,
+        "name":  "Commerce",
+        "url":  "https://parkman.nu/parking/commerce/",
+        "address":  "Hertig Johans torg 4, Skövde",
+        "parking_spaces":  458,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor":  "1 hour free, then 20 kr per started hour, max 80 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark zone 7513",
+                               "Payment terminals (2 locations)",
+                               "Laserdome entertainment nearby"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7513"
+    },
+    {
+        "id":  85,
+        "name":  "Gränbystaden",
+        "url":  "https://parkman.nu/parking/granbystaden/",
+        "address":  "Marknadsgatan 7, 754 60 Uppsala",
+        "parking_spaces":  1489,
+        "opening_hours":  {
+                              "surface":  "07:00–02:00",
+                              "garage":  "07:45–21:30",
+                              "Cirkusplatsen":  "24/7"
+                          },
+        "prices":  {
+                       "visitor":  "3 hours free daily, then 10 kr per started half-hour",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.3,
+        "other_features":  [
+                               "Autopay system",
+                               "160 stores, restaurants, cafés",
+                               "Near Gränbyparken and Väderleken playground"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  86,
+        "name":  "Bonden 11",
+        "url":  "https://parkman.nu/parking/bonden-11/",
+        "address":  "Nygatan 7, 645 31 Strängnäs",
+        "parking_spaces":  null,
+        "opening_hours":  "06:00–22:00",
+        "prices":  {
+                       "visitor":  "2 hours free daily, then 10 kr per half-hour, max 250 kr/24h",
+                       "contract":  "Available"
+                   },
+        "ev_charging_stations":  null,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  null,
+        "other_features":  [
+                               "Autopay system",
+                               "Payment kiosk"
+                           ],
+        "easypark":  false,
+        "parkster":  false,
+        "area_code":  null
+    },
+    {
+        "id":  87,
+        "name":  "Bryggudden Parkering",
+        "url":  "https://parkman.nu/parking/bryggudden-parkering/",
+        "address":  "Bergendorffsgatan 5, 652 16 Karlstad",
+        "parking_spaces":  270,
+        "opening_hours":  "00:00–24:00 (24/7)",
+        "prices":  {
+                       "visitor_indoor":  "7 kr per half-hour, max 120 kr/session",
+                       "visitor_outdoor":  "14 kr per half-hour",
+                       "contract":  "Available through Löfberg Fastigheter"
+                   },
+        "ev_charging_stations":  0,
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.1,
+        "other_features":  [
+                               "Autopay system",
+                               "App code 7603",
+                               "Waterfront district (Bryggudden)",
+                               "Near Karlstad city center",
+                               "Boat shuttle access nearby"
+                           ],
+        "easypark":  true,
+        "parkster":  true,
+        "area_code":  "7603"
+    },
+    {
+        "id":  88,
+        "name":  "Kattvikskajen",
+        "url":  "https://parkman.nu/parking/kattvikskajen/",
+        "address":  "Brädgårdsgatan 3, Hudiksvall",
+        "parking_spaces":  310,
+        "opening_hours":  "Mon–Sun 05:00–22:00",
+        "prices":  {
+                       "visitor":  "8 kr per half-hour, max 100 kr/24h",
+                       "contract":  "Available in multiple tiers"
+                   },
+        "ev_charging_stations":  "Available (number not specified)",
+        "accessibility":  {
+                              "disabled_spaces":  null
+                          },
+        "height_restriction_m":  2.3,
+        "other_features":  [
+                               "Autopay system",
+                               "EasyPark/Linky app code 7707",
+                               "Waterfront mixed-use development",
+                               "Near Hudiksvall travel center/station"
+                           ],
+        "easypark":  true,
+        "parkster":  false,
+        "area_code":  "7707"
+    }
+]
