@@ -1793,20 +1793,14 @@
     </script>
 
     <!-- Faktura-overlay -->
-    <div id="faktura-overlay" class="faktura-overlay" onclick="if(event.target===this)closeFakturaOverlay()">
-      <div class="faktura-card">
-        <button class="faktura-close" onclick="closeFakturaOverlay()" aria-label="Stäng">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <div id="faktura-overlay" class="flow-overlay" onclick="if(event.target===this)closeFakturaOverlay()">
+      <div class="flow-overlay-card">
+        <button class="flow-overlay-close" onclick="closeFakturaOverlay()" aria-label="Stäng">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
 
-        <!-- Viktig info-banner -->
-        <div class="faktura-notice">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Det är enbart den debiterbara parkeringstiden som faktureras — inget mer.
-        </div>
-
-        <div class="faktura-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <div class="flow-overlay-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
             <line x1="9" y1="13" x2="15" y2="13"/>
@@ -1814,19 +1808,26 @@
           </svg>
         </div>
 
-        <h2 class="faktura-title">Fått en faktura?</h2>
-        <p class="faktura-body">
+        <h3 class="flow-overlay-title">Fått en faktura?</h3>
+
+        <!-- Viktig info-banner -->
+        <div class="faktura-notice">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" flex-shrink="0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Det är enbart den debiterbara parkeringstiden som faktureras — inget mer.
+        </div>
+
+        <p class="flow-overlay-body">
           Din faktura avser den tid du faktiskt stod parkerad — från det att du körde in till dess att du körde ut. Ingen avrundning, inga dolda avgifter.
         </p>
-        <p class="faktura-body">
+        <p class="flow-overlay-body" style="margin-top:10px;">
           Betalning görs enkelt via de uppgifter som finns på fakturan — bankgiro, autogiro eller kortbetalning online.
         </p>
 
         <div class="faktura-divider"></div>
 
         <p class="faktura-dispute-label">Vill du bestrida fakturan?</p>
-        <p class="faktura-body">
-          Skicka ett mejl till oss med ditt fakturanummer och en kort förklaring, så tittar vi på det så snart som möjligt.
+        <p class="flow-overlay-body" style="margin-bottom:16px;">
+          Skicka ett mejl med ditt fakturanummer och en kort förklaring, så tittar vi på det så snart som möjligt.
         </p>
         <a href="mailto:info@parkman.nu?subject=Bestridning av faktura" class="faktura-email-btn">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

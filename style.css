@@ -8204,112 +8204,33 @@ img { max-width: 100%; height: auto; }
   border-color: rgba(255,255,255,0.5);
 }
 
-/* ── Faktura overlay ── */
-.faktura-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.22s ease, visibility 0.22s;
-}
-.faktura-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-.faktura-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 40px 36px;
-  max-width: 500px;
-  width: calc(100% - 40px);
-  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
-  transform: translateY(12px) scale(0.97);
-  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1);
-  position: relative;
-}
-.faktura-overlay.open .faktura-card {
-  transform: translateY(0) scale(1);
-}
-.faktura-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: rgba(95,26,68,0.06);
-  border: none;
-  border-radius: 8px;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--color-primary);
-  opacity: 0.6;
-  transition: opacity 0.15s, background 0.15s;
-}
-.faktura-close:hover { opacity: 1; background: rgba(95,26,68,0.1); }
-
+/* ── Faktura overlay — uses same card as flow overlay ── */
 .faktura-notice {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background: rgba(243,153,0,0.1);
-  border: 1px solid rgba(243,153,0,0.35);
+  background: rgba(243,153,0,0.12);
+  border: 1px solid rgba(243,153,0,0.4);
   border-left: 3px solid #f39900;
   border-radius: 6px;
-  padding: 12px 16px;
-  font-size: 0.85rem;
+  padding: 10px 14px;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: #7a4800;
+  color: #f9c05a;
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 .faktura-notice svg { flex-shrink: 0; margin-top: 1px; color: #f39900; }
-
-.faktura-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: rgba(95,26,68,0.07);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  margin-bottom: 16px;
-}
-.faktura-title {
-  font-family: var(--font-main);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 14px;
-  line-height: 1.2;
-}
-.faktura-body {
-  font-size: 0.9rem;
-  line-height: 1.75;
-  color: var(--color-primary);
-  opacity: 0.75;
-  margin-bottom: 12px;
-}
 .faktura-divider {
   border: none;
-  border-top: 1px solid rgba(95,26,68,0.1);
-  margin: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 18px 0;
 }
 .faktura-dispute-label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary);
-  opacity: 0.45;
+  color: rgba(255,255,255,0.4);
   margin-bottom: 8px;
 }
 .faktura-email-btn {
@@ -8317,14 +8238,14 @@ img { max-width: 100%; height: auto; }
   align-items: center;
   gap: 8px;
   margin-top: 10px;
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
   font-family: var(--font-main);
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 12px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 11px 22px;
   border-radius: 6px;
   text-decoration: none;
   transition: opacity 0.2s;
 }
-.faktura-email-btn:hover { opacity: 0.85; }
+.faktura-email-btn:hover { opacity: 0.88; }
