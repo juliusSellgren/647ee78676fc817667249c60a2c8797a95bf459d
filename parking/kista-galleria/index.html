@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kista Galleria – Parkman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/images/favicon/cropped-favicon-32x32.png" size="32" />
+    <link rel="icon" href="/images/favicon/cropped-favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" href="/images/favicon/cropped-favicon-180x180.png" sizes="180x180" />
+    <style>
+      .parking-page-wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 48px 40px 100px;
+      }
+      .parking-page-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        opacity: 0.5;
+        text-decoration: none;
+        margin-bottom: 32px;
+        transition: opacity 0.15s;
+      }
+      .parking-page-back:hover { opacity: 1; }
+      .parking-page-eyebrow {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: 10px;
+      }
+      .parking-page-title {
+        font-family: var(--font-main);
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 700;
+        color: var(--color-primary);
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+        margin-bottom: 8px;
+      }
+      .parking-page-addr {
+        font-size: 0.85rem;
+        font-weight: 300;
+        color: var(--color-primary);
+        opacity: 0.55;
+        margin-bottom: 32px;
+      }
+      .parking-page-map {
+        width: 100%;
+        height: 280px;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 36px;
+        border: 1px solid rgba(95,26,68,0.1);
+      }
+      #parking-detail-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 32px;
+      }
+      .parking-page-two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-bottom: 32px;
+      }
+      @media (max-width: 640px) {
+        .parking-page-wrap { padding: 32px 20px 80px; }
+        .parking-page-two-col { grid-template-columns: 1fr; gap: 24px; }
+        .parking-page-map { height: 200px; }
+      }
+      .parking-page-section-label {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        opacity: 0.4;
+        margin-bottom: 12px;
+      }
+      .parking-page-info-block {
+        background: rgba(95,26,68,0.04);
+        border: 1px solid rgba(95,26,68,0.09);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .parking-page-facility-text {
+        font-size: 0.88rem;
+        font-weight: 300;
+        line-height: 1.8;
+        color: var(--color-primary);
+        opacity: 0.75;
+      }
+      .parking-page-not-found {
+        text-align: center;
+        padding: 80px 20px;
+        color: var(--color-primary);
+        opacity: 0.4;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body class="pg-parking">
+    <nav id="main-nav">
+      <div class="nav-orb"></div>
+      <a href="/index.html"><img src="/Brand_assets/Logo.png" alt="Parkman" class="nav-logo" /></a>
+      <ul class="nav-links">
+        <li><a href="/parkeringar.html">Våra parkeringar</a></li>
+        <li><a href="/fastighetsagare.html">Fastighetsägare</a></li>
+        <li><a href="/autopay.html">Autopay</a></li>
+        <li><a href="/om-oss.html">Om Parkman</a></li>
+        <li class="nav-has-dropdown">
+          <a href="/kontakt.html">Kontakt</a>
+          <ul class="nav-dropdown">
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/kvitton.html">Kvitto</a></li>
+        <li class="nav-has-dropdown">
+          <a href="/mina-sidor.html">Mina sidor</a>
+          <ul class="nav-dropdown">
+            <li><a href="/mina-sidor-kunder.html">Kunder</a></li>
+            <li><a href="/mina-sidor-fastighetsagare.html">Fastighetsägare</a></li>
+          </ul>
+        </li>
+        <li class="lang-switcher">
+          <div class="lang-toggle" translate="no">
+            <button class="lang-opt lang-se lang-active" onclick="setLang('sv')">SE</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="parking-page-wrap">
+      <div id="parking-page-content">
+        <div class="parking-page-not-found">Laddar…</div>
+      </div>
+    </div>
+
+    <div id="autopay-modal-backdrop" onclick="closeAutopayModal()" class="modal-backdrop hidden"></div>
+    <div id="autopay-modal" class="modal-panel modal-panel--autopay hidden">
+      <div class="modal-header modal-header--mb16">
+        <div>
+          <p class="section-eyebrow-sm">Betalningsinformation</p>
+          <h4 class="modal-subtitle">Autopay</h4>
+        </div>
+        <button onclick="closeAutopayModal()" class="modal-close">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <p class="autopay-info-text">Autopay är ett kamerabaserat system som registrerar in- och utfart via ditt registreringsnummer. Du betalar endast för den tid du faktiskt parkerat.</p>
+      <div class="autopay-rows">
+        <div class="autopay-row autopay-row--bordered"><span class="autopay-row-label">Betalautomat</span><span class="autopay-row-value">Slå in ditt registreringsnummer i automaten innan du lämnar parkeringen.</span></div>
+        <div class="autopay-row autopay-row--bordered"><span class="autopay-row-label">Autopay.io</span><span class="autopay-row-value">Registrera betalkort och registreringsnummer på Autopay.io för automatisk debitering.</span></div>
+        <div class="autopay-row autopay-row--bordered"><span class="autopay-row-label">Betala efteråt</span><span class="autopay-row-value">Betala via Autopay.io inom 48 timmar. <a href="https://autopay.io/#otp-container-left" target="_blank" rel="noopener" class="inline-link inline-link--strong">Betala här →</a></span></div>
+        <div class="autopay-row"><span class="autopay-row-label">Faktura</span><span class="autopay-row-value">Om ingen betalmetod väljs skickas faktura till fordonsägaren (avgift tillkommer).</span></div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script src="/lang.js"></script>
+    <script>
+      (function () {
+        const locName = "Kista Galleria";
+        const loc = locations.find(l => l.name === locName);
+        const wrap = document.getElementById('parking-page-content');
+
+        if (!loc) {
+          wrap.innerHTML = `
+            <div class="parking-page-not-found">
+              <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;">Anläggning hittades inte</p>
+              <p>Kontrollera URL:en eller <a href="/parkeringar.html" style="color:var(--color-primary);text-decoration:underline;">bläddra bland alla parkeringar</a>.</p>
+            </div>`;
+          return;
+        }
+
+        document.title = loc.name + ' – Parkman';
+
+        wrap.innerHTML = `
+          <a href="/parkeringar.html?loc=${encodeURIComponent(loc.name)}" class="parking-page-back">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Tillbaka till alla parkeringar
+          </a>
+          <p class="parking-page-eyebrow">Parkman</p>
+          <h1 class="parking-page-title">${loc.name}</h1>
+          <p class="parking-page-addr">${loc.addr}</p>
+          <div id="parking-page-map" class="parking-page-map"></div>
+          <div id="parking-detail-chips"></div>
+          <div class="parking-page-two-col">
+            <div>
+              <p class="parking-page-section-label">Parkering &amp; priser</p>
+              <div id="parking-detail-pricing" class="parking-page-info-block"></div>
+              <div style="margin-top:20px;">
+                <p class="parking-page-section-label">Betalappar</p>
+                <div id="parking-detail-apps"></div>
+              </div>
+              <div id="parking-detail-hyr"></div>
+            </div>
+            <div>
+              ${loc.facility_info ? `
+                <p class="parking-page-section-label">Om anläggningen</p>
+                <div class="parking-page-info-block">
+                  <p class="parking-page-facility-text">${loc.facility_info}</p>
+                </div>` : ''}
+            </div>
+          </div>`;
+
+        const miniMap = L.map('parking-page-map', { zoomControl: false, scrollWheelZoom: false })
+          .setView([loc.lat, loc.lon], 15);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '© OpenStreetMap, © CARTO', maxZoom: 19
+        }).addTo(miniMap);
+        const icon = L.divIcon({
+          className: '',
+          html: `<svg width="24" height="34" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.30))">
+            <path d="M10 0C4.477 0 0 4.477 0 10c0 7 10 18 10 18S20 17 20 10C20 4.477 15.523 0 10 0z" fill="#5f1a44"/>
+            <circle cx="10" cy="10" r="4" fill="#f39900"/></svg>`,
+          iconSize: [24, 34], iconAnchor: [12, 34]
+        });
+        L.marker([loc.lat, loc.lon], { icon }).addTo(miniMap);
+
+        const { pricingHtml, chipsData, notesHtml } = renderInfoRows(loc.info);
+
+        const chipsEl = document.getElementById('parking-detail-chips');
+        if (chipsData.length) {
+          chipsEl.innerHTML = chipsData.map(c =>
+            `<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 13px;border-radius:999px;background:rgba(95,26,68,0.06);border:1px solid rgba(95,26,68,0.11);font-size:0.75rem;font-weight:500;color:var(--color-primary);">${c.icon}${c.line}</span>`
+          ).join('');
+        }
+
+        document.getElementById('parking-detail-pricing').innerHTML = pricingHtml + (notesHtml ? `<div style="margin-top:8px;opacity:0.6;">${notesHtml}</div>` : '');
+
+        const apps = loc.apps || [];
+        const areaCode = loc.area_code || null;
+        const areaCodeApps = ['easypark', 'parkster'];
+        const svgCopy = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+        const appDefs = {
+          easypark: { label:'EasyPark', color:'#009F4D', bg:'rgba(0,159,77,0.08)', border:'rgba(0,159,77,0.20)', img:'/Assets/Easypark.webp' },
+          parkster:  { label:'Parkster',  color:'#1A5EE8', bg:'rgba(26,94,232,0.08)', border:'rgba(26,94,232,0.20)', img:'/Assets/Parkster.jpeg' },
+          autopay:   { label:'Autopay',   color:'#5F1A44', bg:'rgba(95,26,68,0.08)',  border:'rgba(95,26,68,0.20)',  img:'/Assets/Autopay.png' },
+        };
+        document.getElementById('parking-detail-apps').innerHTML = `
+          <div style="display:flex;flex-direction:column;gap:5px;">
+            ${['easypark','parkster','autopay'].map(key => {
+              const def = appDefs[key];
+              const checked = apps.includes(key);
+              const showCode = areaCode && areaCodeApps.includes(key);
+              const codeHtml = showCode
+                ? `<span style="display:inline-flex;align-items:center;gap:3px;margin-left:auto;">
+                    <span style="font-size:0.68rem;font-weight:600;letter-spacing:0.04em;color:${def.color};opacity:0.85;">${areaCode}</span>
+                    <button onclick="(function(btn){navigator.clipboard.writeText('${areaCode}').then(()=>{btn.style.opacity='1';setTimeout(()=>{btn.style.opacity='0.5';},1200);})})(this)" title="Kopiera" style="background:none;border:none;cursor:pointer;padding:0;color:${def.color};opacity:0.5;display:flex;align-items:center;">${svgCopy}</button>
+                  </span>` : '';
+              const readMoreBtn = key === 'autopay' && checked
+                ? `<button onclick="openAutopayModal()" style="margin-left:auto;font-family:var(--font-main);font-size:0.66rem;font-weight:400;color:${def.color};background:none;border:none;cursor:pointer;padding:0;opacity:0.8;text-decoration:underline;text-underline-offset:2px;">Läs mer</button>` : '';
+              return `<div style="display:flex;align-items:center;gap:9px;padding:5px 8px;border-radius:8px;background:${checked ? def.bg : 'transparent'};border:1px solid ${checked ? def.border : 'rgba(95,26,68,0.07)'};opacity:${checked ? '1' : '0.3'};">
+                <img src="${def.img}" alt="${def.label}" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;${checked ? '' : 'filter:grayscale(1);'}">
+                <span style="font-size:0.78rem;font-weight:${checked ? '500' : '400'};color:${checked ? def.color : 'var(--color-primary)'};">${def.label}</span>
+                ${codeHtml}${readMoreBtn}
+              </div>`;
+            }).join('')}
+          </div>`;
+
+        const hyrUrl = hyrUrls[loc.name];
+        const kopUrl = kopUrls[loc.name];
+        const btnStyle = `display:inline-flex;align-items:center;gap:8px;margin-top:10px;margin-right:8px;padding:9px 18px;font-family:var(--font-main);font-size:0.76rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;opacity:0.92;transition:opacity 0.2s,transform 0.2s;`;
+        const arrowIcon = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+        document.getElementById('parking-detail-hyr').innerHTML =
+          (hyrUrl ? `<a href="${hyrUrl}" target="_blank" rel="noopener" style="${btnStyle}background:var(--color-primary);color:#fff;" onmouseover="this.style.opacity='1';this.style.transform='translateY(-1px)'" onmouseout="this.style.opacity='0.92';this.style.transform=''">${arrowIcon}Hyr p-plats</a>` : '') +
+          (kopUrl ? `<a href="${kopUrl}" target="_blank" rel="noopener" style="${btnStyle}background:transparent;color:var(--color-primary);border:1px solid var(--color-primary);" onmouseover="this.style.opacity='1';this.style.transform='translateY(-1px)'" onmouseout="this.style.opacity='0.92';this.style.transform=''">${arrowIcon}Köp ett p-tillstånd</a>` : '');
+
+        if (window.applyLang && window.getLang) window.applyLang(window.getLang());
+      })();
+    </script>
+  </body>
+</html>
