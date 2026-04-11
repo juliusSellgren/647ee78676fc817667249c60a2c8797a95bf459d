@@ -1,9 +1,8 @@
 :root {
   --color-primary: #5f1a44;
   --color-primary-dark: #4a1235;
-  /* Warm coal — used for large dark surfaces (nav, footer, dark cards) */
-  --color-coal: #2a2420;
-  --color-coal-mid: #3a3330;
+  --color-coal: #4a1235;
+  --color-coal-mid: #5f1a44;
   --color-accent: #f39900;
   --color-bg: #f3efe6;
   --font-main: "Roboto Slab", serif;
@@ -2771,10 +2770,8 @@ body.pg-home .cta-sub {
   gap: 0;
   flex-shrink: 0;
   padding: 16px 24px;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 100%),
-    url("images/hem2.png") center bottom/cover no-repeat;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-coal);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   width: 100%;
 }
 .flow-step {
