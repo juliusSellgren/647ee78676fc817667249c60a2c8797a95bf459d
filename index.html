@@ -1765,6 +1765,19 @@
       })();
     </script>
     <script>
+      /* ── Exact above-fold height using real nav height ── */
+      (function () {
+        function fitAboveFold() {
+          var nav = document.getElementById('main-nav');
+          var af  = document.getElementById('above-fold');
+          if (!nav || !af) return;
+          af.style.height = (window.innerHeight - nav.getBoundingClientRect().height) + 'px';
+        }
+        fitAboveFold();
+        window.addEventListener('resize', fitAboveFold);
+      })();
+    </script>
+    <script>
       var flowData = [
         {
           title: "Kör in",
