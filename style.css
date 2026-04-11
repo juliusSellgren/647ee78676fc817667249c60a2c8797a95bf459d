@@ -2929,8 +2929,8 @@ body.pg-home .cta-sub {
 /* ── Logo band ── */
 .logo-band {
   width: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-coal-mid);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 18px 0;
   overflow: hidden;
   flex-shrink: 0;
