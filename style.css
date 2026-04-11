@@ -1772,8 +1772,10 @@ body.pg-faq nav::after {
 
 body.pg-home .hero {
   position: relative;
-  flex: 1;
-  min-height: 0;
+  /* Size to content — never squash or clip */
+  flex: none;
+  width: 100%;
+  min-height: calc(100vh - var(--nav-h, 112px) - 72px);
   background:
     linear-gradient(
       180deg,
@@ -1787,8 +1789,7 @@ body.pg-home .hero {
   align-items: center;
   justify-content: center;
   padding: 80px 40px 100px;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible;
   isolation: isolate;
 }
 body.pg-home .hero::before {
@@ -7794,11 +7795,7 @@ a.card {
 
   /* Split hero — single column on mobile */
   body.pg-home .hero {
-    padding: 52px 20px 0;
-    min-height: unset;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: visible;
+    padding: 52px 20px 48px;
     justify-content: flex-start;
   }
   body.pg-home .hero-inner {
@@ -7915,6 +7912,83 @@ a.card {
   /* Buttons */
   .btn,
   .btn-cta { padding: 12px 22px; font-size: 0.75rem; }
+}
+
+/* =================================================================
+   Short viewports — compress hero so heading + flow strip always
+   visible without clipping, regardless of screen width.
+================================================================= */
+
+/* ── Step 1: mild compression at 800px tall ── */
+@media (max-height: 800px) {
+  body.pg-home .hero {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    justify-content: flex-start;
+  }
+  body.pg-home .hero-header { margin-bottom: 28px; }
+  body.pg-home .hero-inner { gap: 36px; }
+}
+
+/* ── Step 2: stronger compression at 700px tall ── */
+@media (max-height: 700px) {
+  body.pg-home .hero {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+  body.pg-home .hero-header { margin-bottom: 18px; }
+  body.pg-home .hero-header h1 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.2; }
+  body.pg-home .hero-header .hero-sub { font-size: 0.8rem; line-height: 1.45; }
+  body.pg-home .hero-inner { gap: 24px; }
+  body.pg-home .hero-widget-card { padding: 18px 18px 14px; }
+  .flow-step { padding: 8px 16px; gap: 5px; }
+  .flow-icon { width: 38px; height: 38px; }
+}
+
+/* ── Step 3: short viewports (any width) — flow strip floats up
+      so heading + flow strip are always in viewport ── */
+@media (max-height: 650px) {
+  /* Flow strip moves up — between heading and columns */
+  body.pg-home .flow-strip {
+    order: -1;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 8px 12px;
+    border-top: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 14px;
+    justify-content: center;
+  }
+  body.pg-home .hero {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
+  body.pg-home .hero-header {
+    margin-bottom: 10px;
+    order: -2;
+  }
+  body.pg-home .hero-header h1 { font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.15; }
+  body.pg-home .hero-header .hero-eyebrow { margin-bottom: 5px; }
+  body.pg-home .hero-header .hero-sub { display: none; }
+  body.pg-home .hero-inner { order: 0; }
+  /* Compact flow steps */
+  .flow-step { padding: 6px 12px; gap: 4px; }
+  .flow-icon { width: 28px; height: 28px; border-radius: 7px; }
+  .flow-label { font-size: 0.57rem; }
+  .flow-info-btn { display: none; }
+  .flow-arrow { opacity: 0.35; }
+  .flow-faktura-sep { display: none; }
+}
+
+/* ── Mobile-specific: also hide copy column at any height
+      so widget + flow strip fit without scrolling ── */
+@media (max-width: 768px) {
+  body.pg-home .hero-col--copy { display: none; }
+  body.pg-home .hero-inner { grid-template-columns: 1fr; }
 }
 
 /* =================================================================
