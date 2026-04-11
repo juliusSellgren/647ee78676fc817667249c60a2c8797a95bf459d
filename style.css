@@ -1773,7 +1773,14 @@ body.pg-home .hero {
   position: relative;
   flex: 1;
   min-height: 0;
-  background: url("images/hem2.png") center/cover no-repeat;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.25) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("images/hem2.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2760,10 +2767,13 @@ body.pg-home .cta-sub {
   justify-content: center;
   gap: 0;
   padding: 22px 0 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   width: calc(100% + 80px);
   margin-left: -40px;
   margin-right: -40px;
+  background: rgba(20, 6, 14, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .flow-step {
   display: flex;
