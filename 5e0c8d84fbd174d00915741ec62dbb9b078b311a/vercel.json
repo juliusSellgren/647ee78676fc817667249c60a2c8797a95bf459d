@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/parking/:slug", "destination": "/parking/index.html" }
-  ]
-}
