@@ -30,8 +30,9 @@ body {
   color: var(--color-primary);
 }
 #above-fold {
-  height: calc(100vh - var(--nav-h, 112px));
-  overflow: hidden;
+  min-height: calc(100vh - var(--nav-h, 112px));
+  overflow-x: hidden;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
 }
@@ -1786,7 +1787,8 @@ body.pg-home .hero {
   align-items: center;
   justify-content: center;
   padding: 80px 40px 100px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   isolation: isolate;
 }
 body.pg-home .hero::before {
@@ -7763,8 +7765,8 @@ a.card {
 
   nav { padding: 16px 20px; }
 
-  /* Above-fold fills viewport */
-  #above-fold { height: calc(100svh - var(--nav-h, 73px)); }
+  /* Above-fold: min-height so content is never clipped */
+  #above-fold { min-height: calc(100svh - var(--nav-h, 73px)); height: auto; }
 
   /* Hero */
   .hero { padding: 28px 20px 0; }
@@ -7792,8 +7794,11 @@ a.card {
 
   /* Split hero — single column on mobile */
   body.pg-home .hero {
-    padding: 48px 20px 56px;
+    padding: 52px 20px 0;
     min-height: unset;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
     justify-content: flex-start;
   }
   body.pg-home .hero-inner {
