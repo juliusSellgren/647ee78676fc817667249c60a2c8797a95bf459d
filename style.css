@@ -37,6 +37,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+body.pg-home #above-fold {
+  background: url("images/hem2.png") center/cover no-repeat;
+}
 nav {
   position: relative;
   flex-shrink: 0;
@@ -1780,9 +1783,8 @@ body.pg-home .hero {
       180deg,
       rgba(0, 0, 0, 0.45) 0%,
       rgba(0, 0, 0, 0.25) 50%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
-    url("images/hem2.png") center/cover no-repeat;
+      rgba(0, 0, 0, 0.4) 100%
+    );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2770,8 +2772,8 @@ body.pg-home .cta-sub {
   gap: 0;
   flex-shrink: 0;
   padding: 16px 24px;
-  background: var(--color-coal);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   width: 100%;
 }
 .flow-step {
@@ -2927,8 +2929,8 @@ body.pg-home .cta-sub {
 /* ── Logo band ── */
 .logo-band {
   width: 100%;
-  background: var(--color-coal-mid);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 18px 0;
   overflow: hidden;
   flex-shrink: 0;
