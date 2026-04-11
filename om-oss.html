@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Parkman – Parkman</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-32x32.png"
+      size="32"
+    />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      href="images/favicon/cropped-favicon-180x180.png"
+      sizes="180x180"
+    />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div class="nav-orb"></div>
+      <a href="index.html"
+        ><img
+          src="Brand_assets/Logo.png"
+          alt="Parkman"
+          class="nav-logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="parkeringar.html">Våra parkeringar</a></li>
+        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+        <li><a href="autopay.html">Autopay</a></li>
+        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li class="nav-has-dropdown">
+          <a href="kontakt.html">Kontakt</a>
+          <ul class="nav-dropdown">
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="kvitton.html">Kvitto</a></li>
+        <li class="nav-has-dropdown">
+          <a href="mina-sidor.html">Mina sidor</a>
+          <ul class="nav-dropdown">
+            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li>
+              <a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a>
+            </li>
+          </ul>
+        </li>
+        <li class="lang-switcher">
+          <div class="lang-toggle" translate="no">
+            <button
+              class="lang-opt lang-se lang-active"
+              onclick="setLang('sv')"
+            >
+              SE
+            </button>
+            <span class="lang-divider">|</span>
+            <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sticky section navigation -->
+    <div class="om-section-nav" id="om-section-nav">
+      <a href="#om-parkman" class="om-section-link active">Om Parkman</a>
+      <a href="#nyheter" class="om-section-link">Nyheter</a>
+      <a href="#affarside" class="om-section-link">Affärsidé</a>
+      <a href="#taxiremote" class="om-section-link">Taxiremote</a>
+      <a href="#uppforandekod" class="om-section-link">Uppförandekod</a>
+    </div>
+
+    <div class="page-content">
+
+      <!-- ── Section 1: Om Parkman ── -->
+      <div id="om-parkman" class="page-section page-section--intro">
+        <p class="section-label">Om oss</p>
+        <h1 class="section-h1">Om Parkman</h1>
+
+        <!-- Stats bar -->
+        <div style="display:flex;gap:0;margin-bottom:40px;border:1px solid rgba(95,26,68,0.1);border-radius:8px;overflow:hidden;">
+          <div style="flex:1;padding:28px 24px;text-align:center;border-right:1px solid rgba(95,26,68,0.1);">
+            <div style="font-family:'Roboto Slab',serif;font-size:2rem;font-weight:700;color:var(--color-primary);letter-spacing:-0.02em;">2010</div>
+            <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-top:6px;">Grundat</div>
+          </div>
+          <div style="flex:1;padding:28px 24px;text-align:center;border-right:1px solid rgba(95,26,68,0.1);">
+            <div style="font-family:'Roboto Slab',serif;font-size:2rem;font-weight:700;color:var(--color-primary);letter-spacing:-0.02em;">95</div>
+            <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-top:6px;">Anställda</div>
+          </div>
+          <div style="flex:1;padding:28px 24px;text-align:center;">
+            <div style="font-family:'Roboto Slab',serif;font-size:2rem;font-weight:700;color:var(--color-primary);letter-spacing:-0.02em;">88</div>
+            <div style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-top:6px;">ANPR-anläggningar</div>
+          </div>
+        </div>
+
+        <p class="intro-lead">
+          Parkman i Sverige AB är ett svenskt företag som specialiserat sig på att skapa, utveckla och driva moderna och kompletta parkeringslösningar med ett brett utbud av både tekniska och operativa tjänster.
+        </p>
+        <p class="intro-body">
+          Med över 80 anställda och verksamhet i flertalet svenska städer, erbjuder Parkman tillgång till trygga parkeringslösningar med förstklassig service. Parkman är idag marknadsledande inom kamerabaserad parkering och betjänar en mångsidig portfölj av fastigheter, inklusive köpcentrum, destinationer, kontor och bostadsområden.
+        </p>
+        <p class="intro-body">
+          Parkman grundades 2010 med en vision om att erbjuda ett mer personligt och serviceinriktat alternativ inom parkeringsbranschen. Sedan dess har Parkman expanderat snabbt och etablerat sig som en branschledande aktör på den svenska marknaden.
+        </p>
+        <p class="intro-body">
+          Parkman omsätter närmare 650 miljoner kronor och har idag över 200 kunder med ett 90-tal ANPR-anläggningar i drift, från Malmö i söder till Hudiksvall i norr. Parkman ägs idag av Procuritas och Indigo Management AS.
+        </p>
+      </div>
+
+      <!-- ── Section 2: Nyheter ── -->
+      <div id="nyheter" class="page-section page-section--pb64">
+        <div class="box-white">
+          <h2 class="section-h2">Nyheter</h2>
+          <p class="box-sub">Senaste nytt från Parkman</p>
+          <div style="border-left:3px solid var(--color-accent);padding-left:20px;margin-bottom:28px;">
+            <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);">
+              Håll dig uppdaterad om Parkmans senaste nyheter, lanserade tjänster och pressmeddelanden. Besök
+              <a href="https://parkman.nu/nyheter" target="_blank" style="color:var(--color-primary);font-weight:600;text-decoration:underline;">parkman.nu/nyheter</a>
+              för fullständigt nyhetsarkiv.
+            </p>
+          </div>
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.7;color:var(--color-primary);">
+            Vi fortsätter att växa och utveckla vår verksamhet med nya parkeringsanläggningar, förbättrade digitala tjänster och utökat kundstöd runtom i Sverige.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── Section 3: Affärsidé ── -->
+      <div id="affarside" class="page-section page-section--pb64">
+        <div class="box-burgundy">
+          <h2 class="section-h2--white">Affärsidé</h2>
+          <p class="box-sub--dark">Vår vision och strategi</p>
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div style="padding:28px;background:rgba(255,255,255,0.07);border-radius:6px;border-left:3px solid var(--color-accent);">
+              <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.55;color:#fff;margin-bottom:10px;">Vision</p>
+              <p style="font-size:1rem;line-height:1.8;font-weight:300;color:rgba(255,255,255,0.9);font-style:italic;">"Med innovation, enkelhet och personlig service skapar vi framtidens parkeringsupplevelser."</p>
+            </div>
+            <div style="padding:28px;background:rgba(255,255,255,0.07);border-radius:6px;border-left:3px solid rgba(255,255,255,0.3);">
+              <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.55;color:#fff;margin-bottom:10px;">Mission</p>
+              <p style="font-size:0.95rem;line-height:1.85;font-weight:300;color:rgba(255,255,255,0.85);">"Genom kunskap, ett personligt bemötande och innovativa tekniska lösningar erbjuder vi marknadsledande parkeringstjänster till fastighetsägare. Med fokus på ett optimalt nyttjande av parkeringen och en smidig kundresa skapar vi mervärde för våra partners."</p>
+            </div>
+            <div style="padding:28px;background:rgba(255,255,255,0.07);border-radius:6px;border-left:3px solid rgba(255,255,255,0.15);">
+              <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.55;color:#fff;margin-bottom:10px;">Affärsidé</p>
+              <p style="font-size:0.95rem;line-height:1.85;font-weight:300;color:rgba(255,255,255,0.85);">"Vi driver och utvecklar din parkeringsanläggning genom att kombinera marknadsledande teknik med kunskap och personlig service."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Section 4: Taxiremote ── -->
+      <div id="taxiremote" class="page-section page-section--pb64">
+        <div class="box-white">
+          <h2 class="section-h2">Taxiremote</h2>
+          <p class="box-sub">Taxihantering på Arlanda &amp; Bromma</p>
+          <img
+            src="images/taxiRemote.jpeg"
+            alt="Taxiremote på Arlanda"
+            style="width:100%;max-height:300px;object-fit:cover;border-radius:6px;margin-bottom:28px;"
+          />
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);margin-bottom:18px;">
+            Parkman har sedan den 1:a januari 2020 fått förtroendet av Swedavia, att ta hand om all Taxiverksamhet på Arlanda och Bromma. Detta innebär att Parkman skall se till att resenärer som kommer till Arlanda eller Bromma får hjälp med att hitta en Taxi för vidare färd. Det kan vara många olika önskemål om special bilar som kan hantera barnstol, hund, rullstol, stor familj. Det är vår Taxivärds och dennes medhjälpares uppgift att försöka lösa kundens önskemål tillsammans med rätt taxichaufför.
+          </p>
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);margin-bottom:18px;">
+            För att kunna göra detta måste våra taxivärdar se till att det alltid finns tillräckligt med taxibilar i respektive taxificka vid varje terminal och att det är ordning och reda så alla står på rätt platser. Det gäller också att ha koll på vilka bilar som finns för att snabbt kunna tillgodose kundernas behov.
+          </p>
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);margin-bottom:18px;">
+            Parkman sköter förutom detta kommunikationen med de olika Taxibolagen vad gäller nya bilar och olika tillstånd som kan behövas. Det är en mängd saker som skall gås igenom där icke minst de frågor som rör vår miljö är extremt viktiga.
+          </p>
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);">
+            Till slut så rapporterar Parkman all Statistik vidare till Swedavia för att hela tiden kunna utvärdera om något kan göras bättre för våra kunder. Parkman kommer med olika förslag på förbättringar för både resenärer, taxichafförer och Swedavia.
+          </p>
+        </div>
+      </div>
+
+      <!-- ── Section 5: Uppförandekod ── -->
+      <div id="uppforandekod" class="page-section page-section--pb72">
+        <div class="box-white">
+          <h2 class="section-h2">Uppförandekod</h2>
+          <p class="box-sub">Våra värderingar och etik</p>
+          <p style="font-size:0.95rem;line-height:1.85;font-weight:400;opacity:0.8;color:var(--color-primary);margin-bottom:28px;">
+            Parkman strävar efter att bedriva sin verksamhet med högsta möjliga etiska standard. Vår uppförandekod definierar de grundläggande värderingar och principer som styr hur vi agerar gentemot kunder, medarbetare, partners och samhället i stort.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="padding:24px;border:1px solid rgba(95,26,68,0.1);border-radius:6px;">
+              <p style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-bottom:10px;">Integritet</p>
+              <p style="font-size:0.9rem;line-height:1.7;font-weight:400;opacity:0.75;color:var(--color-primary);">Vi agerar alltid ärligt och transparent i alla affärsrelationer.</p>
+            </div>
+            <div style="padding:24px;border:1px solid rgba(95,26,68,0.1);border-radius:6px;">
+              <p style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-bottom:10px;">Respekt</p>
+              <p style="font-size:0.9rem;line-height:1.7;font-weight:400;opacity:0.75;color:var(--color-primary);">Vi behandlar alla med värdighet och respekt, oavsett bakgrund eller roll.</p>
+            </div>
+            <div style="padding:24px;border:1px solid rgba(95,26,68,0.1);border-radius:6px;">
+              <p style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-bottom:10px;">Ansvar</p>
+              <p style="font-size:0.9rem;line-height:1.7;font-weight:400;opacity:0.75;color:var(--color-primary);">Vi tar ansvar för vår påverkan på miljö, samhälle och de människor vi möter.</p>
+            </div>
+            <div style="padding:24px;border:1px solid rgba(95,26,68,0.1);border-radius:6px;">
+              <p style="font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.45;color:var(--color-primary);margin-bottom:10px;">Kvalitet</p>
+              <p style="font-size:0.9rem;line-height:1.7;font-weight:400;opacity:0.75;color:var(--color-primary);">Vi levererar alltid med hög kvalitet och strävar kontinuerligt efter förbättring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA section -->
+    <section class="page-cta">
+      <div class="page-cta-grid">
+        <!-- Vänster: Bild med textöverlay -->
+        <div class="cta-image-panel">
+          <img
+            src="images/varaparkeringar.png"
+            alt="Våra parkeringar"
+            class="cta-image"
+          />
+          <div class="cta-image-overlay"></div>
+          <div class="cta-image-content">
+            <p class="cta-image-label">Våra parkeringar</p>
+            <h2 class="cta-image-heading">
+              Letar du efter en parkeringsplats?
+            </h2>
+            <p class="cta-image-desc">
+              Vi erbjuder parkeringsplatser runt om i Sverige.
+            </p>
+            <a href="parkeringar.html" class="cta-image-link">
+              Gå till våra parkeringar
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Höger: Två staplade kort -->
+        <div class="cta-cards">
+          <!-- Kort 1: Fastighetsägare – lila bakgrund -->
+          <div class="cta-card-dark">
+            <svg
+              class="cta-card-icon"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.5"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+            <h3 class="cta-card-h3">För fastighetsägare</h3>
+            <p class="cta-card-desc">
+              Läs om hur vi hjälper fastighetsägare med hela parkeringslösningen — från projektering till daglig drift.
+            </p>
+            <a href="fastighetsagare.html" class="cta-card-link">
+              Läs mer
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Kort 2: Kontakt – vit bakgrund -->
+          <div class="cta-card-light">
+            <svg
+              class="cta-card-icon--light"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--color-primary)"
+              stroke-width="1.5"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <h3 class="cta-card-h3--light">Kontakta oss</h3>
+            <p class="cta-card-desc--light">
+              Har du frågor om Parkman? Hör av dig till
+              <a href="mailto:info@parkman.nu" class="cta-contact-link"
+                >info@parkman.nu</a
+              >
+              så hjälper vi dig.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="Brand_assets/Logo.png"
+              alt="Parkman"
+              class="footer-logo"
+            />
+            <p class="footer-tagline">
+              Sveriges ledande parkeringsförvaltare — vi sköter hela kedjan från
+              installation till kundservice.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://sv-se.facebook.com/parkmanisverigeab/"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/parkman-i-sverige-ab/"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tjänster -->
+          <div class="footer-col">
+            <h6>Tjänster</h6>
+            <ul>
+              <li><a href="parkeringar.html">Våra parkeringar</a></li>
+              <li><a href="anpr.html">ANPR</a></li>
+              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+            </ul>
+          </div>
+
+          <!-- Företaget -->
+          <div class="footer-col">
+            <h6>Företaget</h6>
+            <ul>
+              <li><a href="om-oss.html">Om oss</a></li>
+              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontakt -->
+          <div class="footer-col">
+            <h6>Kontakt</h6>
+            <div class="footer-contact-list">
+              <a href="tel:0873490000" class="footer-contact-item">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>08 734 90 00</span>
+              </a>
+              <a href="mailto:info@parkman.nu" class="footer-contact-item">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>info@parkman.nu</span>
+              </a>
+              <div class="footer-contact-item footer-contact-muted">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+                <span>Mån–fre 08:00–20:00</span>
+              </div>
+            </div>
+            <div class="footer-badge">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span>Auktoriserat parkeringsbolag</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
+          <div class="footer-bottom-links">
+            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
+            <a href="integritetspolicy.html">Integritetspolicy</a>
+            <a href="cookies.html">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="lang.js"></script>
+    <script>
+      // Highlight active section in subnav as user scrolls
+      (function () {
+        var ids = ['om-parkman', 'nyheter', 'affarside', 'taxiremote', 'uppforandekod'];
+        var links = {};
+        ids.forEach(function (id) {
+          links[id] = document.querySelector('.om-section-link[href="#' + id + '"]');
+        });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              ids.forEach(function (id) { links[id] && links[id].classList.remove('active'); });
+              links[e.target.id] && links[e.target.id].classList.add('active');
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        ids.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) observer.observe(el);
+        });
+      })();
+    </script>
+  </body>
+</html>
