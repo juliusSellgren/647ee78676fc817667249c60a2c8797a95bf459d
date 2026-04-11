@@ -2777,11 +2777,18 @@ body.pg-home .cta-sub {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 10px 28px;
+  padding: 14px 28px;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.flow-step:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 .flow-icon {
   width: 52px;
@@ -2814,26 +2821,26 @@ body.pg-home .cta-sub {
   flex-shrink: 0;
 }
 .flow-info-btn {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
   cursor: pointer;
+  font-family: var(--font-main);
   font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
-  padding: 2px 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(255, 255, 255, 0.35);
-  transition:
-    color 0.15s ease,
-    text-decoration-color 0.15s ease;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 5px 14px;
+  text-decoration: none;
   white-space: nowrap;
+  display: inline-block;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .flow-info-btn:hover {
-  color: rgba(255, 255, 255, 0.95);
-  text-decoration-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
 }
 
 /* ── Flow overlay ── */
@@ -8110,21 +8117,9 @@ html { overflow-x: hidden; }
 body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 
-/* ── Faktura as flow-step ── */
-.flow-faktura-sep {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  opacity: 0.6;
-}
+/* ── Faktura step ── */
 .flow-step--faktura {
-  cursor: pointer;
   outline: none;
-  border: 1px solid rgba(255,255,255,0.25);
-}
-.flow-step--faktura:hover {
-  background: rgba(255,255,255,0.18);
-  border-color: rgba(255,255,255,0.4);
 }
 .flow-step--faktura:focus-visible {
   border-color: rgba(255,255,255,0.7);
@@ -8132,14 +8127,6 @@ img { max-width: 100%; height: auto; }
 }
 .flow-step--faktura:active {
   transform: scale(0.97);
-}
-.flow-faktura-cta {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.6);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-top: 4px;
 }
 
 /* ── Faktura-knapp (hero) — kept for reference ── */
