@@ -8110,7 +8110,39 @@ html { overflow-x: hidden; }
 body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 
-/* ── Faktura-knapp (hero) ── */
+/* ── Faktura as flow-step ── */
+.flow-faktura-sep {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+.flow-step--faktura {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.flow-step--faktura:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.4);
+}
+.flow-step--faktura:focus-visible {
+  border-color: rgba(255,255,255,0.7);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+}
+.flow-step--faktura:active {
+  transform: scale(0.97);
+}
+.flow-faktura-cta {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Faktura-knapp (hero) — kept for reference ── */
 .faktura-btn {
   display: inline-flex;
   align-items: center;
