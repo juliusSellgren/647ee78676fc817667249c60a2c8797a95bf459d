@@ -1,6 +1,9 @@
 :root {
   --color-primary: #5f1a44;
   --color-primary-dark: #4a1235;
+  /* Warm coal — used for large dark surfaces (nav, footer, dark cards) */
+  --color-coal: #2a2420;
+  --color-coal-mid: #3a3330;
   --color-accent: #f39900;
   --color-bg: #f3efe6;
   --font-main: "Roboto Slab", serif;
@@ -43,7 +46,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   padding: 28px 60px;
-  background: var(--color-primary-dark);
+  background: var(--color-coal);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   transition:
     background 0.4s,
@@ -103,7 +106,7 @@ nav::after {
   }
 }
 nav.scrolled {
-  background: var(--color-primary-dark);
+  background: var(--color-coal);
   box-shadow: 0 4px 24px rgba(var(--primary-rgb), 0.3);
 }
 .nav-orb {
@@ -195,7 +198,7 @@ nav.scrolled {
   top: calc(100% + 20px);
   right: 0;
   min-width: 180px;
-  background: var(--color-primary-dark);
+  background: var(--color-coal-mid);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -219,7 +222,7 @@ nav.scrolled {
   right: 18px;
   width: 12px;
   height: 12px;
-  background: var(--color-primary-dark);
+  background: var(--color-coal-mid);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 2px;
@@ -702,7 +705,7 @@ nav.scrolled {
     0 0 0 3px rgba(243, 153, 0, 0.55);
 }
 footer {
-  background: var(--color-primary-dark);
+  background: var(--color-coal);
   border-top: 3px solid var(--color-accent);
   position: relative;
   z-index: 1;
@@ -1415,7 +1418,7 @@ body.pg-faq nav::after {
 
 /* ── Page hero ── */
 .page-hero {
-  background: var(--color-primary);
+  background: var(--color-coal);
   padding: 140px 60px 80px;
   text-align: center;
   position: relative;
@@ -2866,7 +2869,7 @@ body.pg-home .cta-sub {
   visibility: visible;
 }
 .flow-overlay-card {
-  background: var(--color-primary-dark, #3a0f2a);
+  background: var(--color-coal);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 40px 44px;
@@ -2927,7 +2930,7 @@ body.pg-home .cta-sub {
 /* ── Logo band ── */
 .logo-band {
   width: 100%;
-  background: var(--color-primary-dark);
+  background: var(--color-coal-mid);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 18px 0;
   overflow: hidden;
@@ -7689,7 +7692,7 @@ a.card {
     align-items: stretch;
     gap: 0;
     margin: 0;
-    background: var(--color-primary-dark);
+    background: var(--color-coal);
     border-top: 1px solid rgba(255, 255, 255, 0.07);
     border-bottom: 3px solid var(--color-accent);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
