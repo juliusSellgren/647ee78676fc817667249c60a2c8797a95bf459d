@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkman – Hem</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon/cropped-favicon-32x32.png" size="32" />
+    <link rel="icon" href="images/favicon/cropped-favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" href="images/favicon/cropped-favicon-180x180.png" sizes="180x180" />
+    <style>
+      /* ── Index2 – page-specific styles ── */
+
+      /* Reset body for full-width scrollable layout */
+      body.pg-home2 {
+        background: #fff;
+        overflow-x: hidden;
+      }
+
+      /* ─── HERO ─────────────────────────────── */
+      .i2-hero {
+        position: relative;
+        height: calc(100vh - var(--nav-h, 112px));
+        min-height: 520px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .i2-hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('images/hem2.png');
+        background-size: cover;
+        background-position: center 30%;
+        transform: scale(1.04);
+        transition: transform 8s ease-out;
+      }
+      .i2-hero-bg.loaded { transform: scale(1); }
+      .i2-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          rgba(20, 6, 14, 0.72) 0%,
+          rgba(95, 26, 68, 0.55) 60%,
+          rgba(20, 6, 14, 0.85) 100%
+        );
+      }
+      .i2-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 0 24px;
+        max-width: 800px;
+      }
+      .i2-hero-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #f39900;
+        font-weight: 500;
+        margin-bottom: 20px;
+        opacity: 0.9;
+      }
+      .i2-hero-h1 {
+        font-family: 'Roboto Slab', serif;
+        font-size: clamp(2.4rem, 6vw, 4.2rem);
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+      }
+      .i2-hero-h1 em {
+        font-style: normal;
+        color: #f39900;
+      }
+      .i2-hero-sub {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.75);
+        font-weight: 300;
+        max-width: 540px;
+        margin: 0 auto 36px;
+      }
+      .i2-hero-btns {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .i2-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f39900;
+        color: #fff;
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 4px;
+        transition: background 0.2s, transform 0.15s;
+      }
+      .i2-btn-primary:hover { background: #e08a00; transform: translateY(-1px); }
+      .i2-btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.88rem;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 4px;
+        border: 1.5px solid rgba(255,255,255,0.35);
+        transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      }
+      .i2-btn-ghost:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+
+      /* Scroll indicator */
+      .i2-scroll-hint {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        opacity: 0.45;
+        animation: i2scrollbounce 2s ease-in-out infinite;
+      }
+      .i2-scroll-hint span {
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      @keyframes i2scrollbounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(6px); }
+      }
+
+      /* Logo band inuti hero — placeras i absolut botten */
+      .i2-hero-logoband {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        margin: 0;
+        width: 100%;
+      }
+
+      /* ─── STATS BAR ──────────────────────────── */
+      .i2-stats {
+        background: #5f1a44;
+        padding: 52px 40px;
+      }
+      .i2-stats-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .i2-stat {
+        text-align: center;
+        padding: 20px 16px;
+        border-right: 1px solid rgba(255,255,255,0.12);
+      }
+      .i2-stat:last-child { border-right: none; }
+      .i2-stat-num {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #f39900;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .i2-stat-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.5);
+      }
+
+      /* ─── INTRO STRIP ────────────────────────── */
+      .i2-intro {
+        background: #f3efe6;
+        padding: 80px 40px;
+      }
+      .i2-intro-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: center;
+      }
+      .i2-intro-tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #f39900;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .i2-intro-h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #5f1a44;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+      }
+      .i2-intro-body {
+        font-size: 0.95rem;
+        line-height: 1.85;
+        color: #5f1a44;
+        opacity: 0.75;
+        font-weight: 300;
+        margin-bottom: 16px;
+      }
+      .i2-intro-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #5f1a44;
+        text-decoration: none;
+        border-bottom: 1.5px solid #f39900;
+        padding-bottom: 2px;
+        transition: opacity 0.2s;
+      }
+      .i2-intro-link:hover { opacity: 0.65; }
+      .i2-intro-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 16px 48px rgba(95,26,68,0.18);
+      }
+
+      /* ─── SERVICES ───────────────────────────── */
+      .i2-services {
+        background: #fff;
+        padding: 80px 40px;
+      }
+      .i2-section-header {
+        text-align: center;
+        max-width: 560px;
+        margin: 0 auto 56px;
+      }
+      .i2-section-tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #f39900;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .i2-section-h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #5f1a44;
+        letter-spacing: -0.025em;
+        line-height: 1.25;
+      }
+      .i2-cards {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .i2-card {
+        background: #f3efe6;
+        border-radius: 8px;
+        padding: 36px 32px;
+        border: 1px solid rgba(95,26,68,0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .i2-card:hover {
+        box-shadow: 0 12px 36px rgba(95,26,68,0.12);
+        transform: translateY(-3px);
+      }
+      .i2-card-icon {
+        width: 48px;
+        height: 48px;
+        background: #5f1a44;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .i2-card-h3 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #5f1a44;
+        line-height: 1.3;
+      }
+      .i2-card-p {
+        font-size: 0.88rem;
+        line-height: 1.75;
+        color: #5f1a44;
+        opacity: 0.7;
+        font-weight: 300;
+        flex: 1;
+      }
+      .i2-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.76rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #5f1a44;
+        text-decoration: none;
+        margin-top: auto;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+      .i2-card-link:hover { opacity: 1; }
+
+      /* ─── IMAGE SPLIT: FASTIGHETSÄGARE ───────── */
+      .i2-split {
+        background: #5f1a44;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 520px;
+      }
+      .i2-split-img {
+        position: relative;
+        overflow: hidden;
+      }
+      .i2-split-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.85);
+      }
+      .i2-split-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent 60%, #5f1a44 100%);
+      }
+      .i2-split-text {
+        padding: 72px 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .i2-split-tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #f39900;
+        font-weight: 600;
+        margin-bottom: 16px;
+        opacity: 0.9;
+      }
+      .i2-split-h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+      }
+      .i2-split-body {
+        font-size: 0.92rem;
+        line-height: 1.85;
+        color: rgba(255,255,255,0.7);
+        font-weight: 300;
+        margin-bottom: 32px;
+      }
+      .i2-split-checks {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .i2-split-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.88rem;
+        color: rgba(255,255,255,0.8);
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      .i2-split-check svg { flex-shrink: 0; margin-top: 2px; }
+
+      /* ─── HYR P-PLATS CTA ────────────────────── */
+      .i2-hyr {
+        background: #f3efe6;
+        padding: 72px 40px;
+      }
+      .i2-hyr-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .i2-hyr-img {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        box-shadow: 0 20px 56px rgba(95,26,68,0.2);
+      }
+      .i2-hyr-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .i2-hyr-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(95,26,68,0.1), transparent 60%);
+      }
+      .i2-hyr-badge {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: #f39900;
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 6px 12px;
+        border-radius: 3px;
+        z-index: 1;
+      }
+
+      /* ─── HOW IT WORKS ───────────────────────── */
+      .i2-how {
+        background: #fff;
+        padding: 80px 40px;
+      }
+      .i2-steps {
+        max-width: 840px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+        position: relative;
+      }
+      .i2-steps::before {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: calc(100% / 6);
+        right: calc(100% / 6);
+        height: 1px;
+        background: rgba(95,26,68,0.12);
+        pointer-events: none;
+      }
+      .i2-step {
+        text-align: center;
+        position: relative;
+      }
+      .i2-step-num {
+        width: 44px;
+        height: 44px;
+        background: #5f1a44;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+        margin: 0 auto 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .i2-step-h3 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #5f1a44;
+        margin-bottom: 10px;
+      }
+      .i2-step-p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: #5f1a44;
+        opacity: 0.65;
+        font-weight: 300;
+      }
+
+      /* ─── FINAL CTA ──────────────────────────── */
+      .i2-cta {
+        background: #5f1a44;
+        padding: 88px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .i2-cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 60% at 20% 50%, rgba(243,153,0,0.08), transparent),
+          radial-gradient(ellipse 50% 80% at 80% 30%, rgba(255,255,255,0.04), transparent);
+        pointer-events: none;
+      }
+      .i2-cta-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .i2-cta-h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        margin-bottom: 16px;
+      }
+      .i2-cta-sub {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.65);
+        font-weight: 300;
+        margin-bottom: 36px;
+      }
+      .i2-cta-btns {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* ─── RESPONSIVE ─────────────────────────── */
+      @media (max-width: 900px) {
+        .i2-stats-inner { grid-template-columns: repeat(2, 1fr); }
+        .i2-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .i2-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.12); }
+        .i2-intro-inner { grid-template-columns: 1fr; gap: 36px; }
+        .i2-intro-img { order: -1; aspect-ratio: 16/9; }
+        .i2-cards { grid-template-columns: 1fr; max-width: 480px; }
+        .i2-split { grid-template-columns: 1fr; }
+        .i2-split-img { aspect-ratio: 16/9; }
+        .i2-split-img::after { display: none; }
+        .i2-split-text { padding: 48px 36px; }
+        .i2-hyr-inner { grid-template-columns: 1fr; }
+        .i2-steps { grid-template-columns: 1fr; max-width: 360px; }
+        .i2-steps::before { display: none; }
+      }
+      @media (max-width: 600px) {
+        .i2-hero-h1 { font-size: 2rem; }
+        .i2-stats { padding: 40px 24px; }
+        .i2-intro, .i2-services, .i2-how, .i2-hyr, .i2-logos, .i2-cta { padding-left: 24px; padding-right: 24px; }
+        .i2-split-text { padding: 40px 24px; }
+        .i2-stat:nth-child(odd) { border-right: none; }
+        .i2-stats-inner { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </head>
+  <body class="pg-home2">
+    <nav id="main-nav">
+      <div class="nav-orb"></div>
+      <a href="index.html"
+        ><img src="Brand_assets/Logo.png" alt="Parkman" class="nav-logo"
+      /></a>
+      <ul class="nav-links">
+        <li><a href="parkeringar.html">Våra parkeringar</a></li>
+        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+        <li><a href="autopay.html">Autopay</a></li>
+        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li class="nav-has-dropdown">
+          <a href="kontakt.html">Kontakt</a>
+          <ul class="nav-dropdown">
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="kvitton.html">Kvitto</a></li>
+        <li class="nav-has-dropdown">
+          <a href="mina-sidor.html">Mina sidor</a>
+          <ul class="nav-dropdown">
+            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li><a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a></li>
+          </ul>
+        </li>
+        <li class="lang-switcher">
+          <div class="lang-toggle" translate="no">
+            <button class="lang-opt lang-se lang-active" onclick="setLang('sv')">SE</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="i2-hero">
+      <div class="i2-hero-bg" id="heroBg"></div>
+      <div class="i2-hero-overlay"></div>
+      <div class="i2-hero-content">
+        <p class="i2-hero-eyebrow">Parkman i Sverige AB</p>
+        <h1 class="i2-hero-h1">
+          Parkering som<br><em>fungerar</em> — varje gång
+        </h1>
+        <p class="i2-hero-sub">
+          Kameran känner igen dig. Bommen öppnar sig. Du parkerar och går. Ingen app, inga lappar — bara smidig vardag.
+        </p>
+        <div class="i2-hero-btns">
+          <a href="parkeringar.html" class="i2-btn-primary">
+            Hitta parkering
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="fastighetsagare.html" class="i2-btn-ghost">
+            För fastighetsägare
+          </a>
+        </div>
+      </div>
+      <div class="i2-scroll-hint">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <span>Bläddra</span>
+      </div>
+
+      <!-- ── Logo band inuti hero ── -->
+      <div class="logo-band i2-hero-logoband">
+        <p class="logo-band-label">Anlitats av</p>
+        <div class="logo-track-wrap">
+          <div class="logo-track">
+            <span class="logo-item"><img src="images/logos/fabege-svart-logotyp.png" alt="Fabege" /></span>
+            <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg" alt="Västerås Stad" /></span>
+            <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/nacka-forum.png" alt="Nacka Forum" class="logo-scale" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/sollentuna-centrum.png" alt="Sollentuna Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/tumba-centrum.png" alt="Tumba Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/vasby-centrum.png" alt="Väsby Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/Balder.png" alt="Balder" class="logo-scale" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/newsec.png" alt="Newsec" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/storebrand.png" alt="Storebrand" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <!-- duplicate for seamless loop -->
+            <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/nacka-forum.png" alt="Nacka Forum" class="logo-scale" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/sollentuna-centrum.png" alt="Sollentuna Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/tumba-centrum.png" alt="Tumba Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/vasby-centrum.png" alt="Väsby Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/Balder.png" alt="Balder" class="logo-scale" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/newsec.png" alt="Newsec" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/storebrand.png" alt="Storebrand" /></span>
+            <span class="logo-item logo-item-dot">·</span>
+            <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg" alt="Västerås Stad" /></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS ── -->
+    <div class="i2-stats">
+      <div class="i2-stats-inner">
+        <div class="i2-stat">
+          <div class="i2-stat-num">2010</div>
+          <div class="i2-stat-label">Grundat</div>
+        </div>
+        <div class="i2-stat">
+          <div class="i2-stat-num">95+</div>
+          <div class="i2-stat-label">Anställda</div>
+        </div>
+        <div class="i2-stat">
+          <div class="i2-stat-num">88</div>
+          <div class="i2-stat-label">ANPR-anläggningar</div>
+        </div>
+        <div class="i2-stat">
+          <div class="i2-stat-num">200+</div>
+          <div class="i2-stat-label">Kunder</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── INTRO ── -->
+    <section class="i2-intro">
+      <div class="i2-intro-inner">
+        <div>
+          <p class="i2-intro-tag">Om Parkman</p>
+          <h2 class="i2-intro-h2">Marknadsledande inom kamerabaserad parkering</h2>
+          <p class="i2-intro-body">
+            Parkman i Sverige AB skapar, utvecklar och driver moderna parkeringslösningar med ett brett utbud av tekniska och operativa tjänster — från Malmö i söder till Hudiksvall i norr.
+          </p>
+          <p class="i2-intro-body">
+            Vi är det personliga serviceföretaget för parkeringsentreprenad. Vår ambition är att arbeta i nära dialog med er som fastighetsägare och utforma en parkeringslösning som skapar värde för er fastighet och en smidig upplevelse för dina kunder.
+          </p>
+          <a href="om-oss.html" class="i2-intro-link">
+            Läs mer om oss
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div>
+          <img src="images/varaparkeringar.png" alt="Parkman anläggning" class="i2-intro-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="i2-services">
+      <div class="i2-section-header">
+        <p class="i2-section-tag">Vad vi erbjuder</p>
+        <h2 class="i2-section-h2">Kompletta lösningar för varje behov</h2>
+      </div>
+      <div class="i2-cards">
+        <!-- Card 1 -->
+        <div class="i2-card">
+          <div class="i2-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+              <rect x="1" y="3" width="22" height="14" rx="2"/>
+              <path d="M5 17v2M8 17v2M16 17v2M19 17v2M1 10h22"/>
+            </svg>
+          </div>
+          <h3 class="i2-card-h3">Parkeringsanläggningar</h3>
+          <p class="i2-card-p">Vi driver och förvaltar parkeringsanläggningar av alla storlekar — köpcentrum, kontor, bostäder, destinationer. Allt från daglig drift till strategisk rådgivning.</p>
+          <a href="parkeringar.html" class="i2-card-link">
+            Våra parkeringar
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <!-- Card 2 -->
+        <div class="i2-card">
+          <div class="i2-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+              <rect x="2" y="6" width="20" height="13" rx="2"/>
+              <path d="M2 10h20M7 3v3M17 3v3"/>
+              <circle cx="12" cy="14" r="2" fill="#fff"/>
+            </svg>
+          </div>
+          <h3 class="i2-card-h3">Autopay — ANPR</h3>
+          <p class="i2-card-p">Kameran läser av registreringsskylten, bommen öppnar sig och betalningen sker automatiskt. Inget app-krav, ingen biljett — bara smidig genomfart.</p>
+          <a href="autopay.html" class="i2-card-link">
+            Om Autopay
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <!-- Card 3 -->
+        <div class="i2-card">
+          <div class="i2-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="i2-card-h3">Parkeringsövervakning</h3>
+          <p class="i2-card-p">Vi säkerställer att din anläggning används korrekt — kontroll, kontrollavgifter, administration och uppföljning. Anpassade helhetslösningar för din fastighet.</p>
+          <a href="fastighetsagare.html" class="i2-card-link">
+            För fastighetsägare
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SPLIT: FASTIGHETSÄGARE ── -->
+    <section class="i2-split">
+      <div class="i2-split-img">
+        <img src="images/hem.png" alt="Parkman för fastighetsägare" />
+      </div>
+      <div class="i2-split-text">
+        <p class="i2-split-tag">Fastighetsägare</p>
+        <h2 class="i2-split-h2">Vi sköter din parkering — från projektering till daglig drift</h2>
+        <p class="i2-split-body">
+          Lämna hela parkeringsfrågan i trygga händer. Vi förstår era behov genom lyhördhet och kontinuerlig dialog — och levererar lösningar som skapar värde för er fastighet.
+        </p>
+        <ul class="i2-split-checks">
+          <li class="i2-split-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f39900" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Konsultation och projektering
+          </li>
+          <li class="i2-split-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f39900" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Parkeringsövervakning och kontrollavgifter
+          </li>
+          <li class="i2-split-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f39900" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Skyltning, markering och anläggningsarbeten
+          </li>
+          <li class="i2-split-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f39900" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Uthyrning och administration av parkeringsplatser
+          </li>
+        </ul>
+        <a href="fastighetsagare.html" class="i2-btn-primary" style="align-self:flex-start;">
+          Läs mer
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── HYR P-PLATS ── -->
+    <section class="i2-hyr">
+      <div class="i2-hyr-inner">
+        <div>
+          <p class="i2-intro-tag">Fast parkering</p>
+          <h2 class="i2-intro-h2">Hyr en fast parkeringsplats</h2>
+          <p class="i2-intro-body">
+            Sök inte efter parkering varje dag. Välj en fast plats nära dig och parkera bekymmersfritt — månad efter månad.
+          </p>
+          <p class="i2-intro-body">
+            Vi erbjuder fasta parkeringsplatser på ett stort antal anläggningar runt om i Sverige. Välj din plats och teckna avtal direkt online.
+          </p>
+          <a href="hyr-parkeringsplats.html" class="i2-btn-primary" style="margin-top:8px;">
+            Se lediga platser
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="i2-hyr-img">
+          <img src="images/rentParkingSpot.png" alt="Hyr parkeringsplats" />
+          <div class="i2-hyr-badge">Fast plats</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ── -->
+    <section class="i2-how">
+      <div class="i2-section-header">
+        <p class="i2-section-tag">Så fungerar det</p>
+        <h2 class="i2-section-h2">Tre steg — det är allt</h2>
+      </div>
+      <div class="i2-steps">
+        <div class="i2-step">
+          <div class="i2-step-num">1</div>
+          <h3 class="i2-step-h3">Registrera dig</h3>
+          <p class="i2-step-p">Skapa ett konto och lägg till ditt registreringsnummer. Det tar under en minut.</p>
+        </div>
+        <div class="i2-step">
+          <div class="i2-step-num">2</div>
+          <h3 class="i2-step-h3">Kör in</h3>
+          <p class="i2-step-p">Bommen känner igen ditt fordon och öppnar sig automatiskt. Ingen app behövs.</p>
+        </div>
+        <div class="i2-step">
+          <div class="i2-step-num">3</div>
+          <h3 class="i2-step-h3">Betalning sker själv</h3>
+          <p class="i2-step-p">Betalningen dras automatiskt från ditt kopplade konto när du kör ut. Klart.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LOGO BAND (nedre kopia borttagen — finns nu i hero) ── -->
+    <div class="logo-band" style="display:none">
+      <p class="logo-band-label">Anlitats av</p>
+      <div class="logo-track-wrap">
+        <div class="logo-track">
+          <span class="logo-item"><img src="images/logos/fabege-svart-logotyp.png" alt="Fabege" /></span>
+          <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg" alt="Västerås Stad" /></span>
+          <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/nacka-forum.png" alt="Nacka Forum" class="logo-scale" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/sollentuna-centrum.png" alt="Sollentuna Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/tumba-centrum.png" alt="Tumba Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/vasby-centrum.png" alt="Väsby Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/Balder.png" alt="Balder" class="logo-scale" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/newsec.png" alt="Newsec" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/storebrand.png" alt="Storebrand" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/nacka-forum.png" alt="Nacka Forum" class="logo-scale" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/sollentuna-centrum.png" alt="Sollentuna Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/tumba-centrum.png" alt="Tumba Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/vasby-centrum.png" alt="Väsby Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/Balder.png" alt="Balder" class="logo-scale" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/newsec.png" alt="Newsec" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/storebrand.png" alt="Storebrand" /></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg" alt="Västerås Stad" /></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FINAL CTA ── -->
+    <section class="i2-cta">
+      <div class="i2-cta-inner">
+        <h2 class="i2-cta-h2">Redo att göra parkeringen enklare?</h2>
+        <p class="i2-cta-sub">Kontakta oss idag — vi hjälper dig hitta rätt lösning för din parkering eller fastighet.</p>
+        <div class="i2-cta-btns">
+          <a href="parkeringar.html" class="i2-btn-primary">Hitta parkering</a>
+          <a href="kontakt.html" class="i2-btn-ghost">Kontakta oss</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Brand_assets/Logo.png" alt="Parkman" class="footer-logo" />
+            <p class="footer-tagline">
+              Sveriges ledande parkeringsförvaltare — vi sköter hela kedjan från installation till kundservice.
+            </p>
+            <div class="footer-social">
+              <a href="https://sv-se.facebook.com/parkmanisverigeab/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/parkman-i-sverige-ab/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h6>Tjänster</h6>
+            <ul>
+              <li><a href="parkeringar.html">Våra parkeringar</a></li>
+              <li><a href="anpr.html">ANPR</a></li>
+              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h6>Företaget</h6>
+            <ul>
+              <li><a href="om-oss.html">Om oss</a></li>
+              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h6>Kontakt</h6>
+            <div class="footer-contact-list">
+              <a href="tel:0873490000" class="footer-contact-item">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>08 734 90 00</span>
+              </a>
+              <a href="mailto:info@parkman.nu" class="footer-contact-item">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>info@parkman.nu</span>
+              </a>
+              <div class="footer-contact-item footer-contact-muted">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <span>Mån–fre 08:00–20:00</span>
+              </div>
+            </div>
+            <div class="footer-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Auktoriserat parkeringsbolag</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
+          <div class="footer-bottom-links">
+            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
+            <a href="integritetspolicy.html">Integritetspolicy</a>
+            <a href="cookies.html">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="lang.js"></script>
+    <script>
+      // Subtle hero bg zoom-in on load
+      window.addEventListener('load', function () {
+        document.getElementById('heroBg').classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>

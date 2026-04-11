@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Content ''c:\\\\Users\\\\SimonErlandsson\\\\OneDrive - Parkman Sverige AB\\\\Skrivbordet\\\\Webpage\\\\Brand_assets\\\\Brand guideline.pdf'' -Encoding Byte | Select-Object -First 100 | ForEach-Object { [char]$_}\")",
+      "Bash(powershell -NoProfile -Command \"[System.IO.File]::ReadAllText\\(''c:\\\\Users\\\\SimonErlandsson\\\\OneDrive - Parkman Sverige AB\\\\Skrivbordet\\\\Webpage\\\\Brand_assets\\\\Brand guideline.pdf'', [System.Text.Encoding]::Latin1\\)\")",
+      "Bash(powershell -NoProfile -Command \"$input)",
+      "Bash(Select-String -Pattern '[A-Za-z0-9#]{4,}' -AllMatches)",
+      "Bash(ForEach-Object { $_.Matches })",
+      "Bash(ForEach-Object { $_.Value })",
+      "Bash(Select-Object -First 300)",
+      "Bash(powershell -NoProfile:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(node serve.mjs)",
+      "WebFetch(domain:parkman.nu)",
+      "Bash(powershell.exe -Command \"Set-Location ''C:\\\\Users\\\\sellg\\\\Desktop\\\\Webpage''; & ''C:\\\\Program Files\\\\nodejs\\\\node.exe'' screenshot_tip.mjs\")",
+      "Bash(curl -s \"https://assets.icanet.se/image/upload/nzmtcvwodqpgdjuvjuyn.png\" -o \"c:/Users/sellg/Desktop/Webpage/images/logos/ica_test.png\")",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:sv.wikipedia.org)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}

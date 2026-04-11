@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/parking/*"
+  to = "/parking/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/parking/:slug/"
+  to = "/parking/index.html"
+  status = 200
