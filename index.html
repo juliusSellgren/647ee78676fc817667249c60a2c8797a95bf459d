@@ -336,7 +336,7 @@
 
       <!-- ── Flow strip — sits between hero and logo band, always visible ── -->
       <div class="flow-strip">
-        <div class="flow-step">
+        <div class="flow-step" onclick="openFlowOverlay(0)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openFlowOverlay(0)">
           <div class="flow-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 17l2-10h14l2 10" /><path d="M1 17h22" />
@@ -344,35 +344,35 @@
             </svg>
           </div>
           <span class="flow-label">Kör in</span>
-          <button class="flow-info-btn" onclick="openFlowOverlay(0)">Så här fungerar det</button>
+          <span class="flow-info-btn">Så här fungerar det</span>
         </div>
         <div class="flow-arrow">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
         </div>
-        <div class="flow-step">
+        <div class="flow-step" onclick="openFlowOverlay(1)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openFlowOverlay(1)">
           <div class="flow-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" /><path d="M8 4v16M16 4v16" />
             </svg>
           </div>
           <span class="flow-label">Parkera smidigt</span>
-          <button class="flow-info-btn" onclick="openFlowOverlay(1)">Så här fungerar det</button>
+          <span class="flow-info-btn">Så här fungerar det</span>
         </div>
         <div class="flow-arrow">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
         </div>
-        <div class="flow-step">
+        <div class="flow-step" onclick="openFlowOverlay(2)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openFlowOverlay(2)">
           <div class="flow-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20" /><path d="M7 15h4" />
             </svg>
           </div>
           <span class="flow-label">Betala enkelt</span>
-          <button class="flow-info-btn" onclick="openFlowOverlay(2)">Så här fungerar det</button>
+          <span class="flow-info-btn">Så här fungerar det</span>
         </div>
         <div class="flow-arrow">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
