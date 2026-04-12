@@ -1,54 +1,57 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Autopay – Parkman</title>
+    <title>Tjänster – Parkman</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-32x32.png"
+      href="/images/favicon/cropped-favicon-32x32.png"
       size="32"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-192x192.png"
+      href="/images/favicon/cropped-favicon-192x192.png"
       sizes="192x192"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-180x180.png"
+      href="/images/favicon/cropped-favicon-180x180.png"
       sizes="180x180"
     />
   </head>
-  <body class="layout-standard">
+  <body>
     <nav id="main-nav">
       <div class="nav-orb"></div>
       <a href="/"
-        ><img src="Brand_assets/Logo.png" alt="Parkman" class="nav-logo"
+        ><img
+          src="/Brand_assets/Logo.png"
+          alt="Parkman"
+          class="nav-logo"
       /></a>
       <ul class="nav-links">
-        <li><a href="parkeringar.html">Våra parkeringar</a></li>
-        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
-        <li><a href="autopay.html">Autopay</a></li>
-        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li><a href="/parkeringar">Våra parkeringar</a></li>
+        <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+        <li><a href="/autopay">Autopay</a></li>
+        <li><a href="/om-oss">Om Parkman</a></li>
         <li class="nav-has-dropdown">
-          <a href="kontakt.html">Kontakt</a>
+          <a href="/kontakt">Kontakt</a>
           <ul class="nav-dropdown">
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </li>
-        <li><a href="kvitton.html">Kvitto</a></li>
+        <li><a href="/kvitton">Kvitto</a></li>
         <li class="nav-has-dropdown">
-          <a href="mina-sidor.html">Mina sidor</a>
+          <a href="/mina-sidor">Mina sidor</a>
           <ul class="nav-dropdown">
-            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li><a href="/mina-sidor-kunder">Kunder</a></li>
             <li>
-              <a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a>
+              <a href="/mina-sidor-fastighetsagare">Fastighetsägare</a>
             </li>
           </ul>
         </li>
@@ -67,129 +70,56 @@
       </ul>
     </nav>
 
-    <section class="autopay-article">
-      <div class="autopay-header">
-        <img src="images/autopayikon.svg" alt="Autopay" class="autopay-icon" />
-        <p class="section-label">Betaltjänst</p>
-      </div>
-
-      <h2 class="autopay-h2">Såhär fungerar Autopay</h2>
-      <p class="autopay-lead">
-        Autopay är ett kamerabaserat parkeringssystem som gör det lätt för dig
-        att parkera. Kameror vid in- och utfart läser av ditt
-        registreringsnummer och mäter hur länge du parkerar — du behöver aldrig
-        leta efter en parkeringsbiljett eller hålla koll på tiden.
-        <a href="allmanna-villkor.html" class="autopay-lead-link"
-          >Läs mer om de allmänna villkoren för Autopay här.</a
-        >
-      </p>
-
-      <div class="autopay-grid">
-        <!-- Enklare parkering -->
-        <div class="autopay-card autopay-card--accent">
-          <p class="autopay-card-label">Enklare parkering</p>
-          <div class="autopay-card-items">
-            <div class="autopay-card-item">
-              <span class="autopay-dot"></span>
-              <span class="autopay-card-text"
-                >Ingen tidsgräns att bevaka — du debiteras bara för faktisk
-                parkeringstid</span
-              >
-            </div>
-            <div class="autopay-card-item">
-              <span class="autopay-dot"></span>
-              <span class="autopay-card-text"
-                >Minimerad risk för parkeringsböter</span
-              >
-            </div>
-            <div class="autopay-card-item">
-              <span class="autopay-dot"></span>
-              <span class="autopay-card-text"
-                >Möjlighet att betala hemifrån — slipp köerna vid
-                betalautomat</span
-              >
-            </div>
-            <div class="autopay-card-item">
-              <span class="autopay-dot"></span>
-              <span class="autopay-card-text"
-                >Inga bommar som skapar utfartskö</span
-              >
-            </div>
-            <div class="autopay-card-item">
-              <span class="autopay-dot"></span>
-              <span class="autopay-card-text"
-                >Inget parkeringsskifte eller biljett att hålla reda på</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Enkel betalning -->
-        <div class="autopay-card autopay-card--primary">
-          <p class="autopay-card-label">Enkel betalning</p>
-          <p class="autopay-card-body">
-            Kamerasystemet registrerar automatiskt hur länge du parkerat. Du
-            betalar bara för den tid du faktiskt använt — inte mer, inte mindre.
+    <section class="services">
+      <p class="section-label">Vad vi gör</p>
+      <div class="cards">
+        <div class="card">
+          <p class="card-num">01</p>
+          <h3>Strategi</h3>
+          <p>
+            Vi arbetar nära dig för att förstå dina mål och bygga en tydlig väg
+            framåt.
           </p>
         </div>
-      </div>
-
-      <!-- Payment methods -->
-      <p class="autopay-steps-label">Så här kan du betala</p>
-      <div class="autopay-steps">
-        <div class="autopay-step">
-          <span class="autopay-step-num">1</span>
-          <div>
-            <p class="autopay-step-title">Betalautomat på plats</p>
-            <p class="autopay-step-body">
-              Ange ditt registreringsnummer i betalautomaten på anläggningen.
-            </p>
-          </div>
+        <div class="card">
+          <p class="card-num">02</p>
+          <h3>Design</h3>
+          <p>
+            Ren, genomtänkt design som kommunicerar ditt varumärke med
+            självförtroende och precision.
+          </p>
         </div>
-
-        <div class="autopay-step">
-          <span class="autopay-step-num">2</span>
-          <div>
-            <p class="autopay-step-title">
-              Automatisk betalning via Autopay.io
-            </p>
-            <p class="autopay-step-body">
-              Registrera ditt kort och registreringsnummer på autopay.io —
-              betalning sker automatiskt när du kör ut.
-            </p>
-          </div>
+        <div class="card">
+          <p class="card-num">03</p>
+          <h3>Utveckling</h3>
+          <p>
+            Robusta, välbyggda digitala produkter skapade för att hålla länge
+            och växa med dina ambitioner.
+          </p>
         </div>
-
-        <div class="autopay-step">
-          <span class="autopay-step-num">3</span>
-          <div>
-            <p class="autopay-step-title">Betala i efterhand</p>
-            <p class="autopay-step-body">
-              Betala upp till 48 timmar efter parkeringen via funktionen "betala
-              efteråt" på autopay.io.
-            </p>
-          </div>
+        <div class="card">
+          <p class="card-num">04</p>
+          <h3>ANPR & Kamera</h3>
+          <p>
+            Marknadsledande kamerabaserad igenkänning för smidig, bemanningsfri
+            in- och utpassering dygnet runt.
+          </p>
         </div>
-
-        <div class="autopay-step">
-          <span class="autopay-step-num">4</span>
-          <div>
-            <p class="autopay-step-title">Via mobilapp</p>
-            <p class="autopay-step-body">
-              Starta och avsluta din parkering direkt via appen på plats.
-            </p>
-          </div>
+        <div class="card">
+          <p class="card-num">05</p>
+          <h3>Förvaltning</h3>
+          <p>
+            Vi tar fullt driftsansvar för din anläggning — från underhåll och
+            rapportering till optimering av beläggning.
+          </p>
         </div>
-
-        <div class="autopay-step">
-          <span class="autopay-step-num">5</span>
-          <div>
-            <p class="autopay-step-title">Faktura</p>
-            <p class="autopay-step-body">
-              Automatisk fakturering till fordonets ägare. Observera att en
-              administrationsavgift tillkommer.
-            </p>
-          </div>
+        <div class="card">
+          <p class="card-num">06</p>
+          <h3>Kundservice</h3>
+          <p>
+            Personlig och tillgänglig support för fastighetsägare och
+            slutanvändare, med snabb responstid och lokal närvaro.
+          </p>
         </div>
       </div>
     </section>
@@ -199,7 +129,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <img
-              src="Brand_assets/Logo.png"
+              src="/Brand_assets/Logo.png"
               alt="Parkman"
               class="footer-logo"
             />
@@ -251,9 +181,9 @@
           <div class="footer-col">
             <h6>Tjänster</h6>
             <ul>
-              <li><a href="parkeringar.html">Våra parkeringar</a></li>
-              <li><a href="anpr.html">ANPR</a></li>
-              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+              <li><a href="/parkeringar">Våra parkeringar</a></li>
+              <li><a href="/anpr">ANPR</a></li>
+              <li><a href="/fastighetsagare">Fastighetsägare</a></li>
             </ul>
           </div>
 
@@ -261,9 +191,9 @@
           <div class="footer-col">
             <h6>Företaget</h6>
             <ul>
-              <li><a href="om-oss.html">Om oss</a></li>
-              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="/om-oss">Om oss</a></li>
+              <li><a href="/om-oss#nyheter">Nyheter</a></li>
+              <li><a href="/kontakt">Kontakt</a></li>
             </ul>
           </div>
 
@@ -337,15 +267,15 @@
         <div class="footer-bottom">
           <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
           <div class="footer-bottom-links">
-            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
-            <a href="integritetspolicy.html">Integritetspolicy</a>
-            <a href="cookies.html">Cookies</a>
+            <a href="/allmanna-villkor">Allmänna villkor för Autopay</a>
+            <a href="/integritetspolicy">Integritetspolicy</a>
+            <a href="/cookies">Cookies</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="lang.js"></script>
+    <script src="/script.js"></script>
+    <script src="/lang.js"></script>
   </body>
 </html>

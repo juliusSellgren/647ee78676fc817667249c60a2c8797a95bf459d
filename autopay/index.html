@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mina Sidor – Parkman</title>
+    <title>Autopay – Parkman</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-32x32.png"
+      href="/images/favicon/cropped-favicon-32x32.png"
       size="32"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-192x192.png"
+      href="/images/favicon/cropped-favicon-192x192.png"
       sizes="192x192"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-180x180.png"
+      href="/images/favicon/cropped-favicon-180x180.png"
       sizes="180x180"
     />
   </head>
@@ -29,29 +29,26 @@
     <nav id="main-nav">
       <div class="nav-orb"></div>
       <a href="/"
-        ><img
-          src="Brand_assets/Logo.png"
-          alt="Parkman"
-          class="nav-logo"
+        ><img src="/Brand_assets/Logo.png" alt="Parkman" class="nav-logo"
       /></a>
       <ul class="nav-links">
-        <li><a href="parkeringar.html">Våra parkeringar</a></li>
-        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
-        <li><a href="autopay.html">Autopay</a></li>
-        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li><a href="/parkeringar">Våra parkeringar</a></li>
+        <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+        <li><a href="/autopay">Autopay</a></li>
+        <li><a href="/om-oss">Om Parkman</a></li>
         <li class="nav-has-dropdown">
-          <a href="kontakt.html">Kontakt</a>
+          <a href="/kontakt">Kontakt</a>
           <ul class="nav-dropdown">
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </li>
-        <li><a href="kvitton.html">Kvitto</a></li>
+        <li><a href="/kvitton">Kvitto</a></li>
         <li class="nav-has-dropdown">
-          <a href="mina-sidor.html">Mina sidor</a>
+          <a href="/mina-sidor">Mina sidor</a>
           <ul class="nav-dropdown">
-            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li><a href="/mina-sidor-kunder">Kunder</a></li>
             <li>
-              <a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a>
+              <a href="/mina-sidor-fastighetsagare">Fastighetsägare</a>
             </li>
           </ul>
         </li>
@@ -70,89 +67,130 @@
       </ul>
     </nav>
 
-    <section class="portal-section">
-      <p class="section-label">Mina Sidor</p>
-      <h1 class="portal-h1">Välj inloggning</h1>
-      <p class="portal-subtitle">
-        Välj vilken typ av konto du vill logga in på nedan.
+    <section class="autopay-article">
+      <div class="autopay-header">
+        <img src="/images/autopayikon.svg" alt="Autopay" class="autopay-icon" />
+        <p class="section-label">Betaltjänst</p>
+      </div>
+
+      <h2 class="autopay-h2">Såhär fungerar Autopay</h2>
+      <p class="autopay-lead">
+        Autopay är ett kamerabaserat parkeringssystem som gör det lätt för dig
+        att parkera. Kameror vid in- och utfart läser av ditt
+        registreringsnummer och mäter hur länge du parkerar — du behöver aldrig
+        leta efter en parkeringsbiljett eller hålla koll på tiden.
+        <a href="/allmanna-villkor" class="autopay-lead-link"
+          >Läs mer om de allmänna villkoren för Autopay här.</a
+        >
       </p>
 
-      <div class="portal-grid">
-        <!-- Fastighetsägare -->
-        <a href="mina-sidor-fastighetsagare.html" class="portal-card">
-          <div class="portal-card-icon">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#5f1a44"
-              stroke-width="1.8"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
+      <div class="autopay-grid">
+        <!-- Enklare parkering -->
+        <div class="autopay-card autopay-card--accent">
+          <p class="autopay-card-label">Enklare parkering</p>
+          <div class="autopay-card-items">
+            <div class="autopay-card-item">
+              <span class="autopay-dot"></span>
+              <span class="autopay-card-text"
+                >Ingen tidsgräns att bevaka — du debiteras bara för faktisk
+                parkeringstid</span
+              >
+            </div>
+            <div class="autopay-card-item">
+              <span class="autopay-dot"></span>
+              <span class="autopay-card-text"
+                >Minimerad risk för parkeringsböter</span
+              >
+            </div>
+            <div class="autopay-card-item">
+              <span class="autopay-dot"></span>
+              <span class="autopay-card-text"
+                >Möjlighet att betala hemifrån — slipp köerna vid
+                betalautomat</span
+              >
+            </div>
+            <div class="autopay-card-item">
+              <span class="autopay-dot"></span>
+              <span class="autopay-card-text"
+                >Inga bommar som skapar utfartskö</span
+              >
+            </div>
+            <div class="autopay-card-item">
+              <span class="autopay-dot"></span>
+              <span class="autopay-card-text"
+                >Inget parkeringsskifte eller biljett att hålla reda på</span
+              >
+            </div>
           </div>
-          <div>
-            <p class="portal-card-tag">Portal</p>
-            <h2 class="portal-card-h2">Fastighetsägare</h2>
-            <p class="portal-card-body">
-              Hantera dina parkeringsanläggningar, avtal och rapporter via
-              fastighetsägarportalen.
-            </p>
-          </div>
-          <div class="portal-card-cta">
-            Logga in
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-        </a>
+        </div>
 
-        <!-- Kunder -->
-        <a href="mina-sidor-kunder.html" class="portal-card portal-card--dark">
-          <div class="portal-card-icon portal-card-icon--dark">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#f39900"
-              stroke-width="1.8"
-            >
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </div>
+        <!-- Enkel betalning -->
+        <div class="autopay-card autopay-card--primary">
+          <p class="autopay-card-label">Enkel betalning</p>
+          <p class="autopay-card-body">
+            Kamerasystemet registrerar automatiskt hur länge du parkerat. Du
+            betalar bara för den tid du faktiskt använt — inte mer, inte mindre.
+          </p>
+        </div>
+      </div>
+
+      <!-- Payment methods -->
+      <p class="autopay-steps-label">Så här kan du betala</p>
+      <div class="autopay-steps">
+        <div class="autopay-step">
+          <span class="autopay-step-num">1</span>
           <div>
-            <p class="portal-card-tag portal-card-tag--white">Kundportal</p>
-            <h2 class="portal-card-h2 portal-card-h2--white">Kunder</h2>
-            <p class="portal-card-body portal-card-body--white">
-              Hantera dina parkeringstillstånd, abonnemang och betalningar via
-              kundportalen.
+            <p class="autopay-step-title">Betalautomat på plats</p>
+            <p class="autopay-step-body">
+              Ange ditt registreringsnummer i betalautomaten på anläggningen.
             </p>
           </div>
-          <div class="portal-card-cta portal-card-cta--accent">
-            Logga in
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+        </div>
+
+        <div class="autopay-step">
+          <span class="autopay-step-num">2</span>
+          <div>
+            <p class="autopay-step-title">
+              Automatisk betalning via Autopay.io
+            </p>
+            <p class="autopay-step-body">
+              Registrera ditt kort och registreringsnummer på autopay.io —
+              betalning sker automatiskt när du kör ut.
+            </p>
           </div>
-        </a>
+        </div>
+
+        <div class="autopay-step">
+          <span class="autopay-step-num">3</span>
+          <div>
+            <p class="autopay-step-title">Betala i efterhand</p>
+            <p class="autopay-step-body">
+              Betala upp till 48 timmar efter parkeringen via funktionen "betala
+              efteråt" på autopay.io.
+            </p>
+          </div>
+        </div>
+
+        <div class="autopay-step">
+          <span class="autopay-step-num">4</span>
+          <div>
+            <p class="autopay-step-title">Via mobilapp</p>
+            <p class="autopay-step-body">
+              Starta och avsluta din parkering direkt via appen på plats.
+            </p>
+          </div>
+        </div>
+
+        <div class="autopay-step">
+          <span class="autopay-step-num">5</span>
+          <div>
+            <p class="autopay-step-title">Faktura</p>
+            <p class="autopay-step-body">
+              Automatisk fakturering till fordonets ägare. Observera att en
+              administrationsavgift tillkommer.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -161,7 +199,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <img
-              src="Brand_assets/Logo.png"
+              src="/Brand_assets/Logo.png"
               alt="Parkman"
               class="footer-logo"
             />
@@ -213,9 +251,9 @@
           <div class="footer-col">
             <h6>Tjänster</h6>
             <ul>
-              <li><a href="parkeringar.html">Våra parkeringar</a></li>
-              <li><a href="anpr.html">ANPR</a></li>
-              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+              <li><a href="/parkeringar">Våra parkeringar</a></li>
+              <li><a href="/anpr">ANPR</a></li>
+              <li><a href="/fastighetsagare">Fastighetsägare</a></li>
             </ul>
           </div>
 
@@ -223,9 +261,9 @@
           <div class="footer-col">
             <h6>Företaget</h6>
             <ul>
-              <li><a href="om-oss.html">Om oss</a></li>
-              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="/om-oss">Om oss</a></li>
+              <li><a href="/om-oss#nyheter">Nyheter</a></li>
+              <li><a href="/kontakt">Kontakt</a></li>
             </ul>
           </div>
 
@@ -299,15 +337,15 @@
         <div class="footer-bottom">
           <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
           <div class="footer-bottom-links">
-            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
-            <a href="integritetspolicy.html">Integritetspolicy</a>
-            <a href="cookies.html">Cookies</a>
+            <a href="/allmanna-villkor">Allmänna villkor för Autopay</a>
+            <a href="/integritetspolicy">Integritetspolicy</a>
+            <a href="/cookies">Cookies</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="lang.js"></script>
+    <script src="/script.js"></script>
+    <script src="/lang.js"></script>
   </body>
 </html>

@@ -1,27 +1,27 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kvitton – Parkman</title>
+    <title>Mina Sidor – Fastighetsägare – Parkman</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-32x32.png"
+      href="/images/favicon/cropped-favicon-32x32.png"
       size="32"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-192x192.png"
+      href="/images/favicon/cropped-favicon-192x192.png"
       sizes="192x192"
     />
     <link
       rel="icon"
-      href="images/favicon/cropped-favicon-180x180.png"
+      href="/images/favicon/cropped-favicon-180x180.png"
       sizes="180x180"
     />
   </head>
@@ -30,28 +30,28 @@
       <div class="nav-orb"></div>
       <a href="/"
         ><img
-          src="Brand_assets/Logo.png"
+          src="/Brand_assets/Logo.png"
           alt="Parkman"
           class="nav-logo"
       /></a>
       <ul class="nav-links">
-        <li><a href="parkeringar.html">Våra parkeringar</a></li>
-        <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
-        <li><a href="autopay.html">Autopay</a></li>
-        <li><a href="om-oss.html">Om Parkman</a></li>
+        <li><a href="/parkeringar">Våra parkeringar</a></li>
+        <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+        <li><a href="/autopay">Autopay</a></li>
+        <li><a href="/om-oss">Om Parkman</a></li>
         <li class="nav-has-dropdown">
-          <a href="kontakt.html">Kontakt</a>
+          <a href="/kontakt">Kontakt</a>
           <ul class="nav-dropdown">
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </li>
-        <li><a href="kvitton.html">Kvitto</a></li>
+        <li><a href="/kvitton">Kvitto</a></li>
         <li class="nav-has-dropdown">
-          <a href="mina-sidor.html">Mina sidor</a>
+          <a href="/mina-sidor">Mina sidor</a>
           <ul class="nav-dropdown">
-            <li><a href="mina-sidor-kunder.html">Kunder</a></li>
+            <li><a href="/mina-sidor-kunder">Kunder</a></li>
             <li>
-              <a href="mina-sidor-fastighetsagare.html">Fastighetsägare</a>
+              <a href="/mina-sidor-fastighetsagare">Fastighetsägare</a>
             </li>
           </ul>
         </li>
@@ -70,104 +70,187 @@
       </ul>
     </nav>
 
-    <section class="services">
-      <p class="section-label">Saknar du kvitto?</p>
-      <div class="cards">
-        <div class="card">
-          <p class="card-num">01</p>
-          <h3>Kameraparkering (Autopay)</h3>
-          <p class="kvitto-card-body">
-            Har du parkerat på en av våra kameraövervakade anläggningar och
-            betalat via Autopay? Du kan hämta och ladda ned ditt kvitto upp till
-            en månad efter betalning.
-          </p>
-          <a
-            href="https://autopay.io/findReceipt"
-            onclick="
-              window.open(
-                this.href,
-                'popup',
-                'width=600,height=900,scrollbars=yes,resizable=yes',
-              );
-              return false;
-            "
-            class="coverage-cta"
-            >Hämta kvitto
+    <div class="portal-page">
+      <div class="portal-inner">
+        <!-- Header -->
+        <div class="portal-header">
+          <div class="portal-header-icon">
             <svg
-              width="13"
-              height="13"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5f1a44"
+              stroke-width="1.7"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="portal-header-h1">Logga in – Fastighetsägare</h1>
+            <p class="portal-header-subtitle">
+              Välj din portal nedan för att hantera anläggningar, avtal,
+              beläggningsrapporter och fakturering.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dashboard shortcut -->
+        <a href="/fastighetsagare-dashboard" class="portal-shortcut">
+          <div class="portal-shortcut-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5f1a44"
+              stroke-width="1.8"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+          </div>
+          <div class="portal-link-content">
+            <p class="portal-shortcut-tag">Direktlänk</p>
+            <p class="portal-shortcut-title">Öppna Fastighetsägardashboard</p>
+            <p class="portal-shortcut-body">
+              Intäkter, avtal, väntelista, elbilsladdning och ANPR – samlat på
+              ett ställe
+            </p>
+          </div>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="portal-shortcut-arrow"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- Portal-kort -->
+        <div class="portal-links">
+          <!-- Parkman Kundportal -->
+          <a
+            href="https://minparkering.parkman.nu"
+            target="_blank"
+            rel="noopener"
+            class="portal-link-card"
+          >
+            <div class="portal-link-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5f1a44"
+                stroke-width="1.8"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <div class="portal-link-content">
+              <p class="portal-link-title">Parkman Kundportal</p>
+              <p class="portal-link-body">
+                Hantera avtal, hyrda platser och betalningar på
+                minparkering.parkman.nu
+              </p>
+            </div>
+            <svg
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
+              class="portal-link-arrow"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          <!-- Autopay.io -->
+          <a
+            href="https://autopay.io"
+            target="_blank"
+            rel="noopener"
+            class="portal-link-card portal-link-card--muted"
+          >
+            <div class="portal-link-icon portal-link-icon--light">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#5f1a44"
+                stroke-width="1.8"
+                class="portal-link-svg-muted"
+              >
+                <rect x="2" y="6" width="20" height="14" rx="2" />
+                <path d="M2 10h20" />
+                <circle cx="12" cy="15" r="2" />
+              </svg>
+            </div>
+            <div class="portal-link-content">
+              <p class="portal-link-title">Autopay.io</p>
+              <p class="portal-link-body">
+                Hantera Autopay-tillstånd och digitala parkeringsabonnemang
+              </p>
+            </div>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="portal-link-arrow"
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
         </div>
 
-        <div class="card">
-          <p class="card-num">02</p>
-          <h3>Västerås Stad – gatuparkering</h3>
-          <p class="kvitto-card-body">
-            Har du betalat gatuparkering i Västerås vid en parkeringsautomat?
-            Kvitton för dessa betalningar hämtas via Västerås Stads egen portal.
+        <!-- Hjälp-sektion -->
+        <div class="portal-help">
+          <p class="portal-help-label">Behöver du hjälp?</p>
+          <p class="portal-help-body">
+            Kontakta Parkman om du inte hittar rätt portal eller behöver hjälp
+            med inloggning.
           </p>
-          <a
-            href="https://mittkvitto.modulsystem.se/"
-            onclick="
-              window.open(
-                this.href,
-                'popup',
-                'width=500,height=850,scrollbars=yes,resizable=yes',
-              );
-              return false;
-            "
-            class="coverage-cta"
-            >Hämta kvitto
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-        <div class="card">
-          <p class="card-num">03</p>
-          <h3>Övriga kvitton</h3>
-          <p class="kvitto-card-body">
-            Hittar du inte ditt kvitto via ovanstående? Kontakta oss direkt på
-            info@parkman.nu så hjälper vi dig att hitta rätt.
-          </p>
-          <a href="mailto:info@parkman.nu" class="coverage-cta"
-            >Skicka e-post
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <div class="portal-help-actions">
+            <a href="/kontakt" class="portal-btn-primary">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              Kontakta oss
+            </a>
+            <a href="/faq" class="portal-btn-ghost">Vanliga frågor</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <footer>
       <div class="footer-inner">
         <div class="footer-grid">
           <div class="footer-brand">
             <img
-              src="Brand_assets/Logo.png"
+              src="/Brand_assets/Logo.png"
               alt="Parkman"
               class="footer-logo"
             />
@@ -214,28 +297,22 @@
               </a>
             </div>
           </div>
-
-          <!-- Tjänster -->
           <div class="footer-col">
             <h6>Tjänster</h6>
             <ul>
-              <li><a href="parkeringar.html">Våra parkeringar</a></li>
-              <li><a href="anpr.html">ANPR</a></li>
-              <li><a href="fastighetsagare.html">Fastighetsägare</a></li>
+              <li><a href="/parkeringar">Våra parkeringar</a></li>
+              <li><a href="/anpr">ANPR</a></li>
+              <li><a href="/fastighetsagare">Fastighetsägare</a></li>
             </ul>
           </div>
-
-          <!-- Företaget -->
           <div class="footer-col">
             <h6>Företaget</h6>
             <ul>
-              <li><a href="om-oss.html">Om oss</a></li>
-              <li><a href="om-oss.html#nyheter">Nyheter</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="/om-oss">Om oss</a></li>
+              <li><a href="/om-oss#nyheter">Nyheter</a></li>
+              <li><a href="/kontakt">Kontakt</a></li>
             </ul>
           </div>
-
-          <!-- Kontakt -->
           <div class="footer-col">
             <h6>Kontakt</h6>
             <div class="footer-contact-list">
@@ -301,19 +378,18 @@
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
           <div class="footer-bottom-links">
-            <a href="allmanna-villkor.html">Allmänna villkor för Autopay</a>
-            <a href="integritetspolicy.html">Integritetspolicy</a>
-            <a href="cookies.html">Cookies</a>
+            <a href="/allmanna-villkor">Allmänna villkor för Autopay</a>
+            <a href="/integritetspolicy">Integritetspolicy</a>
+            <a href="/cookies">Cookies</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="lang.js"></script>
+    <script src="/script.js"></script>
+    <script src="/lang.js"></script>
   </body>
 </html>
