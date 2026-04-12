@@ -93,6 +93,7 @@
             class="modal-search-input"
             id="parking-search"
             placeholder="Sök parkering eller ort…"
+            data-placeholder-en="Search parking or city…"
             autocomplete="off"
           />
           <svg
@@ -109,17 +110,18 @@
           </svg>
         </div>
         <div class="sidebar-filters">
-          <button class="sidebar-filter-btn active" id="filter-all" onclick="setSidebarFilter('all')">Alla</button>
+          <button class="sidebar-filter-btn active" id="filter-all" onclick="setSidebarFilter('all')"><span data-en="All">Alla</span></button>
           <button class="sidebar-filter-btn" id="filter-hyr" onclick="setSidebarFilter('hyr')">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Hyr p-plats
+            <span data-en="Rent a parking space">Hyr p-plats</span>
           </button>
         </div>
-        <div class="sidebar-label">Välj parkering</div>
-        <div id="location-list"></div>
+        <div class="sidebar-label" data-en="Select parking">Välj parkering</div>
+        <div id="location-list" translate="no"></div>
         <div
           id="parking-no-results"
           class="parking-no-results hidden"
+          data-en="No results"
         >
           Inga träffar
         </div>
@@ -131,6 +133,7 @@
           <div
             id="map"
             class="map-container"
+            translate="no"
           >
             <!-- Floating facility card over map -->
             <div
@@ -151,7 +154,7 @@
             id="hitta-hit-panel"
             class="hitta-hit-panel"
           >
-            <p class="section-eyebrow section-eyebrow--mb10">
+            <p class="section-eyebrow section-eyebrow--mb10" data-en="Directions">
               Hitta hit
             </p>
             <div id="hitta-hit-inner">
@@ -170,7 +173,7 @@
                   />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
-                <p class="hitta-hit-empty-text">
+                <p class="hitta-hit-empty-text" data-en="Select a facility from the list to plan your journey.">
                   Välj en anläggning i listan för att planera din resa hit.
                 </p>
               </div>
@@ -185,57 +188,41 @@
         >
           <!-- Landing panel -->
           <div id="detail-landing" class="detail-landing">
-            <p class="section-eyebrow section-eyebrow--mb16">
+            <p class="section-eyebrow section-eyebrow--mb16" data-en="Our parking facilities">
               Våra parkeringar
             </p>
-            <h2 class="landing-heading">
+            <h2 class="landing-heading" data-en="Explore our facilities across Sweden">
               Utforska våra anläggningar i Sverige
             </h2>
-            <p class="landing-intro">
+            <p class="landing-intro" data-en="Parkman operates many parking facilities throughout Sweden — from Malmö in the south to Hudiksvall in the north. Select a facility from the list to view prices, opening hours and available services.">
               Parkman driver många parkeringsanläggningar i hela Sverige — från
               Malmö i söder till Hudiksvall i norr. Välj en anläggning i listan
               för att se priser, öppettider och tillgängliga tjänster.
             </p>
             <div class="howto-section">
-              <p class="section-eyebrow section-eyebrow--mb18">
+              <p class="section-eyebrow section-eyebrow--mb18" data-en="How to use this page">
                 Så här använder du sidan
               </p>
               <ul class="step-list">
                 <li class="step-item">
-                  <span class="step-badge"
-                    >1</span
-                  >
-                  <span class="step-text"
-                    >Sök på stad, anläggningsnamn eller adress i fältet längst
-                    upp till vänster.</span
-                  >
+                  <span class="step-badge">1</span>
+                  <span class="step-text" data-en="Search by city, facility name or address in the field on the upper left.">Sök på stad, anläggningsnamn eller adress i fältet längst
+                    upp till vänster.</span>
                 </li>
                 <li class="step-item">
-                  <span class="step-badge"
-                    >2</span
-                  >
-                  <span class="step-text"
-                    >Klicka på en anläggning i listan — detaljinformation visas
-                    här nedanför kartan.</span
-                  >
+                  <span class="step-badge">2</span>
+                  <span class="step-text" data-en="Click a facility in the list — details appear below the map.">Klicka på en anläggning i listan — detaljinformation visas
+                    här nedanför kartan.</span>
                 </li>
                 <li class="step-item">
-                  <span class="step-badge"
-                    >3</span
-                  >
-                  <span class="step-text"
-                    >Du kan också klicka direkt på en markör i kartan ovan för
-                    att välja anläggning.</span
-                  >
+                  <span class="step-badge">3</span>
+                  <span class="step-text" data-en="You can also click directly on a marker in the map above to select a facility.">Du kan också klicka direkt på en markör i kartan ovan för
+                    att välja anläggning.</span>
                 </li>
                 <li class="step-item">
-                  <span class="step-badge"
-                    >4</span
-                  >
-                  <span class="step-text"
-                    >För anläggningar med hyres- eller tillståndsköp visas
-                    knappar direkt i informationspanelen.</span
-                  >
+                  <span class="step-badge">4</span>
+                  <span class="step-text" data-en="For facilities with rental or permit options, buttons appear directly in the information panel.">För anläggningar med hyres- eller tillståndsköp visas
+                    knappar direkt i informationspanelen.</span>
                 </li>
               </ul>
             </div>
@@ -258,26 +245,26 @@
               <div>
                 <!-- Pricing highlighted block -->
                 <div class="pricing-block">
-                  <p class="section-eyebrow-sm">
+                  <p class="section-eyebrow-sm" data-en="Parking &amp; prices">
                     Parkering &amp; priser
                   </p>
-                  <div id="detail-pricing"></div>
+                  <div id="detail-pricing" translate="no"></div>
                 </div>
 
                 <!-- Bottom row: betalappar + övrigt -->
                 <div class="detail-bottom-grid">
                   <div>
-                    <p class="section-eyebrow-sm">
+                    <p class="section-eyebrow-sm" data-en="Payment apps">
                       Betalappar
                     </p>
-                    <div id="detail-apps"></div>
+                    <div id="detail-apps" translate="no"></div>
                     <div id="detail-hyr"></div>
                   </div>
                   <div>
-                    <p class="section-eyebrow-sm">
+                    <p class="section-eyebrow-sm" data-en="Other">
                       Övrigt
                     </p>
-                    <div id="detail-other"></div>
+                    <div id="detail-other" translate="no"></div>
                   </div>
                 </div>
               </div>
@@ -287,7 +274,7 @@
                 <div id="detail-first-visit" class="detail-first-visit"></div>
                 <div id="detail-facility-info-wrap" class="hidden">
                   <div class="facility-info-block">
-                    <p class="section-eyebrow-sm section-eyebrow-sm--mb8">
+                    <p class="section-eyebrow-sm section-eyebrow-sm--mb8" data-en="About this facility">
                       Info om anläggningen
                     </p>
                     <div id="detail-facility-info"></div>

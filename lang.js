@@ -157,6 +157,11 @@
           inp._svPlaceholder = inp.placeholder;
         }
         if (lang === "en") {
+          // data-placeholder-en takes priority
+          if (inp.dataset && inp.dataset.placeholderEn) {
+            inp.placeholder = inp.dataset.placeholderEn;
+            return;
+          }
           var key = inp._svPlaceholder ? inp._svPlaceholder.trim() : "";
           if (key && map[key] !== undefined) {
             inp.placeholder = map[key];
