@@ -40,7 +40,7 @@ body {
 body.pg-home #above-fold {
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.38) 100%),
-    url("images/hem2.png") center/cover no-repeat;
+    url("images/hem2.webp") center/cover no-repeat;
 }
 nav {
   position: relative;
