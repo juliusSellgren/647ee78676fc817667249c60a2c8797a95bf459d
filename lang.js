@@ -2,22 +2,20 @@
   "use strict";
 
   // Cache version — bump this to invalidate all stored translations
-  var CACHE_VERSION = "1";
+  var CACHE_VERSION = "2";
 
   // WeakMap keyed per text node to restore original Swedish values
   var originals = new WeakMap();
 
   // ── LocalStorage cache ────────────────────────────────────────────────────────
-  // One cache object per page (pathname), stored as JSON.
+  // One shared cache for the entire site — translations carry across all pages.
   // Structure: { "Swedish text": "English text", ... }
 
-  function cacheKey() {
-    return "pm_lang_en_v" + CACHE_VERSION + "_" + location.pathname;
-  }
+  var CACHE_KEY = "pm_lang_en_v" + CACHE_VERSION;
 
   function loadCache() {
     try {
-      return JSON.parse(localStorage.getItem(cacheKey())) || {};
+      return JSON.parse(localStorage.getItem(CACHE_KEY)) || {};
     } catch (e) {
       return {};
     }
@@ -25,7 +23,7 @@
 
   function saveCache(map) {
     try {
-      localStorage.setItem(cacheKey(), JSON.stringify(map));
+      localStorage.setItem(CACHE_KEY, JSON.stringify(map));
     } catch (e) {}
   }
 
