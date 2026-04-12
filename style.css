@@ -403,7 +403,7 @@ nav.scrolled {
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 6px;
 }
 .hero-search-wrap {
@@ -808,7 +808,7 @@ a.footer-contact-item:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 .footer-contact-muted {
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.65);
 }
 .footer-badge {
   display: inline-flex;
