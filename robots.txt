@@ -1,0 +1,3 @@
+# Tillfälligt blockerad — ta bort dessa rader när hemsidan går live
+User-agent: *
+Disallow: /
