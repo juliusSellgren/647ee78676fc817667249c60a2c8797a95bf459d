@@ -414,13 +414,15 @@
     var cache = loadCache();
     applyMap(nodes, cache, "en");
 
-    // Then fetch API translations for strings not in DICT or cache
+    // Collect strings needing API translation.
+    // Use originals (Swedish) as key — not nodeValue which may already be English.
     var needed = [];
     var seen = {};
     nodes.forEach(function (node) {
       var el = node.parentElement;
       if (el && el.dataset && el.dataset.en) return;
-      var key = node.nodeValue ? node.nodeValue.replace(/\s+/g, " ").trim() : "";
+      var sv = originals.has(node) ? originals.get(node) : node.nodeValue;
+      var key = sv ? sv.replace(/\s+/g, " ").trim() : "";
       if (!key || DICT[key] !== undefined || cache[key] !== undefined) return;
       if (!seen[key]) { needed.push(key); seen[key] = true; }
     });
@@ -447,6 +449,10 @@
     localStorage.setItem("pm_lang", lang);
     updateToggle(lang);
     applyLang(lang);
+    // Re-apply after 400ms to catch any JS-rendered content (setTimeout etc.)
+    setTimeout(function () {
+      if (getLang() === lang) applyLang(lang);
+    }, 400);
   }
 
   function updateToggle(lang) {
@@ -466,39 +472,37 @@
     var lang = getLang();
     if (lang !== "en") return;
 
-    var roots = pendingRoots.slice();
     pendingRoots = [];
-    var unique = roots.filter(function (r) {
-      return !roots.some(function (other) { return other !== r && other.contains(r); });
-    });
 
+    // Always do a full-body pass — cheaper than tracking roots and avoids
+    // missing nodes whose nodeValue was already changed by a prior pass.
+    var allNodes = getTextNodes(document.body);
     var cache = loadCache();
+
+    // Apply dict + cache immediately across the whole page
+    applyMap(allNodes, cache, "en");
+
+    // Collect strings still needing API translation.
+    // Use the stored original (originals WeakMap) as the lookup key so we
+    // never accidentally send an already-translated English string to the API.
     var needed = [];
     var seen = {};
-
-    unique.forEach(function (root) {
-      getTextNodes(root).forEach(function (node) {
-        var el = node.parentElement;
-        if (el && el.dataset && el.dataset.en) return;
-        var key = node.nodeValue ? node.nodeValue.replace(/\s+/g, " ").trim() : "";
-        if (!key || DICT[key] !== undefined || cache[key] !== undefined) return;
-        if (!seen[key]) { needed.push(key); seen[key] = true; }
-      });
+    allNodes.forEach(function (node) {
+      var el = node.parentElement;
+      if (el && el.dataset && el.dataset.en) return;
+      // Use the Swedish original, not the (possibly already-translated) nodeValue
+      var sv = originals.has(node) ? originals.get(node) : node.nodeValue;
+      var key = sv ? sv.replace(/\s+/g, " ").trim() : "";
+      if (!key || DICT[key] !== undefined || cache[key] !== undefined) return;
+      if (!seen[key]) { needed.push(key); seen[key] = true; }
     });
-
-    function applyRoots() {
-      unique.forEach(function (root) { applyMap(getTextNodes(root), cache, "en"); });
-    }
-
-    // Apply dict + cache immediately
-    applyRoots();
 
     if (needed.length === 0) return;
 
     pool(needed, 6, translateOne).then(function (translated) {
       needed.forEach(function (key, i) { cache[key] = translated[i]; });
       saveCache(cache);
-      applyRoots();
+      applyMap(getTextNodes(document.body), cache, "en");
     });
   }
 
@@ -523,5 +527,9 @@
     updateToggle(lang);
     applyLang(lang);
     observer.observe(document.body, { childList: true, subtree: true });
+    // Second pass after 500ms to catch JS-rendered content (initMap, buildList, etc.)
+    if (lang === "en") {
+      setTimeout(function () { applyLang("en"); }, 500);
+    }
   });
 })();
