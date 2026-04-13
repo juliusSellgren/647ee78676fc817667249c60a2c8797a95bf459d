@@ -7952,10 +7952,42 @@ a.card {
   .flow-info-btn { display: none; }
 }
 
-/* ── Mobile: hide copy column so widget + flow strip fit ── */
+/* ── Mobile: collapse copy column to compact teaser band ── */
 @media (max-width: 768px) {
-  body.pg-home .hero-col--copy { display: none; }
-  body.pg-home .hero-inner { grid-template-columns: 1fr; }
+  body.pg-home .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  /* Teaser band — hide verbose content, keep badge + heading + CTA */
+  body.pg-home .hero-tenant-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 14px;
+  }
+  body.pg-home .hero-tenant-sub,
+  body.pg-home .hero-tenant-list {
+    display: none;
+  }
+  body.pg-home .hero-tenant-badge {
+    display: none;
+  }
+  body.pg-home .hero-tenant-heading {
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 0;
+    flex: 1;
+  }
+  body.pg-home .hero-tenant-cta {
+    flex-shrink: 0;
+    padding: 9px 16px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    margin-top: 0;
+  }
 }
 
 /* =================================================================
