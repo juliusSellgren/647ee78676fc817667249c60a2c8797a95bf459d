@@ -89,12 +89,6 @@
           <!-- LEFT: Hitta parkering widget -->
           <div class="hero-col hero-col--widget">
             <div class="hero-widget-card">
-              <!-- Mobile toggle — only visible on small screens -->
-              <div class="hero-mobile-toggle" id="hero-mobile-toggle">
-                <button class="hero-mobile-tab hero-mobile-tab--active" id="hmtab-find" onclick="heroMobileTab('find')">Hitta parkering</button>
-                <button class="hero-mobile-tab" id="hmtab-rent" onclick="heroMobileTab('rent')">Hyr parkering</button>
-              </div>
-              <div id="hero-mobile-panel-find">
               <p class="hero-widget-heading">Hitta en parkering</p>
               <!-- Tabbed widget -->
               <div class="hero-widget">
@@ -287,24 +281,6 @@
                   </span>
                 </div>
               </div>
-              </div><!-- /hero-mobile-panel-find -->
-
-              <!-- Mobile rent panel — mirrors hero-tenant-card content -->
-              <div id="hero-mobile-panel-rent" class="hero-mobile-rent-panel" hidden>
-                <span class="hero-tenant-badge">Hyr parkeringsplats</span>
-                <h2 class="hero-tenant-heading">Hitta och hyr en parkeringsplats</h2>
-                <p class="hero-tenant-sub">Vi erbjuder både reserverade och oreserverade platser — månadsvis för privatpersoner och företag. Skicka in en intresseanmälan så återkommer vi med mer information.</p>
-                <ul class="hero-tenant-list">
-                  <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reserverade och oreserverade platser</li>
-                  <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kamerabaserad parkering — smidigt och enkelt</li>
-                  <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Månadsbetalning via autogiro</li>
-                  <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Anläggningar i hela Sverige</li>
-                </ul>
-                <a href="/hyr-parkeringsplats" class="hero-tenant-cta">
-                  Skicka intresseanmälan
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </a>
-              </div><!-- /hero-mobile-panel-rent -->
             </div>
           </div>
 
@@ -1578,14 +1554,6 @@
         }
       })();
 
-      function heroMobileTab(name) {
-        var isFind = name === 'find';
-        document.getElementById('hmtab-find').classList.toggle('hero-mobile-tab--active', isFind);
-        document.getElementById('hmtab-rent').classList.toggle('hero-mobile-tab--active', !isFind);
-        document.getElementById('hero-mobile-panel-find').hidden = !isFind;
-        document.getElementById('hero-mobile-panel-rent').hidden = isFind;
-        document.getElementById('hero-mobile-toggle').classList.toggle('on-rent', !isFind);
-      }
       function heroSwitchTab(name) {
         document
           .getElementById("tab-find")

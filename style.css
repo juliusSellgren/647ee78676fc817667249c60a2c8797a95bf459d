@@ -7952,86 +7952,10 @@ a.card {
   .flow-info-btn { display: none; }
 }
 
-/* ── Mobile toggle tabs (hidden on desktop) ── */
-.hero-mobile-toggle {
-  display: none;
-  position: relative;
-  background: rgba(0,0,0,0.28);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 4px;
-  margin-bottom: 20px;
-  gap: 0;
-}
-/* Sliding pill background */
-.hero-mobile-toggle::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: calc(50% - 4px);
-  height: calc(100% - 8px);
-  background: rgba(255,255,255,0.13);
-  border-radius: 9px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.12);
-  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
-  pointer-events: none;
-}
-.hero-mobile-toggle.on-rent::before {
-  transform: translateX(100%);
-}
-.hero-mobile-tab {
-  position: relative;
-  z-index: 1;
-  flex: 1;
-  padding: 10px 14px;
-  font-family: var(--font-main);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: none;
-  background: none;
-  color: rgba(255,255,255,0.38);
-  cursor: pointer;
-  border-radius: 9px;
-  transition: color 0.18s;
-  white-space: nowrap;
-}
-.hero-mobile-tab--active {
-  color: #fff;
-}
-.hero-mobile-rent-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.hero-mobile-rent-panel .hero-tenant-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.hero-mobile-rent-panel .hero-tenant-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.8);
-}
-.hero-mobile-rent-panel .hero-tenant-list li svg {
-  flex-shrink: 0;
-  color: var(--color-accent);
-}
-
 /* ── Mobile: hide copy column so widget + flow strip fit ── */
 @media (max-width: 768px) {
   body.pg-home .hero-col--copy { display: none; }
   body.pg-home .hero-inner { grid-template-columns: 1fr; }
-  .hero-mobile-toggle { display: flex; }
 }
 
 /* =================================================================
