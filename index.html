@@ -1734,7 +1734,7 @@
     </script>
     <script>
       // Coverage map — plots real facility dots onto an SVG Sweden outline
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const svg = document.getElementById("coverage-svg");
         if (!svg || typeof locations === "undefined") return;
 
@@ -1810,7 +1810,7 @@
           });
           circle.addEventListener("click", () => {
             window.location.href =
-              "parkeringar.html?loc=" + encodeURIComponent(loc.name);
+              "/parkeringar?loc=" + encodeURIComponent(loc.name);
           });
 
           svg.appendChild(circle);
@@ -1829,7 +1829,7 @@
           { threshold: 0.25 },
         );
         obs.observe(svg);
-      })();
+      });
     </script>
 
     <script>
