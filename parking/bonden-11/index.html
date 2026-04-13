@@ -120,24 +120,24 @@
   <body class="pg-parking">
     <nav id="main-nav">
       <div class="nav-orb"></div>
-      <a href="/index.html"><img src="/Brand_assets/Logo.webp" alt="Parkman" class="nav-logo" /></a>
+      <a href="/"><img src="/Brand_assets/Logo.webp" alt="Parkman" class="nav-logo" /></a>
       <ul class="nav-links">
-        <li><a href="/parkeringar.html">Våra parkeringar</a></li>
-        <li><a href="/fastighetsagare.html">Fastighetsägare</a></li>
-        <li><a href="/autopay.html">Autopay</a></li>
-        <li><a href="/om-oss.html">Om Parkman</a></li>
+        <li><a href="/parkeringar">Våra parkeringar</a></li>
+        <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+        <li><a href="/autopay">Autopay</a></li>
+        <li><a href="/om-oss">Om Parkman</a></li>
         <li class="nav-has-dropdown">
-          <a href="/kontakt.html">Kontakt</a>
+          <a href="/kontakt">Kontakt</a>
           <ul class="nav-dropdown">
-            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </li>
-        <li><a href="/kvitton.html">Kvitto</a></li>
+        <li><a href="/kvitton">Kvitto</a></li>
         <li class="nav-has-dropdown">
-          <a href="/mina-sidor.html">Mina sidor</a>
+          <a href="/mina-sidor">Mina sidor</a>
           <ul class="nav-dropdown">
-            <li><a href="/mina-sidor-kunder.html">Kunder</a></li>
-            <li><a href="/mina-sidor-fastighetsagare.html">Fastighetsägare</a></li>
+            <li><a href="/mina-sidor-kunder">Kunder</a></li>
+            <li><a href="/mina-sidor-fastighetsagare">Fastighetsägare</a></li>
           </ul>
         </li>
         <li class="lang-switcher">
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
           wrap.innerHTML = `
             <div class="parking-page-not-found">
               <p style="font-size:1.1rem;font-weight:600;margin-bottom:8px;">Anläggning hittades inte</p>
-              <p>Kontrollera URL:en eller <a href="/parkeringar.html" style="color:var(--color-primary);text-decoration:underline;">bläddra bland alla parkeringar</a>.</p>
+              <p>Kontrollera URL:en eller <a href="/parkeringar" style="color:var(--color-primary);text-decoration:underline;">bläddra bland alla parkeringar</a>.</p>
             </div>`;
           return;
         }
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.title = loc.name + ' – Parkman';
 
         wrap.innerHTML = `
-          <a href="/parkeringar.html?loc=${encodeURIComponent(loc.name)}" class="parking-page-back">
+          <a href="/parkeringar?loc=${encodeURIComponent(loc.name)}" class="parking-page-back">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             Tillbaka till alla parkeringar
           </a>
