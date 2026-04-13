@@ -8195,6 +8195,90 @@ html { overflow-x: hidden; }
 body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 
+/* ── Flow strip carousel (mobile ≤768px) ── */
+@media (max-width: 768px) {
+  .flow-strip {
+    display: block;
+    padding: 20px 0 0;
+    overflow: visible;
+  }
+  .flow-carousel-track {
+    display: flex;
+    transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  .flow-carousel-slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px 20px;
+  }
+  .flow-carousel-slide .flow-step {
+    width: 100%;
+    max-width: 320px;
+    padding: 22px 24px;
+    gap: 10px;
+    flex: none;
+  }
+  .flow-carousel-slide .flow-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+  .flow-carousel-slide .flow-label {
+    font-size: 0.78rem;
+  }
+  .flow-carousel-slide .flow-info-btn {
+    display: inline-flex;
+  }
+  /* Hide arrows and non-slide elements */
+  .flow-strip > .flow-step,
+  .flow-strip > .flow-arrow {
+    display: none;
+  }
+  /* Nav row */
+  .flow-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 4px 0 16px;
+  }
+  .flow-carousel-btn {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    transition: background 0.18s, color 0.18s;
+    flex-shrink: 0;
+  }
+  .flow-carousel-btn:hover { background: rgba(255,255,255,0.20); color: #fff; }
+  .flow-carousel-btn:disabled { opacity: 0.25; cursor: default; }
+  .flow-carousel-dots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  .flow-carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.28);
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .flow-carousel-dot.active {
+    background: var(--color-accent);
+    transform: scale(1.3);
+  }
+}
+
 /* ── Faktura step ── */
 .flow-step--faktura {
   outline: none;
