@@ -183,7 +183,7 @@
     <script src="/script.js" defer></script>
     <script src="/lang.js" defer></script>
     <script>
-      (function () {
+document.addEventListener('DOMContentLoaded', function () {
         // Extract slug from path: /parking/taby-centrum/ → "taby-centrum"
         const slug = window.location.pathname.replace(/^\/parking\//, '').replace(/\/$/, '');
 
@@ -313,7 +313,7 @@
 
         // Apply language
         if (window.applyLang && window.getLang) window.applyLang(window.getLang());
-      })();
-    </script>
+      });
+</script>
   </body>
 </html>

@@ -179,7 +179,7 @@
     <script src="/script.js" defer></script>
     <script src="/lang.js" defer></script>
     <script>
-      (function () {
+document.addEventListener('DOMContentLoaded', function () {
         const locName = "Sickla Köpkvarter – Hesselmans torg";
         const loc = locations.find(l => l.name === locName);
         const wrap = document.getElementById('parking-page-content');
@@ -288,7 +288,7 @@
           (kopUrl ? `<a href="${kopUrl}" target="_blank" rel="noopener" style="${btnStyle}background:transparent;color:var(--color-primary);border:1px solid var(--color-primary);" onmouseover="this.style.opacity='1';this.style.transform='translateY(-1px)'" onmouseout="this.style.opacity='0.92';this.style.transform=''">${arrowIcon}Köp ett p-tillstånd</a>` : '');
 
         if (window.applyLang && window.getLang) window.applyLang(window.getLang());
-      })();
-    </script>
+      });
+</script>
   </body>
 </html>
