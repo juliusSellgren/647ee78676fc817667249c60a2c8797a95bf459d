@@ -1735,70 +1735,82 @@
     <script>
       // Flow strip carousel — active on mobile (≤768px)
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.innerWidth > 768) return;
         var strip = document.querySelector(".flow-strip");
         if (!strip) return;
-        var steps = Array.from(strip.querySelectorAll(".flow-step"));
-        if (steps.length < 2) return;
+        var initialized = false;
 
-        // Build track + slides
-        var track = document.createElement("div");
-        track.className = "flow-carousel-track";
-        steps.forEach(function (step) {
-          var slide = document.createElement("div");
-          slide.className = "flow-carousel-slide";
-          track.appendChild(slide);
-          slide.appendChild(step);
-        });
-        strip.appendChild(track);
+        function initCarousel() {
+          if (initialized) return;
+          var steps = Array.from(strip.querySelectorAll(".flow-step"));
+          if (steps.length < 2) return;
+          initialized = true;
 
-        // Build nav row
-        var nav = document.createElement("div");
-        nav.className = "flow-carousel-nav";
-        var btnPrev = document.createElement("button");
-        btnPrev.className = "flow-carousel-btn";
-        btnPrev.setAttribute("aria-label", "Föregående");
-        btnPrev.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
-        var dotsWrap = document.createElement("div");
-        dotsWrap.className = "flow-carousel-dots";
-        var btnNext = document.createElement("button");
-        btnNext.className = "flow-carousel-btn";
-        btnNext.setAttribute("aria-label", "Nästa");
-        btnNext.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
-        nav.appendChild(btnPrev);
-        nav.appendChild(dotsWrap);
-        nav.appendChild(btnNext);
-        strip.appendChild(nav);
+          // Build track + slides
+          var track = document.createElement("div");
+          track.className = "flow-carousel-track";
+          steps.forEach(function (step) {
+            var slide = document.createElement("div");
+            slide.className = "flow-carousel-slide";
+            track.appendChild(slide);
+            slide.appendChild(step);
+          });
+          strip.appendChild(track);
 
-        var dots = steps.map(function (_, i) {
-          var d = document.createElement("button");
-          d.className = "flow-carousel-dot" + (i === 0 ? " active" : "");
-          d.setAttribute("aria-label", "Steg " + (i + 1));
-          d.addEventListener("click", function () { goTo(i); });
-          dotsWrap.appendChild(d);
-          return d;
-        });
+          // Build nav row
+          var nav = document.createElement("div");
+          nav.className = "flow-carousel-nav";
+          var btnPrev = document.createElement("button");
+          btnPrev.className = "flow-carousel-btn";
+          btnPrev.setAttribute("aria-label", "Föregående");
+          btnPrev.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+          var dotsWrap = document.createElement("div");
+          dotsWrap.className = "flow-carousel-dots";
+          var btnNext = document.createElement("button");
+          btnNext.className = "flow-carousel-btn";
+          btnNext.setAttribute("aria-label", "Nästa");
+          btnNext.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+          nav.appendChild(btnPrev);
+          nav.appendChild(dotsWrap);
+          nav.appendChild(btnNext);
+          strip.appendChild(nav);
 
-        var current = 0;
-        function goTo(n) {
-          current = Math.max(0, Math.min(steps.length - 1, n));
-          track.style.transform = "translateX(-" + current * 100 + "%)";
-          dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
-          btnPrev.disabled = current === 0;
-          btnNext.disabled = current === steps.length - 1;
+          var dots = steps.map(function (_, i) {
+            var d = document.createElement("button");
+            d.className = "flow-carousel-dot" + (i === 0 ? " active" : "");
+            d.setAttribute("aria-label", "Steg " + (i + 1));
+            d.addEventListener("click", function () { goTo(i); });
+            dotsWrap.appendChild(d);
+            return d;
+          });
+
+          var current = 0;
+          function goTo(n) {
+            current = Math.max(0, Math.min(steps.length - 1, n));
+            track.style.transform = "translateX(-" + current * 100 + "%)";
+            dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
+            btnPrev.disabled = current === 0;
+            btnNext.disabled = current === steps.length - 1;
+          }
+          btnPrev.addEventListener("click", function () { goTo(current - 1); });
+          btnNext.addEventListener("click", function () { goTo(current + 1); });
+
+          // Touch swipe
+          var touchStartX = 0;
+          track.addEventListener("touchstart", function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+          track.addEventListener("touchend", function (e) {
+            var dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+          }, { passive: true });
+
+          // Mark strip as carousel-ready (CSS hides original steps via this class)
+          strip.classList.add("flow-strip--carousel");
+          goTo(0);
         }
-        btnPrev.addEventListener("click", function () { goTo(current - 1); });
-        btnNext.addEventListener("click", function () { goTo(current + 1); });
 
-        // Touch swipe
-        var touchStartX = 0;
-        track.addEventListener("touchstart", function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener("touchend", function (e) {
-          var dx = e.changedTouches[0].clientX - touchStartX;
-          if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
-        }, { passive: true });
-
-        goTo(0);
+        // Init immediately if mobile, or on resize into mobile
+        var mq = window.matchMedia("(max-width: 768px)");
+        if (mq.matches) initCarousel();
+        mq.addEventListener("change", function (e) { if (e.matches) initCarousel(); });
       });
     </script>
     <script>

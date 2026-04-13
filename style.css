@@ -8231,9 +8231,9 @@ img { max-width: 100%; height: auto; }
   .flow-carousel-slide .flow-info-btn {
     display: inline-flex;
   }
-  /* Hide arrows and non-slide elements */
-  .flow-strip > .flow-step,
-  .flow-strip > .flow-arrow {
+  /* Hide original steps/arrows only after carousel is built */
+  .flow-strip--carousel > .flow-step,
+  .flow-strip--carousel > .flow-arrow {
     display: none;
   }
   /* Nav row */
