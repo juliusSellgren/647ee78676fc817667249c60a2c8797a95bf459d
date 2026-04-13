@@ -7952,10 +7952,60 @@ a.card {
   .flow-info-btn { display: none; }
 }
 
+/* ── Mobile toggle tabs (hidden on desktop) ── */
+.hero-mobile-toggle {
+  display: none;
+}
+.hero-mobile-tab {
+  flex: 1;
+  padding: 8px 12px;
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+}
+.hero-mobile-tab--active {
+  color: #fff;
+  border-bottom-color: var(--color-accent);
+}
+.hero-mobile-rent-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero-mobile-rent-panel .hero-tenant-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hero-mobile-rent-panel .hero-tenant-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+}
+.hero-mobile-rent-panel .hero-tenant-list li svg {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
 /* ── Mobile: hide copy column so widget + flow strip fit ── */
 @media (max-width: 768px) {
   body.pg-home .hero-col--copy { display: none; }
   body.pg-home .hero-inner { grid-template-columns: 1fr; }
+  .hero-mobile-toggle { display: flex; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.12); }
 }
 
 /* =================================================================
