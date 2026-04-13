@@ -2791,21 +2791,21 @@ function selectLocation(i) {
       color: "#009F4D",
       bg: "rgba(0,159,77,0.08)",
       border: "rgba(0,159,77,0.20)",
-      img: "Assets/Easypark.webp",
+      img: "/Assets/Easypark.webp",
     },
     parkster: {
       label: "Parkster",
       color: "#1A5EE8",
       bg: "rgba(26,94,232,0.08)",
       border: "rgba(26,94,232,0.20)",
-      img: "Assets/Parkster.jpeg",
+      img: "/Assets/Parkster.jpeg",
     },
     autopay: {
       label: "Autopay",
       color: "#5F1A44",
       bg: "rgba(95,26,68,0.08)",
       border: "rgba(95,26,68,0.20)",
-      img: "Assets/Autopay.png",
+      img: "/Assets/Autopay.png",
     },
   };
 
