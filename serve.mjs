@@ -22,44 +22,32 @@ const MIME = {
   '.ttf': 'font/ttf',
 };
 
-// Map clean URL prefixes to their HTML files
-const cleanUrlMap = [
-  { prefix: '/om-oss/', html: '/om-oss.html' },
-  { prefix: '/parkeringar/', html: '/parkeringar.html' },
-  { prefix: '/projekt/', html: '/projekt.html' },
-  { prefix: '/parking/', html: '/parking/index.html' },
-];
-
 const server = http.createServer((req, res) => {
   let urlPath = req.url.split('?')[0];
   if (urlPath === '/') urlPath = '/index.html';
 
-  // Serve the parent HTML for clean sub-URL paths
-  for (const { prefix, html } of cleanUrlMap) {
-    const base = prefix.slice(0, -1); // e.g. '/om-oss'
-    if (urlPath === base || urlPath === prefix || urlPath.startsWith(prefix)) {
-      const filePath = path.join(__dirname, html);
-      fs.readFile(filePath, (err, data) => {
-        if (err) { res.writeHead(404); res.end('Not found'); return; }
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(data);
-      });
-      return;
-    }
-  }
+  // Try the exact path first, then [path]/index.html for clean URLs
+  const candidates = [
+    path.join(__dirname, urlPath),
+    path.join(__dirname, urlPath, 'index.html'),
+    path.join(__dirname, urlPath.replace(/\/$/, ''), 'index.html'),
+  ];
 
-  const filePath = path.join(__dirname, urlPath);
-
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
+  const tryNext = (i) => {
+    if (i >= candidates.length) {
       res.writeHead(404);
       res.end('Not found');
       return;
     }
-    const ext = path.extname(filePath);
-    res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
-    res.end(data);
-  });
+    fs.readFile(candidates[i], (err, data) => {
+      if (err) { tryNext(i + 1); return; }
+      const ext = path.extname(candidates[i]) || '.html';
+      res.writeHead(200, { 'Content-Type': MIME[ext] || 'text/html' });
+      res.end(data);
+    });
+  };
+
+  tryNext(0);
 });
 
 server.listen(PORT, () => {

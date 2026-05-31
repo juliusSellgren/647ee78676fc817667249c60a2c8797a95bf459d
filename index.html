@@ -7,8 +7,8 @@
     <title>Parkman – Hem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap" /></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" /></noscript>
     <link rel="preload" href="images/hem2.webp" as="image" />
     <link rel="preload" href="script.js" as="script" />
     <link rel="preload" href="lang.js" as="script" />
@@ -83,6 +83,17 @@
             Moderna parkeringslösningar med fokus på förstklassig service och
             trygghet — för både korttidsparkering och månadsabonnemang.
           </p>
+          <div class="hero-stat-bar">
+            <div class="hero-stat-bar-item">
+              <strong class="hero-stat-bar-num" data-target="450" data-suffix="+">0</strong>
+              <span>parkeringsanläggningar</span>
+            </div>
+            <span class="hero-stat-bar-sep" aria-hidden="true">·</span>
+            <div class="hero-stat-bar-item">
+              <strong class="hero-stat-bar-num" data-target="36" data-suffix="+">0</strong>
+              <span>städer</span>
+            </div>
+          </div>
         </div>
 
         <div class="hero-inner">
@@ -939,10 +950,22 @@
     <!-- ── Feature: Hyr parkeringsplats ── -->
     <section class="feature-section">
       <div class="feature-inner">
-        <div class="feature-img-wrap">
-          <img src="images/rentParkingSpot.webp"
-            alt="Hyr en parkeringsplats hos Parkman"
-          / loading="lazy">
+        <div class="feature-img-outer">
+          <div class="feature-img-wrap">
+            <img src="images/rentParkingSpot.webp"
+              alt="Hyr en parkeringsplats hos Parkman"
+              loading="lazy" />
+          </div>
+          <div class="feature-float-stat">
+            <span class="feature-float-stat-num">1&nbsp;200<sup>+</sup></span>
+            <span class="feature-float-stat-label">aktiva platser</span>
+          </div>
+          <div class="feature-float-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Kamerabevakning 24/7
+          </div>
         </div>
         <div class="feature-text">
           <p class="section-label">Hyr en plats</p>
@@ -1568,6 +1591,42 @@
           .getElementById("panel-fee")
           .classList.toggle("hidden", name !== "fee");
       }
+
+      /* Fix: lock widget height so switching tabs never resizes the card */
+      (function () {
+        function lockPanelHeight() {
+          var pFind = document.getElementById("panel-find");
+          var pFee  = document.getElementById("panel-fee");
+          if (!pFind || !pFee) return;
+
+          /* Show fee panel in-flow (invisible) so it gets its true
+             rendered height including loaded web fonts */
+          pFee.style.display    = "block";
+          pFee.style.visibility = "hidden";
+          var feeH  = pFee.offsetHeight;
+          /* Reset find panel min-height before reading its natural size */
+          pFind.style.minHeight = "";
+          var findH = pFind.offsetHeight;
+          pFee.style.display    = "";
+          pFee.style.visibility = "";
+          pFee.classList.add("hidden");
+
+          var max = Math.max(findH, feeH);
+          pFind.style.minHeight = max + "px";
+          pFee.style.minHeight  = max + "px";
+        }
+
+        /* Run once early, then again after fonts are fully rendered */
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", lockPanelHeight);
+        } else {
+          lockPanelHeight();
+        }
+        /* Re-measure after web fonts load — font size affects info-link height */
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(lockPanelHeight);
+        }
+      })();
       function heroCheckFee(e) {
         e.preventDefault();
         const input = document.getElementById("fee-reg-input");
@@ -2132,6 +2191,100 @@
         </a>
       </div>
     </div>
+
+    <!-- ── Premium upgrades: hero reveal, parallax, card spotlight ── -->
+    <script>
+      (function () {
+        /* 1 ── Hero heading: word-by-word reveal */
+        var h1 = document.querySelector('body.pg-home .hero h1');
+        if (h1) {
+          var words = h1.textContent.trim().split(/\s+/);
+          h1.innerHTML = words.map(function (w, i) {
+            return '<span class="hero-word" style="animation-delay:' + (0.08 + i * 0.09) + 's">' + w + '</span>';
+          }).join(' ');
+        }
+
+        /* Eyebrow, sub-text and the two hero columns fade in */
+        [
+          ['.hero-eyebrow',          0.05],
+          ['.hero-header .hero-sub', 0.65],
+          ['.hero-col--widget',      0.50],
+          ['.hero-col--copy',        0.62],
+        ].forEach(function (pair) {
+          var el = document.querySelector(pair[0]);
+          if (el) {
+            el.classList.add('hero-entrance');
+            el.style.animationDelay = pair[1] + 's';
+          }
+        });
+
+        /* 2 ── Parallax on hero background */
+        var af = document.getElementById('above-fold');
+        if (af) {
+          var ticking = false;
+          window.addEventListener('scroll', function () {
+            if (!ticking) {
+              requestAnimationFrame(function () {
+                var y = window.scrollY;
+                if (y < window.innerHeight * 1.5) {
+                  af.style.backgroundPositionY = 'calc(50% + ' + (y * 0.32).toFixed(1) + 'px)';
+                }
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }, { passive: true });
+        }
+
+        /* 3 ── Stat-bar animated counters */
+        (function () {
+          function fmtNum(n, sep) {
+            if (!sep || n < 1000) return String(n);
+            // Swedish number format: space as thousands separator
+            return n.toLocaleString('sv-SE').replace(/ /g, sep);
+          }
+          var bars = document.querySelectorAll('.hero-stat-bar-num[data-target]');
+          if (!bars.length) return;
+          var duration = 1600;
+          var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+          function animateBar(el) {
+            var target = parseInt(el.dataset.target, 10);
+            var suffix = el.dataset.suffix || '';
+            var sep = el.dataset.sep || '';
+            var start = performance.now();
+            function tick(now) {
+              var p = Math.min((now - start) / duration, 1);
+              var v = Math.round(target * easeOut(p));
+              el.textContent = fmtNum(v, sep) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          }
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { animateBar(e.target); obs.unobserve(e.target); }
+            });
+          }, { threshold: 0.5 });
+          bars.forEach(function (el) { obs.observe(el); });
+        })();
+
+        /* 4 ── Card spotlight: track mouse position per card */
+        function initSpotlight() {
+          document.querySelectorAll('body.pg-home .card').forEach(function (card) {
+            card.addEventListener('mousemove', function (e) {
+              var r = card.getBoundingClientRect();
+              card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+              card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initSpotlight);
+        } else {
+          initSpotlight();
+        }
+      })();
+    </script>
 
     <!-- ============================================================
          TEMPORÄR LÖSENORDSÖVERLAY — tas bort innan live-lansering
