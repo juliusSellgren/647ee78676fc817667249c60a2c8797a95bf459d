@@ -1,1045 +1,658 @@
 ﻿<!doctype html>
 <html lang="sv">
-  <head>
-    <script>if(location.pathname==='/index.html')location.replace('/' + location.search + location.hash);</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parkman – Hem</title>
+
+<head>
+  <script>if (location.pathname === '/index.html') location.replace('/' + location.search + location.hash);</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkman – Hem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" /></noscript>
-    <link rel="preload" href="images/hem2.webp" as="image" />
-    <link rel="preload" href="script.js" as="script" />
-    <link rel="preload" href="lang.js" as="script" />
-    <link rel="stylesheet" href="style.min.css" />
-    <link
-      rel="icon"
-      href="images/favicon/cropped-favicon-32x32.png"
-      size="32"
-    />
-    <link
-      rel="icon"
-      href="images/favicon/cropped-favicon-192x192.png"
-      sizes="192x192"
-    />
-    <link
-      rel="icon"
-      href="images/favicon/cropped-favicon-180x180.png"
-      sizes="180x180"
-    />
-  </head>
-  <body class="pg-home">
-    <nav id="main-nav">
-      <div class="nav-orb"></div>
-      <a href="/"
-        ><img src="Brand_assets/Logo.webp" alt="Parkman" class="nav-logo"
-      /></a>
-      <ul class="nav-links">
-        <li><a href="/parkeringar">Våra parkeringar</a></li>
-        <li><a href="/fastighetsagare">Fastighetsägare</a></li>
-        <li><a href="/autopay">Autopay</a></li>
-        <li><a href="/om-oss">Om Parkman</a></li>
-        <li class="nav-has-dropdown">
-          <a href="/kontakt">Kontakt</a>
-          <ul class="nav-dropdown">
-            <li><a href="/faq">FAQ</a></li>
-          </ul>
-        </li>
-        <li><a href="/kvitton">Kvitto</a></li>
-        <li class="nav-has-dropdown">
-          <a href="/mina-sidor">Mina sidor</a>
-          <ul class="nav-dropdown">
-            <li><a href="/mina-sidor-kunder">Kunder</a></li>
-            <li>
-              <a href="/mina-sidor-fastighetsagare">Fastighetsägare</a>
-            </li>
-          </ul>
-        </li>
-        <li class="lang-switcher">
-          <div class="lang-toggle" translate="no">
-            <button
-              class="lang-opt lang-se lang-active"
-              onclick="setLang('sv')"
-            >
-              SE
-            </button>
-            <span class="lang-divider">|</span>
-            <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <div id="above-fold">
-      <!-- ── Hero ── -->
-      <section class="hero">
-        <div class="hero-grain"></div>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" />
+  </noscript>
+  <link rel="preload" href="images/hem2.webp" as="image" />
+  <link rel="preload" href="script.js" as="script" />
+  <link rel="preload" href="lang.js" as="script" />
+  <link rel="stylesheet" href="style.min.css" />
+  <link rel="icon" href="images/favicon/cropped-favicon-32x32.png" size="32" />
+  <link rel="icon" href="images/favicon/cropped-favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" href="images/favicon/cropped-favicon-180x180.png" sizes="180x180" />
+</head>
 
-        <!-- Centered heading above both columns -->
-        <div class="hero-header">
-          <p class="hero-eyebrow">Parkman i Sverige AB</p>
-          <h1>Det personliga parkeringsbolaget</h1>
-          <p class="hero-sub">
-            Moderna parkeringslösningar med fokus på förstklassig service och
-            trygghet — för både korttidsparkering och månadsabonnemang.
-          </p>
-          <div class="hero-stat-bar">
-            <div class="hero-stat-bar-item">
-              <strong class="hero-stat-bar-num" data-target="450" data-suffix="+">0</strong>
-              <span>parkeringsanläggningar</span>
-            </div>
-            <span class="hero-stat-bar-sep" aria-hidden="true">·</span>
-            <div class="hero-stat-bar-item">
-              <strong class="hero-stat-bar-num" data-target="36" data-suffix="+">0</strong>
-              <span>städer</span>
-            </div>
+<body class="pg-home">
+  <nav id="main-nav">
+    <div class="nav-orb"></div>
+    <a href="/"><img src="Brand_assets/Logo.webp" alt="Parkman" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="/parkeringar">Våra parkeringar</a></li>
+      <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+      <li><a href="/autopay">Autopay</a></li>
+      <li><a href="/om-oss">Om Parkman</a></li>
+      <li class="nav-has-dropdown">
+        <a href="/kontakt">Kontakt</a>
+        <ul class="nav-dropdown">
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="/kvitton">Kvitto</a></li>
+      <li class="nav-has-dropdown">
+        <a href="/mina-sidor">Mina sidor</a>
+        <ul class="nav-dropdown">
+          <li><a href="/mina-sidor-kunder">Kunder</a></li>
+          <li>
+            <a href="/mina-sidor-fastighetsagare">Fastighetsägare</a>
+          </li>
+        </ul>
+      </li>
+      <li class="lang-switcher">
+        <div class="lang-toggle" translate="no">
+          <button class="lang-opt lang-se lang-active" onclick="setLang('sv')">
+            SE
+          </button>
+          <span class="lang-divider">|</span>
+          <button class="lang-opt lang-en" onclick="setLang('en')">EN</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="above-fold">
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="hero-grain"></div>
+
+      <!-- Centered heading above both columns -->
+      <div class="hero-header">
+        <p class="hero-eyebrow">Parkman i Sverige AB</p>
+        <h1>Det personliga parkeringsbolaget</h1>
+        <p class="hero-sub">
+          Moderna parkeringslösningar med fokus på förstklassig service och
+          trygghet — för både korttidsparkering och månadsabonnemang.
+        </p>
+        <div class="hero-stat-bar">
+          <div class="hero-stat-bar-item">
+            <strong class="hero-stat-bar-num" data-target="450" data-suffix="+">0</strong>
+            <span>parkeringsanläggningar</span>
+          </div>
+          <span class="hero-stat-bar-sep" aria-hidden="true">·</span>
+          <div class="hero-stat-bar-item">
+            <strong class="hero-stat-bar-num" data-target="36" data-suffix="+">0</strong>
+            <span>städer</span>
           </div>
         </div>
+      </div>
 
-        <div class="hero-inner">
-          <!-- LEFT: Hitta parkering widget -->
-          <div class="hero-col hero-col--widget">
-            <div class="hero-widget-card">
-              <p class="hero-widget-heading">Hitta en parkering</p>
-              <!-- Tabbed widget -->
-              <div class="hero-widget">
-                <div class="hero-tabs">
-                  <button
-                    class="hero-tab active"
-                    id="tab-find"
-                    onclick="heroSwitchTab('find')"
-                  >
-                    <svg
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.35-4.35" />
-                    </svg>
-                    Hitta parkering
-                  </button>
-                  <button
-                    class="hero-tab"
-                    id="tab-fee"
-                    onclick="heroSwitchTab('fee')"
-                  >
-                    <svg
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="3" />
-                      <path d="M9 12l2 2 4-4" />
-                    </svg>
-                    Betala Efteråt
-                  </button>
-                </div>
-
-                <!-- Panel: Hitta parkering -->
-                <div class="hero-tab-panel" id="panel-find">
-                  <div class="hero-search-wrap">
-                    <input
-                      type="text"
-                      class="hero-search-input"
-                      id="hero-search"
-                      placeholder="Sök parkering, tjänst eller ort."
-                      autocomplete="off"
-                      spellcheck="false"
-                    />
-                    <svg
-                      class="search-icon"
-                      id="search-icon-svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.35-4.35" />
-                    </svg>
-                    <button
-                      class="search-clear"
-                      id="search-clear"
-                      aria-label="Rensa sökning"
-                    ></button>
-                  </div>
-                </div>
-
-                <!-- Panel: Kontrollera avgift -->
-                <div class="hero-tab-panel hidden" id="panel-fee">
-                  <form class="hero-fee-form" onsubmit="heroCheckFee(event)">
-                    <input
-                      type="text"
-                      id="fee-reg-input"
-                      class="hero-search-input"
-                      placeholder="ABC 123"
-                      maxlength="8"
-                      required
-                      autocomplete="off"
-                      spellcheck="false"
-                      oninput="this.value = this.value.toUpperCase()"
-                    />
-                    <button type="submit" class="hero-fee-btn">
-                      Kontrollera
-                    </button>
-                  </form>
-                  <button
-                    type="button"
-                    class="hero-fee-info-link"
-                    onclick="openFeeInfoModal()"
-                  >
-                    Hittar du ingen avgift?
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 16v-4M12 8h.01" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Cross-sell -->
-              <div class="hero-crosssell">
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-                <span>Parkerar du regelbundet?</span>
-                <a href="/hyr-parkeringsplats" class="hero-crosssell-link">
-                  Hyr p-plats
-                  <svg
-                    width="11"
-                    height="11"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
+      <div class="hero-inner">
+        <!-- LEFT: Hitta parkering widget -->
+        <div class="hero-col hero-col--widget">
+          <div class="hero-widget-card">
+            <p class="hero-widget-heading">Hitta en parkering</p>
+            <!-- Tabbed widget -->
+            <div class="hero-widget">
+              <div class="hero-tabs">
+                <button class="hero-tab active" id="tab-find" onclick="heroSwitchTab('find')">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
                   </svg>
-                </a>
+                  Hitta parkering
+                </button>
+                <button class="hero-tab" id="tab-fee" onclick="heroSwitchTab('fee')">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                  Betala Efteråt
+                </button>
               </div>
 
-              <!-- Öppettider / tillgänglighet -->
-              <div class="hero-availability">
-                <div class="hero-avail-status">
-                  <span class="hero-avail-dot"></span>
-                  <span class="hero-avail-open">Öppet nu</span>
-                  <span class="hero-avail-sep">·</span>
-                  <span class="hero-avail-hours"
-                    >08:00 – 20:00, alla dagar</span
-                  >
+              <!-- Panel: Hitta parkering -->
+              <div class="hero-tab-panel" id="panel-find">
+                <div class="hero-search-wrap">
+                  <input type="text" class="hero-search-input" id="hero-search"
+                    placeholder="Sök parkering, tjänst eller ort." autocomplete="off" spellcheck="false" />
+                  <svg class="search-icon" id="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
+                  <button class="search-clear" id="search-clear" aria-label="Rensa sökning"></button>
                 </div>
-                <div class="hero-avail-chips">
-                  <span class="hero-avail-chip">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect x="2" y="5" width="20" height="14" rx="2" />
-                      <path d="M2 10h20" />
-                    </svg>
-                    Betalning online 24/7
-                  </span>
-                  <span class="hero-avail-chip">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    </svg>
-                    Autopay alltid aktivt
-                  </span>
-                </div>
+              </div>
+
+              <!-- Panel: Kontrollera avgift -->
+              <div class="hero-tab-panel hidden" id="panel-fee">
+                <form class="hero-fee-form" onsubmit="heroCheckFee(event)">
+                  <input type="text" id="fee-reg-input" class="hero-search-input" placeholder="ABC 123" maxlength="8"
+                    required autocomplete="off" spellcheck="false" oninput="this.value = this.value.toUpperCase()" />
+                  <button type="submit" class="hero-fee-btn">
+                    Kontrollera
+                  </button>
+                </form>
+                <button type="button" class="hero-fee-info-link" onclick="openFeeInfoModal()">
+                  Hittar du ingen avgift?
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4M12 8h.01" />
+                  </svg>
+                </button>
               </div>
             </div>
-          </div>
 
-          <!-- RIGHT: Hyreskunder -->
-          <div class="hero-col hero-col--copy">
-            <div class="hero-tenant-card">
-              <span class="hero-tenant-badge">Hyr parkeringsplats</span>
-              <h2 class="hero-tenant-heading">
-                Hitta och hyr en parkeringsplats
-              </h2>
-              <p class="hero-tenant-sub">
-                Vi erbjuder både reserverade och oreserverade platser —
-                månadsvis för privatpersoner och företag. Skicka in en
-                intresseanmälan så återkommer vi med mer information.
-              </p>
-              <ul class="hero-tenant-list">
-                <li>
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                  Reserverade och oreserverade platser
-                </li>
-                <li>
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                  Kamerabaserad parkering — smidigt och enkelt
-                </li>
-                <li>
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                  Månadsbetalning via autogiro
-                </li>
-                <li>
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                  Anläggningar i hela Sverige
-                </li>
-              </ul>
-              <a href="/hyr-parkeringsplats" class="hero-tenant-cta">
-                Skicka intresseanmälan
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+            <!-- Cross-sell -->
+            <div class="hero-crosssell">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span>Parkerar du regelbundet?</span>
+              <a href="/hyr-parkeringsplats" class="hero-crosssell-link">
+                Hyr p-plats
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </a>
             </div>
+
+            <!-- Öppettider / tillgänglighet -->
+            <div class="hero-availability">
+              <div class="hero-avail-status">
+                <span class="hero-avail-dot"></span>
+                <span class="hero-avail-open">Öppet nu</span>
+                <span class="hero-avail-sep">·</span>
+                <span class="hero-avail-hours">08:00 – 20:00, alla dagar</span>
+              </div>
+              <div class="hero-avail-chips">
+                <span class="hero-avail-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <path d="M2 10h20" />
+                  </svg>
+                  Betalning online 24/7
+                </span>
+                <span class="hero-avail-chip">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                  Autopay alltid aktivt
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- ── Flow overlay (position:fixed — no layout impact) ── -->
-        <div
-          class="flow-overlay"
-          id="flow-overlay"
-          onclick="closeFlowOverlay(event)"
-        >
-          <div class="flow-overlay-card">
-            <button
-              class="flow-overlay-close"
-              onclick="closeFlowOverlay(null)"
-              aria-label="Stäng"
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              >
-                <path d="M18 6 6 18M6 6l12 12" />
+        <!-- RIGHT: Hyreskunder -->
+        <div class="hero-col hero-col--copy">
+          <div class="hero-tenant-card">
+            <span class="hero-tenant-badge">Hyr parkeringsplats</span>
+            <h2 class="hero-tenant-heading">
+              Hitta och hyr en parkeringsplats
+            </h2>
+            <p class="hero-tenant-sub">
+              Vi erbjuder både reserverade och oreserverade platser —
+              månadsvis för privatpersoner och företag. Skicka in en
+              intresseanmälan så återkommer vi med mer information.
+            </p>
+            <ul class="hero-tenant-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Reserverade och oreserverade platser
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Kamerabaserad parkering — smidigt och enkelt
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Månadsbetalning via autogiro
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Anläggningar i hela Sverige
+              </li>
+            </ul>
+            <a href="/hyr-parkeringsplats" class="hero-tenant-cta">
+              Skicka intresseanmälan
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </button>
-            <div class="flow-overlay-icon" id="flow-overlay-icon"></div>
-            <h3 class="flow-overlay-title" id="flow-overlay-title"></h3>
-            <p class="flow-overlay-body" id="flow-overlay-body"></p>
+            </a>
           </div>
-        </div>
-      </section>
-
-      <!-- ── Flow strip — sits between hero and logo band, always visible ── -->
-      <div class="flow-strip">
-        <div
-          class="flow-step"
-          onclick="openFlowOverlay(0)"
-          role="button"
-          tabindex="0"
-          onkeydown="if (event.key === 'Enter') openFlowOverlay(0);"
-        >
-          <div class="flow-icon">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 17l2-10h14l2 10" />
-              <path d="M1 17h22" />
-              <circle cx="7.5" cy="20.5" r="1.5" />
-              <circle cx="16.5" cy="20.5" r="1.5" />
-            </svg>
-          </div>
-          <span class="flow-label">Kör in</span>
-          <span class="flow-info-btn">Så här fungerar det</span>
-        </div>
-        <div class="flow-arrow">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </div>
-        <div
-          class="flow-step"
-          onclick="openFlowOverlay(1)"
-          role="button"
-          tabindex="0"
-          onkeydown="if (event.key === 'Enter') openFlowOverlay(1);"
-        >
-          <div class="flow-icon">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="M8 4v16M16 4v16" />
-            </svg>
-          </div>
-          <span class="flow-label">Parkera smidigt</span>
-          <span class="flow-info-btn">Så här fungerar det</span>
-        </div>
-        <div class="flow-arrow">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </div>
-        <div
-          class="flow-step"
-          onclick="openFlowOverlay(2)"
-          role="button"
-          tabindex="0"
-          onkeydown="if (event.key === 'Enter') openFlowOverlay(2);"
-        >
-          <div class="flow-icon">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="5" width="20" height="14" rx="2" />
-              <path d="M2 10h20" />
-              <path d="M7 15h4" />
-            </svg>
-          </div>
-          <span class="flow-label">Betala enkelt</span>
-          <span class="flow-info-btn">Så här fungerar det</span>
-        </div>
-        <div class="flow-arrow">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </div>
-        <div
-          class="flow-step flow-step--faktura"
-          onclick="openFakturaOverlay()"
-          role="button"
-          tabindex="0"
-          onkeydown="if (event.key === 'Enter') openFakturaOverlay();"
-        >
-          <div class="flow-icon">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-              />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="9" y1="13" x2="15" y2="13" />
-              <line x1="9" y1="17" x2="13" y2="17" />
-            </svg>
-          </div>
-          <span class="flow-label">Fått en faktura?</span>
-          <span class="flow-info-btn">Läs mer här</span>
         </div>
       </div>
 
-      <!-- ── Logo band ── -->
-      <div class="logo-band">
-        <p class="logo-band-label">Urval av våra uppdragsgivare</p>
-        <div class="logo-track-wrap">
-          <div class="logo-track">
-            <span class="logo-item"
-              ><img src="images/logos/fabege-svart-logotyp.webp" alt="Fabege"
-            / loading="lazy"></span>
-            <span class="logo-item"
-              ><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg"
-                alt="Västerås Stad"
-            / loading="lazy"></span>
-            <span class="logo-item"
-              ><img src="images/logos/mall-of-scandinavia.svg"
-                alt="Westfield Mall of Scandinavia"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/taby-centrum.svg"
-                alt="Westfield Täby Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/nacka-forum.webp"
-                alt="Nacka Forum"
-                class="logo-scale"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/haninge-centrum.svg"
-                alt="Haninge Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/sollentuna-centrum.webp"
-                alt="Sollentuna Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/tumba-centrum.webp" alt="Tumba Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/vasby-centrum.webp" alt="Väsby Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/ica-maxi.svg" alt="ICA Maxi"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/Balder.webp"
-                alt="Balder"
-                class="logo-scale"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/AtriumLjungberg.webp"
-                alt="Atrium Ljungberg"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/newsec.webp" alt="Newsec"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/storebrand.webp" alt="Storebrand"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <!-- duplicate for seamless loop -->
-            <span class="logo-item"
-              ><img src="images/logos/mall-of-scandinavia.svg"
-                alt="Westfield Mall of Scandinavia"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/taby-centrum.svg"
-                alt="Westfield Täby Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/nacka-forum.webp"
-                alt="Nacka Forum"
-                class="logo-scale"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/haninge-centrum.svg"
-                alt="Haninge Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/sollentuna-centrum.webp"
-                alt="Sollentuna Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/tumba-centrum.webp" alt="Tumba Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/vasby-centrum.webp" alt="Väsby Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/ica-maxi.svg" alt="ICA Maxi"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/Balder.webp"
-                alt="Balder"
-                class="logo-scale"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/AtriumLjungberg.webp"
-                alt="Atrium Ljungberg"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/newsec.webp" alt="Newsec"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/storebrand.webp" alt="Storebrand"
-            / loading="lazy"></span>
-            <span class="logo-item logo-item-dot">·</span>
-            <span class="logo-item"
-              ><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg"
-                alt="Västerås Stad"
-            / loading="lazy"></span>
-          </div>
+      <!-- ── Flow overlay (position:fixed — no layout impact) ── -->
+      <div class="flow-overlay" id="flow-overlay" onclick="closeFlowOverlay(event)">
+        <div class="flow-overlay-card">
+          <button class="flow-overlay-close" onclick="closeFlowOverlay(null)" aria-label="Stäng">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="flow-overlay-icon" id="flow-overlay-icon"></div>
+          <h3 class="flow-overlay-title" id="flow-overlay-title"></h3>
+          <p class="flow-overlay-body" id="flow-overlay-body"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Flow strip — sits between hero and logo band, always visible ── -->
+    <div class="flow-strip">
+      <div class="flow-step" onclick="openFlowOverlay(0)" role="button" tabindex="0"
+        onkeydown="if (event.key === 'Enter') openFlowOverlay(0);">
+        <div class="flow-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17l2-10h14l2 10" />
+            <path d="M1 17h22" />
+            <circle cx="7.5" cy="20.5" r="1.5" />
+            <circle cx="16.5" cy="20.5" r="1.5" />
+          </svg>
+        </div>
+        <span class="flow-label">Kör in</span>
+        <span class="flow-info-btn">Så här fungerar det</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </div>
+      <div class="flow-step" onclick="openFlowOverlay(1)" role="button" tabindex="0"
+        onkeydown="if (event.key === 'Enter') openFlowOverlay(1);">
+        <div class="flow-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="M8 4v16M16 4v16" />
+          </svg>
+        </div>
+        <span class="flow-label">Parkera smidigt</span>
+        <span class="flow-info-btn">Så här fungerar det</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </div>
+      <div class="flow-step" onclick="openFlowOverlay(2)" role="button" tabindex="0"
+        onkeydown="if (event.key === 'Enter') openFlowOverlay(2);">
+        <div class="flow-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <path d="M2 10h20" />
+            <path d="M7 15h4" />
+          </svg>
+        </div>
+        <span class="flow-label">Betala enkelt</span>
+        <span class="flow-info-btn">Så här fungerar det</span>
+      </div>
+      <div class="flow-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </div>
+      <div class="flow-step flow-step--faktura" onclick="openFakturaOverlay()" role="button" tabindex="0"
+        onkeydown="if (event.key === 'Enter') openFakturaOverlay();">
+        <div class="flow-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="9" y1="13" x2="15" y2="13" />
+            <line x1="9" y1="17" x2="13" y2="17" />
+          </svg>
+        </div>
+        <span class="flow-label">Fått en faktura?</span>
+        <span class="flow-info-btn">Läs mer här</span>
+      </div>
+    </div>
+
+    <!-- ── Logo band ── -->
+    <div class="logo-band">
+      <p class="logo-band-label">Urval av våra uppdragsgivare</p>
+      <div class="logo-track-wrap">
+        <div class="logo-track">
+          <span class="logo-item"><img src="images/logos/fabege-svart-logotyp.webp" alt="Fabege" /
+              loading="lazy"></span>
+          <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg"
+              alt="Västerås Stad" / loading="lazy"></span>
+          <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/nacka-forum.webp" alt="Nacka Forum" class="logo-scale" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/sollentuna-centrum.webp" alt="Sollentuna Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/tumba-centrum.webp" alt="Tumba Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/vasby-centrum.webp" alt="Väsby Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/Balder.webp" alt="Balder" class="logo-scale" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/newsec.webp" alt="Newsec" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/storebrand.webp" alt="Storebrand" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="logo-item"><img src="images/logos/mall-of-scandinavia.svg" alt="Westfield Mall of Scandinavia" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/taby-centrum.svg" alt="Westfield Täby Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/nacka-forum.webp" alt="Nacka Forum" class="logo-scale" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/haninge-centrum.svg" alt="Haninge Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/sollentuna-centrum.webp" alt="Sollentuna Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/tumba-centrum.webp" alt="Tumba Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/vasby-centrum.webp" alt="Väsby Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/ica-maxi.svg" alt="ICA Maxi" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/marsta-centrum.svg" alt="Märsta Centrum" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/Balder.webp" alt="Balder" class="logo-scale" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/AtriumLjungberg.webp" alt="Atrium Ljungberg" /
+              loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/newsec.webp" alt="Newsec" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/storebrand.webp" alt="Storebrand" / loading="lazy"></span>
+          <span class="logo-item logo-item-dot">·</span>
+          <span class="logo-item"><img src="images/logos/VasterasStad_Logotyp_2025_Liggande_Svart_Digitalt.svg"
+              alt="Västerås Stad" / loading="lazy"></span>
         </div>
       </div>
     </div>
-    <!-- /above-fold -->
+  </div>
+  <!-- /above-fold -->
 
-    <div
-      class="search-results"
-      id="search-results"
-      role="listbox"
-      aria-label="Sökresultat"
-    ></div>
+  <div class="search-results" id="search-results" role="listbox" aria-label="Sökresultat"></div>
 
-    <!-- ── How it works ── -->
-    <section class="how-section">
-      <p class="section-label">Hur det fungerar</p>
-      <h2>Parkera — utan att tänka på det</h2>
-      <p class="how-sub">
-        Inga biljetter. Inga bommar. Ingen stress. Kamerorna sköter allt
-        automatiskt.
-      </p>
-      <div class="how-steps">
-        <div class="how-step">
-          <div class="how-step-icon">
-            <span class="how-step-num">1</span>
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#fff"
-              stroke-width="1.8"
-            >
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-              />
-              <circle cx="12" cy="9" r="2.5" fill="#fff" stroke="none" />
-            </svg>
-          </div>
-          <h3>Kör in</h3>
-          <p>
-            Kameran läser av ditt registreringsnummer automatiskt. Ingen
-            biljett, ingen bom — bara kör in.
-          </p>
+  <!-- ── How it works ── -->
+  <section class="how-section">
+    <p class="section-label">Hur det fungerar</p>
+    <h2>Parkera — utan att tänka på det</h2>
+    <p class="how-sub">
+      Inga biljetter. Inga bommar. Ingen stress. Kamerorna sköter allt
+      automatiskt.
+    </p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">1</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" fill="#fff" stroke="none" />
+          </svg>
         </div>
-        <div class="how-step">
-          <div class="how-step-icon">
-            <span class="how-step-num">2</span>
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#fff"
-              stroke-width="1.8"
-            >
-              <rect x="3" y="8" width="18" height="10" rx="2" />
-              <path d="M7 8V6a5 5 0 0 1 10 0v2" />
-              <circle cx="12" cy="13" r="1.5" fill="#fff" stroke="none" />
-            </svg>
-          </div>
-          <h3>Parkera fritt</h3>
-          <p>
-            Ta den tid du behöver. Ingen parkeringsbiljett som löper ut — du
-            debiteras bara för den tid du faktiskt stod.
-          </p>
+        <h3>Kör in</h3>
+        <p>
+          Kameran läser av ditt registreringsnummer automatiskt. Ingen
+          biljett, ingen bom — bara kör in.
+        </p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">2</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
+            <rect x="3" y="8" width="18" height="10" rx="2" />
+            <path d="M7 8V6a5 5 0 0 1 10 0v2" />
+            <circle cx="12" cy="13" r="1.5" fill="#fff" stroke="none" />
+          </svg>
         </div>
-        <div class="how-step">
-          <div class="how-step-icon">
-            <span class="how-step-num">3</span>
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#fff"
-              stroke-width="1.8"
-            >
-              <rect x="2" y="6" width="20" height="14" rx="2" />
-              <path d="M2 10h20" />
-              <circle cx="12" cy="15" r="1.5" fill="#fff" stroke="none" />
-            </svg>
-          </div>
-          <h3>Betala enkelt</h3>
-          <p>
-            Betala automatiskt via Autopay efter utfart — eller via app,
-            betalautomat eller online inom 48 timmar.
-          </p>
+        <h3>Parkera fritt</h3>
+        <p>
+          Ta den tid du behöver. Ingen parkeringsbiljett som löper ut — du
+          debiteras bara för den tid du faktiskt stod.
+        </p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-icon">
+          <span class="how-step-num">3</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
+            <rect x="2" y="6" width="20" height="14" rx="2" />
+            <path d="M2 10h20" />
+            <circle cx="12" cy="15" r="1.5" fill="#fff" stroke="none" />
+          </svg>
+        </div>
+        <h3>Betala enkelt</h3>
+        <p>
+          Betala automatiskt via Autopay efter utfart — eller via app,
+          betalautomat eller online inom 48 timmar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── Services ── -->
+  <section class="services">
+    <p class="section-label">Vad vi gör</p>
+    <h2>Kompletta parkeringslösningar</h2>
+    <div class="cards">
+      <a class="card" data-card="01" href="/strategi">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <path d="M2 20h20M5 20V10l7-7 7 7v10" />
+            <rect x="9" y="14" width="6" height="6" />
+          </svg>
+        </div>
+        <p class="card-num">01</p>
+        <h3>Strategi &amp; Analys</h3>
+        <p>
+          Vi kartlägger dina behov och utformar en parkeringsstrategi som
+          maximerar intäkter och minimerar problem.
+        </p>
+      </a>
+      <a class="card" data-card="02" href="/anpr">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M19.07 4.93A10 10 0 0 1 21 12M4.93 4.93A10 10 0 0 0 3 12M12 3v2M12 19v2M3 12H1M23 12h-2" />
+          </svg>
+        </div>
+        <p class="card-num">02</p>
+        <h3>ANPR &amp; Kamera</h3>
+        <p>
+          Marknadsledande kamerabaserad nummerplåtsigenkänning — smidig,
+          bemanningsfri in- och utpassering dygnet runt.
+        </p>
+      </a>
+      <a class="card" data-card="03" href="/autopay">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <rect x="2" y="6" width="20" height="14" rx="2" />
+            <path d="M2 10h20" />
+            <circle cx="7" cy="15" r="1" fill="var(--color-accent)" />
+            <circle cx="12" cy="15" r="1" fill="var(--color-accent)" />
+          </svg>
+        </div>
+        <p class="card-num">03</p>
+        <h3>Autopay &amp; Betalning</h3>
+        <p>
+          Sömlös betalning via Autopay, EasyPark och Parkster. Besökaren
+          betalar enkelt — i appen, vid automaten eller online.
+        </p>
+      </a>
+      <a class="card" data-card="04" href="/forvaltning">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>
+        </div>
+        <p class="card-num">04</p>
+        <h3>Förvaltning</h3>
+        <p>
+          Vi tar fullt driftsansvar — underhåll, rapportering och löpande
+          optimering av beläggning och intäkter.
+        </p>
+      </a>
+      <a class="card" data-card="05" href="/kontakt">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <p class="card-num">05</p>
+        <h3>Kundservice</h3>
+        <p>
+          Personlig och tillgänglig support för fastighetsägare och besökare,
+          med snabb responstid och lokal närvaro.
+        </p>
+      </a>
+      <a class="card" data-card="06" href="/fastighetsagare">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <path d="M14 14h7v7M14 17.5h4M17.5 14v4" />
+          </svg>
+        </div>
+        <p class="card-num">06</p>
+        <h3>Fastighetsägare</h3>
+        <p>
+          Skräddarsydda avtal för fastighetsägare — vi hanterar hela
+          parkeringen så att du kan fokusera på din kärnverksamhet.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Feature: Hyr parkeringsplats ── -->
+  <section class="feature-section">
+    <div class="feature-inner">
+      <div class="feature-img-outer">
+        <div class="feature-img-wrap">
+          <img src="images/rentParkingSpot.webp" alt="Hyr en parkeringsplats hos Parkman" loading="lazy" />
+        </div>
+        <div class="feature-float-stat">
+          <span class="feature-float-stat-num">1&nbsp;200<sup>+</sup></span>
+          <span class="feature-float-stat-label">aktiva platser</span>
+        </div>
+        <div class="feature-float-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Kamerabevakning 24/7
         </div>
       </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ── Services ── -->
-    <section class="services">
-      <p class="section-label">Vad vi gör</p>
-      <h2>Kompletta parkeringslösningar</h2>
-      <div class="cards">
-        <a class="card" data-card="01" href="/strategi">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <path d="M2 20h20M5 20V10l7-7 7 7v10" />
-              <rect x="9" y="14" width="6" height="6" />
-            </svg>
-          </div>
-          <p class="card-num">01</p>
-          <h3>Strategi &amp; Analys</h3>
-          <p>
-            Vi kartlägger dina behov och utformar en parkeringsstrategi som
-            maximerar intäkter och minimerar problem.
-          </p>
-        </a>
-        <a class="card" data-card="02" href="/anpr">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M19.07 4.93A10 10 0 0 1 21 12M4.93 4.93A10 10 0 0 0 3 12M12 3v2M12 19v2M3 12H1M23 12h-2"
-              />
-            </svg>
-          </div>
-          <p class="card-num">02</p>
-          <h3>ANPR &amp; Kamera</h3>
-          <p>
-            Marknadsledande kamerabaserad nummerplåtsigenkänning — smidig,
-            bemanningsfri in- och utpassering dygnet runt.
-          </p>
-        </a>
-        <a class="card" data-card="03" href="/autopay">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <rect x="2" y="6" width="20" height="14" rx="2" />
-              <path d="M2 10h20" />
-              <circle cx="7" cy="15" r="1" fill="var(--color-accent)" />
-              <circle cx="12" cy="15" r="1" fill="var(--color-accent)" />
-            </svg>
-          </div>
-          <p class="card-num">03</p>
-          <h3>Autopay &amp; Betalning</h3>
-          <p>
-            Sömlös betalning via Autopay, EasyPark och Parkster. Besökaren
-            betalar enkelt — i appen, vid automaten eller online.
-          </p>
-        </a>
-        <a class="card" data-card="04" href="/forvaltning">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <path
-                d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
-              />
-            </svg>
-          </div>
-          <p class="card-num">04</p>
-          <h3>Förvaltning</h3>
-          <p>
-            Vi tar fullt driftsansvar — underhåll, rapportering och löpande
-            optimering av beläggning och intäkter.
-          </p>
-        </a>
-        <a class="card" data-card="05" href="/kontakt">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <p class="card-num">05</p>
-          <h3>Kundservice</h3>
-          <p>
-            Personlig och tillgänglig support för fastighetsägare och besökare,
-            med snabb responstid och lokal närvaro.
-          </p>
-        </a>
-        <a class="card" data-card="06" href="/fastighetsagare">
-          <div class="card-icon">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-accent)"
-              stroke-width="1.8"
-            >
-              <rect x="3" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="3" width="7" height="7" rx="1" />
-              <rect x="3" y="14" width="7" height="7" rx="1" />
-              <path d="M14 14h7v7M14 17.5h4M17.5 14v4" />
-            </svg>
-          </div>
-          <p class="card-num">06</p>
-          <h3>Fastighetsägare</h3>
-          <p>
-            Skräddarsydda avtal för fastighetsägare — vi hanterar hela
-            parkeringen så att du kan fokusera på din kärnverksamhet.
-          </p>
+      <div class="feature-text">
+        <p class="section-label">Hyr en plats</p>
+        <h2>Din fasta parkering — trygg och enkel</h2>
+        <p>
+          Sök bland hundratals lediga parkeringsplatser i Stockholm, Göteborg,
+          Malmö och fler städer. Välj rätt plats, skriv på digitalt och ha
+          alltid någonstans att ställa bilen.
+        </p>
+        <ul class="feature-bullets">
+          <li>Digitalt avtal — klart på minuter</li>
+          <li>Månadsbetalning via autogiro</li>
+          <li>Säkra, kameraövervakade garageplatser</li>
+          <li>Avbokning med kort varsel</li>
+        </ul>
+        <a href="/parkeringar" class="feature-btn">
+          Se lediga platser
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ── Feature: Hyr parkeringsplats ── -->
-    <section class="feature-section">
-      <div class="feature-inner">
-        <div class="feature-img-outer">
-          <div class="feature-img-wrap">
-            <img src="images/rentParkingSpot.webp"
-              alt="Hyr en parkeringsplats hos Parkman"
-              loading="lazy" />
-          </div>
-          <div class="feature-float-stat">
-            <span class="feature-float-stat-num">1&nbsp;200<sup>+</sup></span>
-            <span class="feature-float-stat-label">aktiva platser</span>
-          </div>
-          <div class="feature-float-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-            Kamerabevakning 24/7
-          </div>
-        </div>
-        <div class="feature-text">
-          <p class="section-label">Hyr en plats</p>
-          <h2>Din fasta parkering — trygg och enkel</h2>
-          <p>
-            Sök bland hundratals lediga parkeringsplatser i Stockholm, Göteborg,
-            Malmö och fler städer. Välj rätt plats, skriv på digitalt och ha
-            alltid någonstans att ställa bilen.
-          </p>
-          <ul class="feature-bullets">
-            <li>Digitalt avtal — klart på minuter</li>
-            <li>Månadsbetalning via autogiro</li>
-            <li>Säkra, kameraövervakade garageplatser</li>
-            <li>Avbokning med kort varsel</li>
-          </ul>
-          <a href="/parkeringar" class="feature-btn">
-            Se lediga platser
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
+  <!-- ── Coverage Map ── -->
+  <section class="coverage-section">
+    <div class="coverage-inner">
+      <div class="coverage-text">
+        <p class="section-label">Täckning</p>
+        <h2>Parkman i hela Sverige</h2>
+        <p class="coverage-sub">
+          Från Malmö i söder till Hudiksvall i norr — parkeringsanläggningar i
+          fler än 10 städer och samhällen runt om i landet.
+        </p>
+        <div class="coverage-cities" id="coverage-cities"></div>
+        <a href="/parkeringar" class="coverage-cta">
+          Se alla anläggningar
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
       </div>
-    </section>
-
-    <!-- ── Coverage Map ── -->
-    <section class="coverage-section">
-      <div class="coverage-inner">
-        <div class="coverage-text">
-          <p class="section-label">Täckning</p>
-          <h2>Parkman i hela Sverige</h2>
-          <p class="coverage-sub">
-            Från Malmö i söder till Hudiksvall i norr — parkeringsanläggningar i
-            fler än 10 städer och samhällen runt om i landet.
-          </p>
-          <div class="coverage-cities" id="coverage-cities"></div>
-          <a href="/parkeringar" class="coverage-cta">
-            Se alla anläggningar
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-        <div class="coverage-map-wrap">
-          <svg
-            id="coverage-svg"
-            viewBox="0 0 300 520"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!--
+      <div class="coverage-map-wrap">
+        <svg id="coverage-svg" viewBox="0 0 300 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!--
               Coordinate system:
               x = (lon - 11.3) / 7.9 * 300
               y = (62.5 - lat) / 7.5 * 520
               lon range: 11.3–19.2 E  |  lat range: 55.0–62.5 N
             -->
 
-            <!-- Sweden mainland — ~170 points, clockwise from NW border -->
-            <path
-              d="
+          <!-- Sweden mainland — ~170 points, clockwise from NW border -->
+          <path d="
               M 30,0 L 239,0
               L 234,4 L 229,8 L 230,15 L 225,23 L 222,27 L 220,31 L 220,42 L 220,53
               L 219,66 L 219,70 L 220,78 L 220,83 L 219,91 L 218,104 L 220,114 L 222,127
@@ -1060,1258 +673,1048 @@
               L 10,307 L 7,299 L 5,292 L 2,287 L 1,282 L 0,280 L 0,270 L 0,263 L 0,248
               L 2,239 L 4,232 L 5,221 L 8,208 L 9,199 L 11,187 L 12,181 L 15,174
               L 13,163 L 11,152 L 19,131 L 10,119 L 8,104 L 13,94 L 19,69 L 22,60 L 26,35 L 28,17
-              Z"
-              fill="rgba(255,255,255,0.08)"
-              stroke="rgba(255,255,255,0.35)"
-              stroke-width="1.3"
-              stroke-linejoin="round"
-            />
+              Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.35)" stroke-width="1.3"
+            stroke-linejoin="round" />
 
-            <!-- Öland — 21-point outline, diagonal SW→NE (56.17–57.37N) -->
-            <path
-              d="M 194,439 L 195,430 L 196,419 L 198,407 L 199,396 L 200,384 L 201,373 L 203,361
+          <!-- Öland — 21-point outline, diagonal SW→NE (56.17–57.37N) -->
+          <path d="M 194,439 L 195,430 L 196,419 L 198,407 L 199,396 L 200,384 L 201,373 L 203,361
               L 207,363 L 213,359 L 219,357 L 221,357
               L 215,364 L 211,373 L 209,384 L 210,396 L 209,407 L 206,419 L 203,430 L 199,442 L 196,439 Z"
-              fill="rgba(255,255,255,0.08)"
-              stroke="rgba(255,255,255,0.28)"
-              stroke-width="1"
-              stroke-linejoin="round"
-            />
+            fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-linejoin="round" />
 
-            <!-- Gotland — 18-point outline (56.9–57.9N) -->
-            <path
-              d="M 260,387 L 262,381 L 267,375 L 272,367 L 275,359 L 279,350 L 284,340
+          <!-- Gotland — 18-point outline (56.9–57.9N) -->
+          <path d="M 260,387 L 262,381 L 267,375 L 272,367 L 275,359 L 279,350 L 284,340
               L 286,328 L 283,318 L 277,317 L 269,320 L 263,323 L 259,327
-              L 258,336 L 259,347 L 259,359 L 258,370 L 258,381 Z"
-              fill="rgba(255,255,255,0.08)"
-              stroke="rgba(255,255,255,0.28)"
-              stroke-width="1"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <div id="coverage-tooltip" class="coverage-tooltip"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CTA ── -->
-    <section class="cta-section">
-      <div class="cta-section-inner">
-        <p class="cta-eyebrow">Kom igång</p>
-        <h2>Låt oss ta hand om din parkering</h2>
-        <p class="cta-sub">
-          Vi hanterar allt från strategi och teknik till daglig drift — så att
-          du kan fokusera på det som är viktigt för dig.
-        </p>
-        <a href="/kontakt" class="btn-cta">
-          Kontakta oss
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- ── FAQ ── -->
-    <section class="faq-section">
-      <div class="faq-inner">
-        <div class="faq-header fade-up">
-          <p class="section-label">Vanliga frågor</p>
-          <h2>Svar på det du undrar</h2>
-        </div>
-        <ul class="faq-list" role="list">
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Hur hyr jag en parkeringsplats?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Besök "Våra parkeringar" på webbplatsen, fyll i en
-                intresseanmälan för din önskade anläggning så hör Parkman av sig
-                med mer information. Du kan även kontakta oss direkt via
-                <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a>.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Vad är Autopay och hur fungerar det?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Autopay är ett heldigitalt system där kameror automatiskt läser
-                av ditt registreringsnummer vid in- och utfart. Betalning sker
-                via registrerat kort eller faktura — ingen biljett, ingen app
-                behövs. Tillståndet är digitalt och skickas via e-post.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Kan jag avsluta parkeringen tidigt och bara betala för faktisk
-                tid?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Ja. Avsluta parkeringen i appen och du betalar enbart för den
-                tid du faktiskt stod parkerad. Du kan även förlänga
-                parkeringstiden direkt i appen om du behöver stanna längre.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Vilken uppsägningstid gäller för månadsavtal?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Avtal löper tillsvidare utan bindningstid (om inget annat anges
-                i ditt specifika kontrakt). Uppsägningstiden räknas alltid till
-                slutet av en kalendermånad. Du hittar din exakta uppsägningstid
-                i Park46-appen eller via minparkering.parkman.nu.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Vad innebär en icke-reserverad parkeringsplats?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Ett icke-reserverat tillstånd ger rätten att parkera inom ett
-                område utan en fast, dedikerad plats. Du parkerar på tillgänglig
-                plats. Parkman övervakar beläggningen och säljer aldrig fler
-                tillstånd än vad som ryms i anläggningen.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Finns det laddplatser för elbil?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Parkman arbetar aktivt för att möta efterfrågan på laddplatser
-                för både hyresgäster och korttidsparkering. Information om
-                laddmöjligheter finns på respektive anläggningssida under "Våra
-                parkeringar".
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Garaget var fullt — kan jag ställa mig i kö?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Ja. Skicka en intresseanmälan för ditt önskade garage eller
-                kontakta
-                <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a>.
-                Du får bekräftelse på din köregistrering och aviseras när en
-                plats blir ledig.
-              </div>
-            </div>
-          </li>
-
-          <li class="faq-item fade-up">
-            <button class="faq-question" aria-expanded="false">
-              <span class="faq-question-text"
-                >Jag fick en parkeringsanmärkning — hur överklagar jag?</span
-              >
-              <span class="faq-icon" aria-hidden="true"
-                ><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M6 1v10M1 6h10"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  /></svg
-              ></span>
-            </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">
-                Kontakta Hojab på 08-735 29 99 för att överklaga en
-                parkeringsanmärkning. Har du frågor om fakturor från
-                Autopay-anläggningar är du välkommen att använda
-                kontaktformuläret på vår webbplats.
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="faq-footer fade-up">
-          <p>Hittar du inte svaret du söker?</p>
-          <a href="/faq">Se alla vanliga frågor →</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <img
-              src="Brand_assets/Logo.webp"
-              alt="Parkman"
-              class="footer-logo"
-            />
-            <p class="footer-tagline">
-              Sveriges ledande parkeringsförvaltare — vi sköter hela kedjan från
-              installation till kundservice.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://sv-se.facebook.com/parkmanisverigeab/"
-                target="_blank"
-                rel="noopener"
-                class="footer-social-link"
-                aria-label="Facebook"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/parkman-i-sverige-ab/"
-                target="_blank"
-                rel="noopener"
-                class="footer-social-link"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Tjänster -->
-          <div class="footer-col">
-            <h6>Tjänster</h6>
-            <ul>
-              <li><a href="/parkeringar">Våra parkeringar</a></li>
-              <li><a href="/anpr">ANPR</a></li>
-              <li><a href="/fastighetsagare">Fastighetsägare</a></li>
-            </ul>
-          </div>
-
-          <!-- Företaget -->
-          <div class="footer-col">
-            <h6>Företaget</h6>
-            <ul>
-              <li><a href="/om-oss">Om oss</a></li>
-              <li><a href="/om-oss#nyheter">Nyheter</a></li>
-              <li><a href="/kontakt">Kontakt</a></li>
-            </ul>
-          </div>
-
-          <!-- Kontakt -->
-          <div class="footer-col">
-            <h6>Kontakt</h6>
-            <div class="footer-contact-list">
-              <a href="tel:0873490000" class="footer-contact-item">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
-                  />
-                </svg>
-                <span>08 734 90 00</span>
-              </a>
-              <a href="mailto:info@parkman.nu" class="footer-contact-item">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                <span>info@parkman.nu</span>
-              </a>
-              <div class="footer-contact-item footer-contact-muted">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 3" />
-                </svg>
-                <span>Mån–fre 08:00–20:00</span>
-              </div>
-            </div>
-            <div class="footer-badge">
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              <span>Auktoriserat parkeringsbolag</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
-          <div class="footer-bottom-links">
-            <a href="/allmanna-villkor">Allmänna villkor för Autopay</a>
-            <a href="/integritetspolicy">Integritetspolicy</a>
-            <a href="/cookies">Cookies</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Fee info modal -->
-    <div id="fee-info-modal" class="fee-modal-overlay">
-      <div id="fee-info-inner" class="fee-modal-inner">
-        <button onclick="closeFeeInfoModal()" class="fee-modal-close">
-          &times;
-        </button>
-        <div class="fee-modal-icon">
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="var(--color-primary)"
-            stroke-width="2"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 16v-4M12 8h.01" />
-          </svg>
-        </div>
-        <h3 class="fee-modal-h3">Hittar du ingen avgift?</h3>
-        <p class="fee-modal-lead">
-          Om ingen avgift visas på Autopays sida beror det troligen på ett av
-          följande:
-        </p>
-        <div class="fee-modal-list">
-          <div class="fee-modal-item">
-            <div class="fee-modal-bullet">
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--color-accent)"
-                stroke-width="2.5"
-              >
-                <path d="M5 12l5 5 9-9" />
-              </svg>
-            </div>
-            <div>
-              <p class="fee-modal-item-title">Parkeringen var gratis</p>
-              <p class="fee-modal-item-body">
-                Du parkerade på en anläggning med fri parkering eller inom en
-                fri tidsgräns.
-              </p>
-            </div>
-          </div>
-          <div class="fee-modal-item">
-            <div class="fee-modal-bullet">
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--color-accent)"
-                stroke-width="2.5"
-              >
-                <path d="M12 8v4l3 3M12 3a9 9 0 1 1 0 18A9 9 0 0 1 12 3z" />
-              </svg>
-            </div>
-            <div>
-              <p class="fee-modal-item-title">
-                Avgiften har gått ut per faktura
-              </p>
-              <p class="fee-modal-item-body">
-                Om parkeringen avslutades för mer än 48 timmar sedan har
-                betalningsfönstret stängt och avgiften skickats ut per faktura.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button onclick="closeFeeInfoModal()" class="fee-modal-btn">
-          Stäng
-        </button>
+              L 258,336 L 259,347 L 259,359 L 258,370 L 258,381 Z" fill="rgba(255,255,255,0.08)"
+            stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-linejoin="round" />
+        </svg>
+        <div id="coverage-tooltip" class="coverage-tooltip"></div>
       </div>
     </div>
+  </section>
 
-    <script>
-      // Set exact nav height as CSS variable so hero fills remaining viewport
-      (function () {
-        const nav = document.getElementById("main-nav");
-        if (nav) {
-          const setNavH = () =>
-            document.documentElement.style.setProperty(
-              "--nav-h",
-              nav.offsetHeight + "px",
-            );
-          setNavH();
-          window.addEventListener("resize", setNavH);
-        }
-      })();
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <div class="cta-section-inner">
+      <p class="cta-eyebrow">Kom igång</p>
+      <h2>Låt oss ta hand om din parkering</h2>
+      <p class="cta-sub">
+        Vi hanterar allt från strategi och teknik till daglig drift — så att
+        du kan fokusera på det som är viktigt för dig.
+      </p>
+      <a href="/kontakt" class="btn-cta">
+        Kontakta oss
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
 
-      function heroSwitchTab(name) {
-        document
-          .getElementById("tab-find")
-          .classList.toggle("active", name === "find");
-        document
-          .getElementById("tab-fee")
-          .classList.toggle("active", name === "fee");
-        document
-          .getElementById("panel-find")
-          .classList.toggle("hidden", name !== "find");
-        document
-          .getElementById("panel-fee")
-          .classList.toggle("hidden", name !== "fee");
+  <!-- ── FAQ ── -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="faq-header fade-up">
+        <p class="section-label">Vanliga frågor</p>
+        <h2>Svar på det du undrar</h2>
+      </div>
+      <ul class="faq-list" role="list">
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Hur hyr jag en parkeringsplats?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Besök "Våra parkeringar" på webbplatsen, fyll i en
+              intresseanmälan för din önskade anläggning så hör Parkman av sig
+              med mer information. Du kan även kontakta oss direkt via
+              <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a>.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Vad är Autopay och hur fungerar det?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Autopay är ett heldigitalt system där kameror automatiskt läser
+              av ditt registreringsnummer vid in- och utfart. Betalning sker
+              via registrerat kort eller faktura — ingen biljett, ingen app
+              behövs. Tillståndet är digitalt och skickas via e-post.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Kan jag avsluta parkeringen tidigt och bara betala för faktisk
+              tid?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Ja. Avsluta parkeringen i appen och du betalar enbart för den
+              tid du faktiskt stod parkerad. Du kan även förlänga
+              parkeringstiden direkt i appen om du behöver stanna längre.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Vilken uppsägningstid gäller för månadsavtal?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Avtal löper tillsvidare utan bindningstid (om inget annat anges
+              i ditt specifika kontrakt). Uppsägningstiden räknas alltid till
+              slutet av en kalendermånad. Du hittar din exakta uppsägningstid
+              i Park46-appen eller via minparkering.parkman.nu.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Vad innebär en icke-reserverad parkeringsplats?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Ett icke-reserverat tillstånd ger rätten att parkera inom ett
+              område utan en fast, dedikerad plats. Du parkerar på tillgänglig
+              plats. Parkman övervakar beläggningen och säljer aldrig fler
+              tillstånd än vad som ryms i anläggningen.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Finns det laddplatser för elbil?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Parkman arbetar aktivt för att möta efterfrågan på laddplatser
+              för både hyresgäster och korttidsparkering. Information om
+              laddmöjligheter finns på respektive anläggningssida under "Våra
+              parkeringar".
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Garaget var fullt — kan jag ställa mig i kö?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Ja. Skicka en intresseanmälan för ditt önskade garage eller
+              kontakta
+              <a href="mailto:uthyrning@parkman.nu">uthyrning@parkman.nu</a>.
+              Du får bekräftelse på din köregistrering och aviseras när en
+              plats blir ledig.
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Jag fick en parkeringsanmärkning — hur överklagar jag?</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Kontakta Hojab på 08-735 29 99 för att överklaga en
+              parkeringsanmärkning. Har du frågor om fakturor från
+              Autopay-anläggningar är du välkommen att använda
+              kontaktformuläret på vår webbplats.
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="faq-footer fade-up">
+        <p>Hittar du inte svaret du söker?</p>
+        <a href="/faq">Se alla vanliga frågor →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Brand_assets/Logo.webp" alt="Parkman" class="footer-logo" />
+          <p class="footer-tagline">
+            Sveriges ledande parkeringsförvaltare — vi sköter hela kedjan från
+            installation till kundservice.
+          </p>
+          <div class="footer-social">
+            <a href="https://sv-se.facebook.com/parkmanisverigeab/" target="_blank" rel="noopener"
+              class="footer-social-link" aria-label="Facebook">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/parkman-i-sverige-ab/" target="_blank" rel="noopener"
+              class="footer-social-link" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tjänster -->
+        <div class="footer-col">
+          <h6>Tjänster</h6>
+          <ul>
+            <li><a href="/parkeringar">Våra parkeringar</a></li>
+            <li><a href="/anpr">ANPR</a></li>
+            <li><a href="/fastighetsagare">Fastighetsägare</a></li>
+          </ul>
+        </div>
+
+        <!-- Företaget -->
+        <div class="footer-col">
+          <h6>Företaget</h6>
+          <ul>
+            <li><a href="/om-oss">Om oss</a></li>
+            <li><a href="/om-oss#nyheter">Nyheter</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt -->
+        <div class="footer-col">
+          <h6>Kontakt</h6>
+          <div class="footer-contact-list">
+            <a href="tel:0873490000" class="footer-contact-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>08 734 90 00</span>
+            </a>
+            <a href="mailto:info@parkman.nu" class="footer-contact-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>info@parkman.nu</span>
+            </a>
+            <div class="footer-contact-item footer-contact-muted">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 3" />
+              </svg>
+              <span>Mån–fre 08:00–20:00</span>
+            </div>
+          </div>
+          <div class="footer-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span>Auktoriserat parkeringsbolag</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Parkman Sverige AB · Stockholm, Sverige</span>
+        <div class="footer-bottom-links">
+          <a href="/allmanna-villkor">Allmänna villkor för Autopay</a>
+          <a href="/integritetspolicy">Integritetspolicy</a>
+          <a href="/cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fee info modal -->
+  <div id="fee-info-modal" class="fee-modal-overlay">
+    <div id="fee-info-inner" class="fee-modal-inner">
+      <button onclick="closeFeeInfoModal()" class="fee-modal-close">
+        &times;
+      </button>
+      <div class="fee-modal-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4M12 8h.01" />
+        </svg>
+      </div>
+      <h3 class="fee-modal-h3">Hittar du ingen avgift?</h3>
+      <p class="fee-modal-lead">
+        Om ingen avgift visas på Autopays sida beror det troligen på ett av
+        följande:
+      </p>
+      <div class="fee-modal-list">
+        <div class="fee-modal-item">
+          <div class="fee-modal-bullet">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5">
+              <path d="M5 12l5 5 9-9" />
+            </svg>
+          </div>
+          <div>
+            <p class="fee-modal-item-title">Parkeringen var gratis</p>
+            <p class="fee-modal-item-body">
+              Du parkerade på en anläggning med fri parkering eller inom en
+              fri tidsgräns.
+            </p>
+          </div>
+        </div>
+        <div class="fee-modal-item">
+          <div class="fee-modal-bullet">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5">
+              <path d="M12 8v4l3 3M12 3a9 9 0 1 1 0 18A9 9 0 0 1 12 3z" />
+            </svg>
+          </div>
+          <div>
+            <p class="fee-modal-item-title">
+              Avgiften har gått ut per faktura
+            </p>
+            <p class="fee-modal-item-body">
+              Om parkeringen avslutades för mer än 48 timmar sedan har
+              betalningsfönstret stängt och avgiften skickats ut per faktura.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button onclick="closeFeeInfoModal()" class="fee-modal-btn">
+        Stäng
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Set exact nav height as CSS variable so hero fills remaining viewport
+    (function () {
+      const nav = document.getElementById("main-nav");
+      if (nav) {
+        const setNavH = () =>
+          document.documentElement.style.setProperty(
+            "--nav-h",
+            nav.offsetHeight + "px",
+          );
+        setNavH();
+        window.addEventListener("resize", setNavH);
       }
+    })();
 
-      /* Fix: lock widget height so switching tabs never resizes the card */
-      (function () {
-        function lockPanelHeight() {
-          var pFind = document.getElementById("panel-find");
-          var pFee  = document.getElementById("panel-fee");
-          if (!pFind || !pFee) return;
-
-          /* Show fee panel in-flow (invisible) so it gets its true
-             rendered height including loaded web fonts */
-          pFee.style.display    = "block";
-          pFee.style.visibility = "hidden";
-          var feeH  = pFee.offsetHeight;
-          /* Reset find panel min-height before reading its natural size */
-          pFind.style.minHeight = "";
-          var findH = pFind.offsetHeight;
-          pFee.style.display    = "";
-          pFee.style.visibility = "";
-          pFee.classList.add("hidden");
-
-          var max = Math.max(findH, feeH);
-          pFind.style.minHeight = max + "px";
-          pFee.style.minHeight  = max + "px";
-        }
-
-        /* Run once early, then again after fonts are fully rendered */
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", lockPanelHeight);
-        } else {
-          lockPanelHeight();
-        }
-        /* Re-measure after web fonts load — font size affects info-link height */
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(lockPanelHeight);
-        }
-      })();
-      function heroCheckFee(e) {
-        e.preventDefault();
-        const input = document.getElementById("fee-reg-input");
-        const val = input.value.replace(/\s+/g, "").toUpperCase();
-        if (!val) {
-          input.focus();
-          return;
-        }
-        const w = 520,
-          h = 700;
-        const left = Math.round((screen.width - w) / 2);
-        const top = Math.round((screen.height - h) / 2);
-        window.open(
-          "https://autopay.io/onetimepayment/" + val,
-          "autopay_fee",
-          `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`,
-        );
-      }
-      function openFeeInfoModal() {
-        const modal = document.getElementById("fee-info-modal");
-        const inner = document.getElementById("fee-info-inner");
-        modal.style.display = "flex";
-        requestAnimationFrame(() => {
-          inner.style.transform = "scale(1)";
-          inner.style.opacity = "1";
-        });
-        document.addEventListener("keydown", _feeInfoEsc);
-      }
-      function closeFeeInfoModal() {
-        const modal = document.getElementById("fee-info-modal");
-        const inner = document.getElementById("fee-info-inner");
-        inner.style.transform = "scale(0.94)";
-        inner.style.opacity = "0";
-        setTimeout(() => {
-          modal.style.display = "none";
-        }, 220);
-        document.removeEventListener("keydown", _feeInfoEsc);
-      }
-      function _feeInfoEsc(e) {
-        if (e.key === "Escape") closeFeeInfoModal();
-      }
+    function heroSwitchTab(name) {
       document
-        .getElementById("fee-info-modal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) closeFeeInfoModal();
+        .getElementById("tab-find")
+        .classList.toggle("active", name === "find");
+      document
+        .getElementById("tab-fee")
+        .classList.toggle("active", name === "fee");
+      document
+        .getElementById("panel-find")
+        .classList.toggle("hidden", name !== "find");
+      document
+        .getElementById("panel-fee")
+        .classList.toggle("hidden", name !== "fee");
+    }
+
+    /* Fix: lock widget height so switching tabs never resizes the card */
+    (function () {
+      function lockPanelHeight() {
+        var pFind = document.getElementById("panel-find");
+        var pFee = document.getElementById("panel-fee");
+        if (!pFind || !pFee) return;
+
+        /* Show fee panel in-flow (invisible) so it gets its true
+           rendered height including loaded web fonts */
+        pFee.style.display = "block";
+        pFee.style.visibility = "hidden";
+        var feeH = pFee.offsetHeight;
+        /* Reset find panel min-height before reading its natural size */
+        pFind.style.minHeight = "";
+        var findH = pFind.offsetHeight;
+        pFee.style.display = "";
+        pFee.style.visibility = "";
+        pFee.classList.add("hidden");
+
+        var max = Math.max(findH, feeH);
+        pFind.style.minHeight = max + "px";
+        pFee.style.minHeight = max + "px";
+      }
+
+      /* Run once early, then again after fonts are fully rendered */
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", lockPanelHeight);
+      } else {
+        lockPanelHeight();
+      }
+      /* Re-measure after web fonts load — font size affects info-link height */
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(lockPanelHeight);
+      }
+    })();
+    function heroCheckFee(e) {
+      e.preventDefault();
+      const input = document.getElementById("fee-reg-input");
+      const val = input.value.replace(/\s+/g, "").toUpperCase();
+      if (!val) {
+        input.focus();
+        return;
+      }
+      const w = 520,
+        h = 700;
+      const left = Math.round((screen.width - w) / 2);
+      const top = Math.round((screen.height - h) / 2);
+      window.open(
+        "https://autopay.io/onetimepayment/" + val,
+        "autopay_fee",
+        `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`,
+      );
+    }
+    function openFeeInfoModal() {
+      const modal = document.getElementById("fee-info-modal");
+      const inner = document.getElementById("fee-info-inner");
+      modal.style.display = "flex";
+      requestAnimationFrame(() => {
+        inner.style.transform = "scale(1)";
+        inner.style.opacity = "1";
+      });
+      document.addEventListener("keydown", _feeInfoEsc);
+    }
+    function closeFeeInfoModal() {
+      const modal = document.getElementById("fee-info-modal");
+      const inner = document.getElementById("fee-info-inner");
+      inner.style.transform = "scale(0.94)";
+      inner.style.opacity = "0";
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 220);
+      document.removeEventListener("keydown", _feeInfoEsc);
+    }
+    function _feeInfoEsc(e) {
+      if (e.key === "Escape") closeFeeInfoModal();
+    }
+    document
+      .getElementById("fee-info-modal")
+      .addEventListener("click", function (e) {
+        if (e.target === this) closeFeeInfoModal();
+      });
+
+    // Scroll fade-up animations
+    (function () {
+      const singles = [
+        ".how-section .section-label",
+        ".how-section h2",
+        ".how-sub",
+        ".services .section-label",
+        ".services h2",
+        ".feature-img-wrap",
+        ".feature-text .section-label",
+        ".feature-text h2",
+        ".feature-text > p",
+        ".feature-bullets",
+        ".feature-btn",
+        ".coverage-text .section-label",
+        ".coverage-text h2",
+        ".coverage-sub",
+        ".coverage-cities",
+        ".coverage-cta",
+        ".faq-header",
+        ".faq-footer",
+        ".cta-eyebrow",
+        ".cta-section h2",
+        ".cta-sub",
+        ".btn-cta",
+      ];
+      const staggerGroups = [
+        ".how-steps .how-step",
+        ".cards .card",
+        ".faq-item",
+      ];
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      singles.forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el) => {
+          el.classList.add("fade-up");
+          obs.observe(el);
+        });
+      });
+      staggerGroups.forEach((sel) => {
+        document.querySelectorAll(sel).forEach((el, i) => {
+          el.classList.add("fade-up");
+          el.style.transitionDelay = i * 0.09 + "s";
+          obs.observe(el);
+        });
+      });
+    })();
+
+    // Counter animation for hero stats
+    (function () {
+      const stats = document.querySelectorAll(".hero-stat-num[data-target]");
+      if (!stats.length) return;
+      const duration = 1800;
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+      function animateCounter(el) {
+        const target = parseInt(el.dataset.target, 10);
+        const from = parseInt(el.dataset.from || "0", 10);
+        const start = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          el.textContent = Math.round(
+            from + (target - from) * easeOut(progress),
+          );
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      stats.forEach((el) => observer.observe(el));
+    })();
+  </script>
+
+  <script src="script.js" defer></script>
+  <script src="lang.js" defer></script>
+  <script>
+    (function () {
+      function updateAvailStatus() {
+        var dot = document.querySelector(".hero-avail-dot");
+        var label = document.querySelector(".hero-avail-open");
+        if (!dot || !label) return;
+        var now = new Date();
+        var mins = now.getHours() * 60 + now.getMinutes();
+        var open = mins >= 8 * 60 && mins < 20 * 60; // 08:00–20:00
+        if (open) {
+          dot.classList.remove("closed");
+          label.classList.remove("closed");
+          label.textContent = "Öppet nu";
+        } else {
+          dot.classList.add("closed");
+          label.classList.add("closed");
+          label.textContent = "Stängt";
+        }
+      }
+      updateAvailStatus();
+      // Re-check every minute in case the user leaves the tab open
+      setInterval(updateAvailStatus, 60000);
+    })();
+  </script>
+  <script>
+    // Flow strip carousel — active on mobile (≤768px)
+    document.addEventListener("DOMContentLoaded", function () {
+      var strip = document.querySelector(".flow-strip");
+      if (!strip) return;
+      var initialized = false;
+
+      function initCarousel() {
+        if (initialized) return;
+        var steps = Array.from(strip.querySelectorAll(".flow-step"));
+        if (steps.length < 2) return;
+        initialized = true;
+
+        // Build track + slides
+        var track = document.createElement("div");
+        track.className = "flow-carousel-track";
+        steps.forEach(function (step) {
+          var slide = document.createElement("div");
+          slide.className = "flow-carousel-slide";
+          track.appendChild(slide);
+          slide.appendChild(step);
+        });
+        strip.appendChild(track);
+
+        // Build nav row
+        var nav = document.createElement("div");
+        nav.className = "flow-carousel-nav";
+        var btnPrev = document.createElement("button");
+        btnPrev.className = "flow-carousel-btn";
+        btnPrev.setAttribute("aria-label", "Föregående");
+        btnPrev.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+        var dotsWrap = document.createElement("div");
+        dotsWrap.className = "flow-carousel-dots";
+        var btnNext = document.createElement("button");
+        btnNext.className = "flow-carousel-btn";
+        btnNext.setAttribute("aria-label", "Nästa");
+        btnNext.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+        nav.appendChild(btnPrev);
+        nav.appendChild(dotsWrap);
+        nav.appendChild(btnNext);
+        strip.appendChild(nav);
+
+        var dots = steps.map(function (_, i) {
+          var d = document.createElement("button");
+          d.className = "flow-carousel-dot" + (i === 0 ? " active" : "");
+          d.setAttribute("aria-label", "Steg " + (i + 1));
+          d.addEventListener("click", function () { goTo(i); });
+          dotsWrap.appendChild(d);
+          return d;
         });
 
-      // Scroll fade-up animations
-      (function () {
-        const singles = [
-          ".how-section .section-label",
-          ".how-section h2",
-          ".how-sub",
-          ".services .section-label",
-          ".services h2",
-          ".feature-img-wrap",
-          ".feature-text .section-label",
-          ".feature-text h2",
-          ".feature-text > p",
-          ".feature-bullets",
-          ".feature-btn",
-          ".coverage-text .section-label",
-          ".coverage-text h2",
-          ".coverage-sub",
-          ".coverage-cities",
-          ".coverage-cta",
-          ".faq-header",
-          ".faq-footer",
-          ".cta-eyebrow",
-          ".cta-section h2",
-          ".cta-sub",
-          ".btn-cta",
-        ];
-        const staggerGroups = [
-          ".how-steps .how-step",
-          ".cards .card",
-          ".faq-item",
-        ];
-        const obs = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting) {
-                e.target.classList.add("is-visible");
-                obs.unobserve(e.target);
-              }
-            });
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        var current = 0;
+        function goTo(n) {
+          current = Math.max(0, Math.min(steps.length - 1, n));
+          track.style.transform = "translateX(-" + current * 100 + "%)";
+          dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
+          btnPrev.disabled = current === 0;
+          btnNext.disabled = current === steps.length - 1;
+        }
+        btnPrev.addEventListener("click", function () { goTo(current - 1); });
+        btnNext.addEventListener("click", function () { goTo(current + 1); });
+
+        // Touch swipe
+        var touchStartX = 0;
+        track.addEventListener("touchstart", function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener("touchend", function (e) {
+          var dx = e.changedTouches[0].clientX - touchStartX;
+          if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+        }, { passive: true });
+
+        // Mark strip as carousel-ready (CSS hides original steps via this class)
+        strip.classList.add("flow-strip--carousel");
+        goTo(0);
+      }
+
+      // Init immediately if mobile, or on resize into mobile
+      var mq = window.matchMedia("(max-width: 768px)");
+      if (mq.matches) initCarousel();
+      mq.addEventListener("change", function (e) {
+        if (e.matches) initCarousel();
+        else {
+          // Teardown carousel when leaving mobile to restore original layout
+          if (!initialized) return;
+          // Move any steps back into the strip in-order
+          var track = strip.querySelector('.flow-carousel-track');
+          if (track) {
+            var stepsInTrack = Array.from(track.querySelectorAll('.flow-step'));
+            stepsInTrack.forEach(function (s) { strip.insertBefore(s, track); });
+            // remove the track element
+            track.parentNode && track.parentNode.removeChild(track);
+          }
+          // remove nav
+          var nav = strip.querySelector('.flow-carousel-nav');
+          if (nav) nav.parentNode && nav.parentNode.removeChild(nav);
+          strip.classList.remove('flow-strip--carousel');
+          initialized = false;
+        }
+      });
+    });
+  </script>
+  <script>
+    // Coverage map — plots real facility dots onto an SVG Sweden outline
+    document.addEventListener("DOMContentLoaded", function () {
+      const svg = document.getElementById("coverage-svg");
+      if (!svg || typeof locations === "undefined") return;
+
+      const SVG_W = 300,
+        SVG_H = 520;
+      const LON_MIN = 11.3,
+        LON_SPAN = 7.9; // 11.3–19.2
+      const LAT_MAX = 62.5,
+        LAT_SPAN = 7.5; // 55.0–62.5
+
+      function toSvg(lat, lon) {
+        return {
+          x: ((lon - LON_MIN) / LON_SPAN) * SVG_W,
+          y: ((LAT_MAX - lat) / LAT_SPAN) * SVG_H,
+        };
+      }
+
+      // Build city chips from address data
+      const cityMap = {};
+      locations.forEach((loc) => {
+        const parts = loc.addr.split(",");
+        const city = (parts[parts.length - 1] || "").trim();
+        if (city) cityMap[city] = (cityMap[city] || 0) + 1;
+      });
+      const topCities = Object.entries(cityMap)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 7);
+      const citiesEl = document.getElementById("coverage-cities");
+      if (citiesEl) {
+        topCities.forEach(([city, count]) => {
+          const chip = document.createElement("span");
+          chip.className = "coverage-city-chip";
+          chip.innerHTML =
+            city + ' <span class="chip-count">' + count + "</span>";
+          citiesEl.appendChild(chip);
+        });
+      }
+
+      // Sort locations south→north for stagger animation
+      const sorted = locations.slice().sort((a, b) => a.lat - b.lat);
+      const delayMap = {};
+      sorted.forEach((loc, i) => {
+        delayMap[loc.name] = i;
+      });
+
+      const tooltip = document.getElementById("coverage-tooltip");
+      const mapWrap = document.querySelector(".coverage-map-wrap");
+
+      locations.forEach((loc) => {
+        const { x, y } = toSvg(loc.lat, loc.lon);
+        const circle = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle",
         );
-        singles.forEach((sel) => {
-          document.querySelectorAll(sel).forEach((el) => {
-            el.classList.add("fade-up");
-            obs.observe(el);
-          });
-        });
-        staggerGroups.forEach((sel) => {
-          document.querySelectorAll(sel).forEach((el, i) => {
-            el.classList.add("fade-up");
-            el.style.transitionDelay = i * 0.09 + "s";
-            obs.observe(el);
-          });
-        });
-      })();
+        circle.setAttribute("cx", x.toFixed(1));
+        circle.setAttribute("cy", y.toFixed(1));
+        circle.setAttribute("r", "3.5");
+        circle.setAttribute("fill", "rgba(243,153,0,0.88)");
+        circle.setAttribute("stroke", "rgba(243,153,0,0.25)");
+        circle.setAttribute("stroke-width", "4");
+        circle.classList.add("map-dot");
+        circle.style.transitionDelay = delayMap[loc.name] * 16 + "ms";
 
-      // Counter animation for hero stats
+        circle.addEventListener("mousemove", (e) => {
+          const wrapRect = mapWrap.getBoundingClientRect();
+          tooltip.textContent = loc.name;
+          tooltip.style.left = e.clientX - wrapRect.left + 14 + "px";
+          tooltip.style.top = e.clientY - wrapRect.top - 34 + "px";
+          tooltip.style.opacity = "1";
+        });
+        circle.addEventListener("mouseleave", () => {
+          tooltip.style.opacity = "0";
+        });
+        circle.addEventListener("click", () => {
+          window.location.href =
+            "/parkeringar?loc=" + encodeURIComponent(loc.name);
+        });
+
+        svg.appendChild(circle);
+      });
+
+      // Animate dots in when SVG enters viewport
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              svg.classList.add("coverage-dots-visible");
+              obs.unobserve(svg);
+            }
+          });
+        },
+        { threshold: 0.25 },
+      );
+      obs.observe(svg);
+    });
+  </script>
+
+  <script>
+    // FAQ accordion
+    (function () {
+      document.querySelectorAll(".faq-question").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".faq-item");
+          var answer = item.querySelector(".faq-answer");
+          var isOpen = item.classList.contains("is-open");
+
+          // Close all
+          document
+            .querySelectorAll(".faq-item.is-open")
+            .forEach(function (open) {
+              open.classList.remove("is-open");
+              open.querySelector(".faq-answer").style.maxHeight = "0";
+              open
+                .querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+            });
+
+          // Open clicked (if it was closed)
+          if (!isOpen) {
+            item.classList.add("is-open");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    })();
+  </script>
+  <script>
+    /* ── Exact above-fold height using real nav height ── */
+    (function () {
+      function fitAboveFold() {
+        var nav = document.getElementById("main-nav");
+        var af = document.getElementById("above-fold");
+        if (!nav || !af) return;
+        af.style.height =
+          window.innerHeight - nav.getBoundingClientRect().height + "px";
+      }
+      fitAboveFold();
+      window.addEventListener("resize", fitAboveFold);
+    })();
+  </script>
+  <script>
+    var flowData = [
+      {
+        title: "Kör in",
+        body: "Våra parkeringsanläggningar använder automatisk nummerskyltsigenkänning (ANPR). Du behöver inte checka in, ta biljett eller registrera dig — bommen öppnas automatiskt när kameran känner igen ditt fordon.",
+        icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l2-10h14l2 10"/><path d="M1 17h22"/><circle cx="7.5" cy="20.5" r="1.5"/><circle cx="16.5" cy="20.5" r="1.5"/></svg>',
+      },
+      {
+        title: "Parkera smidigt",
+        body: "Parkera på anvisad plats utan att behöva tänka på biljetter eller tidsbegränsningar. Systemet registrerar automatiskt din ankomsttid och håller koll på din parkering under hela besöket.",
+        icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg>',
+      },
+      {
+        title: "Betala enkelt",
+        titleEn: "Pay easily",
+        bodySv:
+          'Du har 48 timmar på dig att betala efter avslutad parkering via <a href="https://autopay.io/pay/" target="_blank" rel="noopener" class="flow-inline-link">Autopay</a>. Om betalning inte sker inom den tiden skickas avgiften ut per faktura.',
+        bodyEn:
+          'You have 48 hours to pay after completing your parking via <a href="https://autopay.io/pay/" target="_blank" rel="noopener" class="flow-inline-link">Autopay</a>. If payment is not made within that time, the fee will be sent as an invoice.',
+        isHtml: true,
+        icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M7 15h4"/></svg>',
+      },
+    ];
+
+    function openFlowOverlay(index) {
+      var d = flowData[index];
+      var lang = typeof getLang === "function" ? getLang() : "sv";
+      document.getElementById("flow-overlay-icon").innerHTML = d.icon;
+      var titleEl = document.getElementById("flow-overlay-title");
+      var bodyEl = document.getElementById("flow-overlay-body");
+      if (d.isHtml) {
+        titleEl.textContent =
+          lang === "en" && d.titleEn ? d.titleEn : d.title;
+        bodyEl.innerHTML = lang === "en" && d.bodyEn ? d.bodyEn : d.bodySv;
+      } else {
+        titleEl.textContent = d.title;
+        bodyEl.textContent = d.body;
+      }
+      document.getElementById("flow-overlay").classList.add("open");
+      document.body.style.overflow = "hidden";
+      if (!d.isHtml && typeof applyLang === "function") {
+        applyLang(lang);
+      }
+    }
+
+    function closeFlowOverlay(event) {
+      if (event && event.target !== document.getElementById("flow-overlay"))
+        return;
+      document.getElementById("flow-overlay").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeFlowOverlay(null);
+        closeFakturaOverlay();
+      }
+    });
+
+    function openFakturaOverlay() {
+      document.getElementById("faktura-overlay").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeFakturaOverlay() {
+      document.getElementById("faktura-overlay").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  </script>
+
+  <!-- Faktura-overlay -->
+  <div id="faktura-overlay" class="flow-overlay" onclick="if (event.target === this) closeFakturaOverlay();">
+    <div class="flow-overlay-card">
+      <button class="flow-overlay-close" onclick="closeFakturaOverlay()" aria-label="Stäng">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="flow-overlay-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="9" y1="13" x2="15" y2="13" />
+          <line x1="9" y1="17" x2="13" y2="17" />
+        </svg>
+      </div>
+
+      <h3 class="flow-overlay-title">Fått en faktura?</h3>
+
+      <!-- Viktig info-banner -->
+      <div class="faktura-notice">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          flex-shrink="0">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        Det är enbart den debiterbara parkeringstiden som faktureras — inget
+        mer.
+      </div>
+
+      <p class="flow-overlay-body">
+        Din faktura avser den tid du faktiskt stod parkerad — från det att du
+        körde in till dess att du körde ut. Ingen avrundning, inga dolda
+        avgifter.
+      </p>
+      <p class="flow-overlay-body" style="margin-top: 10px">
+        Betalning görs enkelt via de uppgifter som finns på fakturan —
+        bankgiro, autogiro eller kortbetalning online.
+      </p>
+
+      <div class="faktura-divider"></div>
+
+      <p class="faktura-dispute-label">Vill du bestrida fakturan?</p>
+      <p class="flow-overlay-body" style="margin-bottom: 16px">
+        Skicka ett mejl med ditt fakturanummer och en kort förklaring, så
+        tittar vi på det så snart som möjligt.
+      </p>
+      <a href="mailto:info@parkman.nu?subject=Bestridning av faktura" class="faktura-email-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        info@parkman.nu
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Premium upgrades: hero reveal, parallax, card spotlight ── -->
+  <script>
+    (function () {
+      /* 1 ── Hero heading: word-by-word reveal */
+      var h1 = document.querySelector('body.pg-home .hero h1');
+      if (h1) {
+        var words = h1.textContent.trim().split(/\s+/);
+        h1.innerHTML = words.map(function (w, i) {
+          return '<span class="hero-word" style="animation-delay:' + (0.08 + i * 0.09) + 's">' + w + '</span>';
+        }).join(' ');
+      }
+
+      /* Eyebrow, sub-text and the two hero columns fade in */
+      [
+        ['.hero-eyebrow', 0.05],
+        ['.hero-header .hero-sub', 0.65],
+        ['.hero-col--widget', 0.50],
+        ['.hero-col--copy', 0.62],
+      ].forEach(function (pair) {
+        var el = document.querySelector(pair[0]);
+        if (el) {
+          el.classList.add('hero-entrance');
+          el.style.animationDelay = pair[1] + 's';
+        }
+      });
+
+      /* 2 ── Parallax on hero background */
+      var af = document.getElementById('above-fold');
+      if (af) {
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            requestAnimationFrame(function () {
+              var y = window.scrollY;
+              if (y < window.innerHeight * 1.5) {
+                af.style.backgroundPositionY = 'calc(50% + ' + (y * 0.32).toFixed(1) + 'px)';
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      }
+
+      /* 3 ── Stat-bar animated counters */
       (function () {
-        const stats = document.querySelectorAll(".hero-stat-num[data-target]");
-        if (!stats.length) return;
-        const duration = 1800;
-        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-        function animateCounter(el) {
-          const target = parseInt(el.dataset.target, 10);
-          const from = parseInt(el.dataset.from || "0", 10);
-          const start = performance.now();
+        function fmtNum(n, sep) {
+          if (!sep || n < 1000) return String(n);
+          // Swedish number format: space as thousands separator
+          return n.toLocaleString('sv-SE').replace(/ /g, sep);
+        }
+        var bars = document.querySelectorAll('.hero-stat-bar-num[data-target]');
+        if (!bars.length) return;
+        var duration = 1600;
+        var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+        function animateBar(el) {
+          var target = parseInt(el.dataset.target, 10);
+          var suffix = el.dataset.suffix || '';
+          var sep = el.dataset.sep || '';
+          var start = performance.now();
           function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            el.textContent = Math.round(
-              from + (target - from) * easeOut(progress),
-            );
-            if (progress < 1) requestAnimationFrame(tick);
+            var p = Math.min((now - start) / duration, 1);
+            var v = Math.round(target * easeOut(p));
+            el.textContent = fmtNum(v, sep) + suffix;
+            if (p < 1) requestAnimationFrame(tick);
           }
           requestAnimationFrame(tick);
         }
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.4 },
-        );
-        stats.forEach((el) => observer.observe(el));
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { animateBar(e.target); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.5 });
+        bars.forEach(function (el) { obs.observe(el); });
       })();
-    </script>
 
-    <script src="script.js" defer></script>
-    <script src="lang.js" defer></script>
-    <script>
-      (function () {
-        function updateAvailStatus() {
-          var dot = document.querySelector(".hero-avail-dot");
-          var label = document.querySelector(".hero-avail-open");
-          if (!dot || !label) return;
-          var now = new Date();
-          var mins = now.getHours() * 60 + now.getMinutes();
-          var open = mins >= 8 * 60 && mins < 20 * 60; // 08:00–20:00
-          if (open) {
-            dot.classList.remove("closed");
-            label.classList.remove("closed");
-            label.textContent = "Öppet nu";
-          } else {
-            dot.classList.add("closed");
-            label.classList.add("closed");
-            label.textContent = "Stängt";
-          }
-        }
-        updateAvailStatus();
-        // Re-check every minute in case the user leaves the tab open
-        setInterval(updateAvailStatus, 60000);
-      })();
-    </script>
-    <script>
-      // Flow strip carousel — active on mobile (≤768px)
-      document.addEventListener("DOMContentLoaded", function () {
-        var strip = document.querySelector(".flow-strip");
-        if (!strip) return;
-        var initialized = false;
-
-        function initCarousel() {
-          if (initialized) return;
-          var steps = Array.from(strip.querySelectorAll(".flow-step"));
-          if (steps.length < 2) return;
-          initialized = true;
-
-          // Build track + slides
-          var track = document.createElement("div");
-          track.className = "flow-carousel-track";
-          steps.forEach(function (step) {
-            var slide = document.createElement("div");
-            slide.className = "flow-carousel-slide";
-            track.appendChild(slide);
-            slide.appendChild(step);
-          });
-          strip.appendChild(track);
-
-          // Build nav row
-          var nav = document.createElement("div");
-          nav.className = "flow-carousel-nav";
-          var btnPrev = document.createElement("button");
-          btnPrev.className = "flow-carousel-btn";
-          btnPrev.setAttribute("aria-label", "Föregående");
-          btnPrev.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
-          var dotsWrap = document.createElement("div");
-          dotsWrap.className = "flow-carousel-dots";
-          var btnNext = document.createElement("button");
-          btnNext.className = "flow-carousel-btn";
-          btnNext.setAttribute("aria-label", "Nästa");
-          btnNext.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
-          nav.appendChild(btnPrev);
-          nav.appendChild(dotsWrap);
-          nav.appendChild(btnNext);
-          strip.appendChild(nav);
-
-          var dots = steps.map(function (_, i) {
-            var d = document.createElement("button");
-            d.className = "flow-carousel-dot" + (i === 0 ? " active" : "");
-            d.setAttribute("aria-label", "Steg " + (i + 1));
-            d.addEventListener("click", function () { goTo(i); });
-            dotsWrap.appendChild(d);
-            return d;
-          });
-
-          var current = 0;
-          function goTo(n) {
-            current = Math.max(0, Math.min(steps.length - 1, n));
-            track.style.transform = "translateX(-" + current * 100 + "%)";
-            dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
-            btnPrev.disabled = current === 0;
-            btnNext.disabled = current === steps.length - 1;
-          }
-          btnPrev.addEventListener("click", function () { goTo(current - 1); });
-          btnNext.addEventListener("click", function () { goTo(current + 1); });
-
-          // Touch swipe
-          var touchStartX = 0;
-          track.addEventListener("touchstart", function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
-          track.addEventListener("touchend", function (e) {
-            var dx = e.changedTouches[0].clientX - touchStartX;
-            if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
-          }, { passive: true });
-
-          // Mark strip as carousel-ready (CSS hides original steps via this class)
-          strip.classList.add("flow-strip--carousel");
-          goTo(0);
-        }
-
-        // Init immediately if mobile, or on resize into mobile
-        var mq = window.matchMedia("(max-width: 768px)");
-        if (mq.matches) initCarousel();
-        mq.addEventListener("change", function (e) {
-          if (e.matches) initCarousel();
-          else {
-            // Teardown carousel when leaving mobile to restore original layout
-            if (!initialized) return;
-            // Move any steps back into the strip in-order
-            var track = strip.querySelector('.flow-carousel-track');
-            if (track) {
-              var stepsInTrack = Array.from(track.querySelectorAll('.flow-step'));
-              stepsInTrack.forEach(function(s) { strip.insertBefore(s, track); });
-              // remove the track element
-              track.parentNode && track.parentNode.removeChild(track);
-            }
-            // remove nav
-            var nav = strip.querySelector('.flow-carousel-nav');
-            if (nav) nav.parentNode && nav.parentNode.removeChild(nav);
-            strip.classList.remove('flow-strip--carousel');
-            initialized = false;
-          }
-        });
-      });
-    </script>
-    <script>
-      // Coverage map — plots real facility dots onto an SVG Sweden outline
-      document.addEventListener("DOMContentLoaded", function () {
-        const svg = document.getElementById("coverage-svg");
-        if (!svg || typeof locations === "undefined") return;
-
-        const SVG_W = 300,
-          SVG_H = 520;
-        const LON_MIN = 11.3,
-          LON_SPAN = 7.9; // 11.3–19.2
-        const LAT_MAX = 62.5,
-          LAT_SPAN = 7.5; // 55.0–62.5
-
-        function toSvg(lat, lon) {
-          return {
-            x: ((lon - LON_MIN) / LON_SPAN) * SVG_W,
-            y: ((LAT_MAX - lat) / LAT_SPAN) * SVG_H,
-          };
-        }
-
-        // Build city chips from address data
-        const cityMap = {};
-        locations.forEach((loc) => {
-          const parts = loc.addr.split(",");
-          const city = (parts[parts.length - 1] || "").trim();
-          if (city) cityMap[city] = (cityMap[city] || 0) + 1;
-        });
-        const topCities = Object.entries(cityMap)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, 7);
-        const citiesEl = document.getElementById("coverage-cities");
-        if (citiesEl) {
-          topCities.forEach(([city, count]) => {
-            const chip = document.createElement("span");
-            chip.className = "coverage-city-chip";
-            chip.innerHTML =
-              city + ' <span class="chip-count">' + count + "</span>";
-            citiesEl.appendChild(chip);
-          });
-        }
-
-        // Sort locations south→north for stagger animation
-        const sorted = locations.slice().sort((a, b) => a.lat - b.lat);
-        const delayMap = {};
-        sorted.forEach((loc, i) => {
-          delayMap[loc.name] = i;
-        });
-
-        const tooltip = document.getElementById("coverage-tooltip");
-        const mapWrap = document.querySelector(".coverage-map-wrap");
-
-        locations.forEach((loc) => {
-          const { x, y } = toSvg(loc.lat, loc.lon);
-          const circle = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "circle",
-          );
-          circle.setAttribute("cx", x.toFixed(1));
-          circle.setAttribute("cy", y.toFixed(1));
-          circle.setAttribute("r", "3.5");
-          circle.setAttribute("fill", "rgba(243,153,0,0.88)");
-          circle.setAttribute("stroke", "rgba(243,153,0,0.25)");
-          circle.setAttribute("stroke-width", "4");
-          circle.classList.add("map-dot");
-          circle.style.transitionDelay = delayMap[loc.name] * 16 + "ms";
-
-          circle.addEventListener("mousemove", (e) => {
-            const wrapRect = mapWrap.getBoundingClientRect();
-            tooltip.textContent = loc.name;
-            tooltip.style.left = e.clientX - wrapRect.left + 14 + "px";
-            tooltip.style.top = e.clientY - wrapRect.top - 34 + "px";
-            tooltip.style.opacity = "1";
-          });
-          circle.addEventListener("mouseleave", () => {
-            tooltip.style.opacity = "0";
-          });
-          circle.addEventListener("click", () => {
-            window.location.href =
-              "/parkeringar?loc=" + encodeURIComponent(loc.name);
-          });
-
-          svg.appendChild(circle);
-        });
-
-        // Animate dots in when SVG enters viewport
-        const obs = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting) {
-                svg.classList.add("coverage-dots-visible");
-                obs.unobserve(svg);
-              }
-            });
-          },
-          { threshold: 0.25 },
-        );
-        obs.observe(svg);
-      });
-    </script>
-
-    <script>
-      // FAQ accordion
-      (function () {
-        document.querySelectorAll(".faq-question").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            var item = btn.closest(".faq-item");
-            var answer = item.querySelector(".faq-answer");
-            var isOpen = item.classList.contains("is-open");
-
-            // Close all
-            document
-              .querySelectorAll(".faq-item.is-open")
-              .forEach(function (open) {
-                open.classList.remove("is-open");
-                open.querySelector(".faq-answer").style.maxHeight = "0";
-                open
-                  .querySelector(".faq-question")
-                  .setAttribute("aria-expanded", "false");
-              });
-
-            // Open clicked (if it was closed)
-            if (!isOpen) {
-              item.classList.add("is-open");
-              answer.style.maxHeight = answer.scrollHeight + "px";
-              btn.setAttribute("aria-expanded", "true");
-            }
+      /* 4 ── Card spotlight: track mouse position per card */
+      function initSpotlight() {
+        document.querySelectorAll('body.pg-home .card').forEach(function (card) {
+          card.addEventListener('mousemove', function (e) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+            card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
           });
         });
-      })();
-    </script>
-    <script>
-      /* ── Exact above-fold height using real nav height ── */
-      (function () {
-        function fitAboveFold() {
-          var nav = document.getElementById("main-nav");
-          var af = document.getElementById("above-fold");
-          if (!nav || !af) return;
-          af.style.height =
-            window.innerHeight - nav.getBoundingClientRect().height + "px";
-        }
-        fitAboveFold();
-        window.addEventListener("resize", fitAboveFold);
-      })();
-    </script>
-    <script>
-      var flowData = [
-        {
-          title: "Kör in",
-          body: "Våra parkeringsanläggningar använder automatisk nummerskyltsigenkänning (ANPR). Du behöver inte checka in, ta biljett eller registrera dig — bommen öppnas automatiskt när kameran känner igen ditt fordon.",
-          icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l2-10h14l2 10"/><path d="M1 17h22"/><circle cx="7.5" cy="20.5" r="1.5"/><circle cx="16.5" cy="20.5" r="1.5"/></svg>',
-        },
-        {
-          title: "Parkera smidigt",
-          body: "Parkera på anvisad plats utan att behöva tänka på biljetter eller tidsbegränsningar. Systemet registrerar automatiskt din ankomsttid och håller koll på din parkering under hela besöket.",
-          icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg>',
-        },
-        {
-          title: "Betala enkelt",
-          titleEn: "Pay easily",
-          bodySv:
-            'Du har 48 timmar på dig att betala efter avslutad parkering via <a href="https://autopay.io/pay/" target="_blank" rel="noopener" class="flow-inline-link">Autopay</a>. Om betalning inte sker inom den tiden skickas avgiften ut per faktura.',
-          bodyEn:
-            'You have 48 hours to pay after completing your parking via <a href="https://autopay.io/pay/" target="_blank" rel="noopener" class="flow-inline-link">Autopay</a>. If payment is not made within that time, the fee will be sent as an invoice.',
-          isHtml: true,
-          icon: '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M7 15h4"/></svg>',
-        },
-      ];
-
-      function openFlowOverlay(index) {
-        var d = flowData[index];
-        var lang = typeof getLang === "function" ? getLang() : "sv";
-        document.getElementById("flow-overlay-icon").innerHTML = d.icon;
-        var titleEl = document.getElementById("flow-overlay-title");
-        var bodyEl = document.getElementById("flow-overlay-body");
-        if (d.isHtml) {
-          titleEl.textContent =
-            lang === "en" && d.titleEn ? d.titleEn : d.title;
-          bodyEl.innerHTML = lang === "en" && d.bodyEn ? d.bodyEn : d.bodySv;
-        } else {
-          titleEl.textContent = d.title;
-          bodyEl.textContent = d.body;
-        }
-        document.getElementById("flow-overlay").classList.add("open");
-        document.body.style.overflow = "hidden";
-        if (!d.isHtml && typeof applyLang === "function") {
-          applyLang(lang);
-        }
       }
-
-      function closeFlowOverlay(event) {
-        if (event && event.target !== document.getElementById("flow-overlay"))
-          return;
-        document.getElementById("flow-overlay").classList.remove("open");
-        document.body.style.overflow = "";
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSpotlight);
+      } else {
+        initSpotlight();
       }
+    })();
+  </script>
 
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          closeFlowOverlay(null);
-          closeFakturaOverlay();
-        }
-      });
-
-      function openFakturaOverlay() {
-        document.getElementById("faktura-overlay").classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-      function closeFakturaOverlay() {
-        document.getElementById("faktura-overlay").classList.remove("open");
-        document.body.style.overflow = "";
-      }
-    </script>
-
-    <!-- Faktura-overlay -->
-    <div
-      id="faktura-overlay"
-      class="flow-overlay"
-      onclick="if (event.target === this) closeFakturaOverlay();"
-    >
-      <div class="flow-overlay-card">
-        <button
-          class="flow-overlay-close"
-          onclick="closeFakturaOverlay()"
-          aria-label="Stäng"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-          >
-            <path d="M18 6 6 18M6 6l12 12" />
-          </svg>
-        </button>
-
-        <div class="flow-overlay-icon">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-            />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="9" y1="13" x2="15" y2="13" />
-            <line x1="9" y1="17" x2="13" y2="17" />
-          </svg>
-        </div>
-
-        <h3 class="flow-overlay-title">Fått en faktura?</h3>
-
-        <!-- Viktig info-banner -->
-        <div class="faktura-notice">
-          <svg
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-            flex-shrink="0"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
-          </svg>
-          Det är enbart den debiterbara parkeringstiden som faktureras — inget
-          mer.
-        </div>
-
-        <p class="flow-overlay-body">
-          Din faktura avser den tid du faktiskt stod parkerad — från det att du
-          körde in till dess att du körde ut. Ingen avrundning, inga dolda
-          avgifter.
-        </p>
-        <p class="flow-overlay-body" style="margin-top: 10px">
-          Betalning görs enkelt via de uppgifter som finns på fakturan —
-          bankgiro, autogiro eller kortbetalning online.
-        </p>
-
-        <div class="faktura-divider"></div>
-
-        <p class="faktura-dispute-label">Vill du bestrida fakturan?</p>
-        <p class="flow-overlay-body" style="margin-bottom: 16px">
-          Skicka ett mejl med ditt fakturanummer och en kort förklaring, så
-          tittar vi på det så snart som möjligt.
-        </p>
-        <a
-          href="mailto:info@parkman.nu?subject=Bestridning av faktura"
-          class="faktura-email-btn"
-        >
-          <svg
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          info@parkman.nu
-        </a>
-      </div>
-    </div>
-
-    <!-- ── Premium upgrades: hero reveal, parallax, card spotlight ── -->
-    <script>
-      (function () {
-        /* 1 ── Hero heading: word-by-word reveal */
-        var h1 = document.querySelector('body.pg-home .hero h1');
-        if (h1) {
-          var words = h1.textContent.trim().split(/\s+/);
-          h1.innerHTML = words.map(function (w, i) {
-            return '<span class="hero-word" style="animation-delay:' + (0.08 + i * 0.09) + 's">' + w + '</span>';
-          }).join(' ');
-        }
-
-        /* Eyebrow, sub-text and the two hero columns fade in */
-        [
-          ['.hero-eyebrow',          0.05],
-          ['.hero-header .hero-sub', 0.65],
-          ['.hero-col--widget',      0.50],
-          ['.hero-col--copy',        0.62],
-        ].forEach(function (pair) {
-          var el = document.querySelector(pair[0]);
-          if (el) {
-            el.classList.add('hero-entrance');
-            el.style.animationDelay = pair[1] + 's';
-          }
-        });
-
-        /* 2 ── Parallax on hero background */
-        var af = document.getElementById('above-fold');
-        if (af) {
-          var ticking = false;
-          window.addEventListener('scroll', function () {
-            if (!ticking) {
-              requestAnimationFrame(function () {
-                var y = window.scrollY;
-                if (y < window.innerHeight * 1.5) {
-                  af.style.backgroundPositionY = 'calc(50% + ' + (y * 0.32).toFixed(1) + 'px)';
-                }
-                ticking = false;
-              });
-              ticking = true;
-            }
-          }, { passive: true });
-        }
-
-        /* 3 ── Stat-bar animated counters */
-        (function () {
-          function fmtNum(n, sep) {
-            if (!sep || n < 1000) return String(n);
-            // Swedish number format: space as thousands separator
-            return n.toLocaleString('sv-SE').replace(/ /g, sep);
-          }
-          var bars = document.querySelectorAll('.hero-stat-bar-num[data-target]');
-          if (!bars.length) return;
-          var duration = 1600;
-          var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
-          function animateBar(el) {
-            var target = parseInt(el.dataset.target, 10);
-            var suffix = el.dataset.suffix || '';
-            var sep = el.dataset.sep || '';
-            var start = performance.now();
-            function tick(now) {
-              var p = Math.min((now - start) / duration, 1);
-              var v = Math.round(target * easeOut(p));
-              el.textContent = fmtNum(v, sep) + suffix;
-              if (p < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
-          }
-          var obs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-              if (e.isIntersecting) { animateBar(e.target); obs.unobserve(e.target); }
-            });
-          }, { threshold: 0.5 });
-          bars.forEach(function (el) { obs.observe(el); });
-        })();
-
-        /* 4 ── Card spotlight: track mouse position per card */
-        function initSpotlight() {
-          document.querySelectorAll('body.pg-home .card').forEach(function (card) {
-            card.addEventListener('mousemove', function (e) {
-              var r = card.getBoundingClientRect();
-              card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
-              card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
-            });
-          });
-        }
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', initSpotlight);
-        } else {
-          initSpotlight();
-        }
-      })();
-    </script>
-
-    <!-- ============================================================
+  <!-- ============================================================
          TEMPORÄR LÖSENORDSÖVERLAY — tas bort innan live-lansering
          Ta bort allt mellan dessa kommentarer för att inaktivera.
          ============================================================ -->
-    <div
-      id="pw-overlay"
-      style="
+  <div id="pw-overlay" style="
         position: fixed;
         inset: 0;
         z-index: 99999;
@@ -2320,10 +1723,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      "
-    >
-      <div
-        style="
+      ">
+    <div style="
           background: #fff;
           border-radius: 12px;
           padding: 48px 40px;
@@ -2331,15 +1732,9 @@
           max-width: 380px;
           text-align: center;
           box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
-        "
-      >
-        <img
-          src="Brand_assets/Logo.webp"
-          alt="Parkman"
-          style="height: 36px; margin-bottom: 28px"
-        />
-        <p
-          style="
+        ">
+      <img src="Brand_assets/Logo.webp" alt="Parkman" style="height: 36px; margin-bottom: 28px" />
+      <p style="
             font-family: &quot;Roboto Slab&quot;, serif;
             font-size: 0.72rem;
             letter-spacing: 0.12em;
@@ -2347,16 +1742,10 @@
             color: #5f1a44;
             opacity: 0.5;
             margin-bottom: 24px;
-          "
-        >
-          Förhandsgranskning
-        </p>
-        <input
-          id="pw-input"
-          type="password"
-          placeholder="Lösenord"
-          autocomplete="current-password"
-          style="
+          ">
+        Förhandsgranskning
+      </p>
+      <input id="pw-input" type="password" placeholder="Lösenord" autocomplete="current-password" style="
             width: 100%;
             box-sizing: border-box;
             border: 1.5px solid rgba(95, 26, 68, 0.2);
@@ -2368,23 +1757,15 @@
             font-family: inherit;
             margin-bottom: 12px;
             transition: border-color 0.2s;
-          "
-          onkeydown="if (event.key === 'Enter') checkPw();"
-          onfocus="this.style.borderColor = '#5f1a44'"
-          onblur="this.style.borderColor = 'rgba(95,26,68,0.2)'"
-        />
-        <p
-          id="pw-error"
-          style="
+          " onkeydown="if (event.key === 'Enter') checkPw();" onfocus="this.style.borderColor = '#5f1a44'"
+        onblur="this.style.borderColor = 'rgba(95,26,68,0.2)'" />
+      <p id="pw-error" style="
             color: #c0392b;
             font-size: 0.8rem;
             min-height: 18px;
             margin-bottom: 10px;
-          "
-        ></p>
-        <button
-          onclick="checkPw()"
-          style="
+          "></p>
+      <button onclick="checkPw()" style="
             width: 100%;
             padding: 13px;
             border: none;
@@ -2397,105 +1778,103 @@
             font-family: inherit;
             letter-spacing: 0.03em;
             transition: opacity 0.2s;
-          "
-          onmouseover="this.style.opacity = '0.85'"
-          onmouseout="this.style.opacity = '1'"
-        >
-          Gå in
-        </button>
-      </div>
+          " onmouseover="this.style.opacity = '0.85'" onmouseout="this.style.opacity = '1'">
+        Gå in
+      </button>
     </div>
-    <script>
-      (function () {
-        if (sessionStorage.getItem("pm_preview") === "1") {
-          document.getElementById("pw-overlay").style.display = "none";
-        }
-      })();
-      function checkPw() {
-        var val = document.getElementById("pw-input").value;
-        if (val === "jsParkman123") {
-          sessionStorage.setItem("pm_preview", "1");
-          document.getElementById("pw-overlay").style.display = "none";
-        } else {
-          var err = document.getElementById("pw-error");
-          err.textContent = "Fel lösenord, försök igen.";
-          document.getElementById("pw-input").value = "";
-          document.getElementById("pw-input").focus();
-        }
+  </div>
+  <script>
+    (function () {
+      if (sessionStorage.getItem("pm_preview") === "1") {
+        document.getElementById("pw-overlay").style.display = "none";
       }
-    </script>
-    <!-- ============================================================
+    })();
+    function checkPw() {
+      var val = document.getElementById("pw-input").value;
+      if (val === "parkman123") {
+        sessionStorage.setItem("pm_preview", "1");
+        document.getElementById("pw-overlay").style.display = "none";
+      } else {
+        var err = document.getElementById("pw-error");
+        err.textContent = "Fel lösenord, försök igen.";
+        document.getElementById("pw-input").value = "";
+        document.getElementById("pw-input").focus();
+      }
+    }
+  </script>
+  <!-- ============================================================
          SLUT PÅ TEMPORÄR LÖSENORDSÖVERLAY
          ============================================================ -->
-    <script>
-      (function () {
-        var KEY = 'flowStripExpanded_v1';
-        var BP = 480; // collapse breakpoint in px
+  <script>
+    (function () {
+      var KEY = 'flowStripExpanded_v1';
+      var BP = 480; // collapse breakpoint in px
 
-        function initFlowStrip() {
-          var strip = document.querySelector('.flow-strip');
-          if (!strip) return;
+      function initFlowStrip() {
+        var strip = document.querySelector('.flow-strip');
+        if (!strip) return;
 
-          var COLLAPSED_H = 56; // px — matches CSS collapsed height
+        var COLLAPSED_H = 56; // px — matches CSS collapsed height
 
-          function setMax(h) { strip.style.maxHeight = (typeof h === 'number' ? h + 'px' : h); }
+        function setMax(h) { strip.style.maxHeight = (typeof h === 'number' ? h + 'px' : h); }
 
-          function resolveFull() {
-            var full = strip.scrollHeight;
-            if (!full) {
-              var prev = strip.style.maxHeight;
-              strip.style.maxHeight = 'none';
-              full = strip.scrollHeight || COLLAPSED_H;
-              strip.style.maxHeight = prev;
-            }
-            return full;
+        function resolveFull() {
+          var full = strip.scrollHeight;
+          if (!full) {
+            var prev = strip.style.maxHeight;
+            strip.style.maxHeight = 'none';
+            full = strip.scrollHeight || COLLAPSED_H;
+            strip.style.maxHeight = prev;
           }
-
-          function collapse(save) {
-            strip.classList.remove('flow-strip--open');
-            setMax(COLLAPSED_H);
-            if (save) sessionStorage.setItem(KEY, '0');
-          }
-
-          function expand(save) {
-            strip.classList.add('flow-strip--open');
-            var full = resolveFull();
-            setMax(full);
-            if (save) sessionStorage.setItem(KEY, '1');
-          }
-
-          // Remove any existing toggle buttons inserted previously
-          var oldBtns = strip.parentNode.querySelectorAll('.flow-toggle');
-          oldBtns.forEach(function (b) { b.parentNode && b.parentNode.removeChild(b); });
-
-          var stored = sessionStorage.getItem(KEY);
-          var isSmall = window.matchMedia('(max-width: ' + BP + 'px)').matches;
-          if (isSmall) {
-            if (stored === '1') expand(false);
-            else collapse(false);
-          } else {
-            strip.classList.remove('flow-strip--open');
-            strip.style.maxHeight = '';
-          }
-
-          strip.addEventListener('transitionend', function () {
-            if (strip.classList.contains('flow-strip--open')) strip.style.maxHeight = 'none';
-          });
-
-          var mq = window.matchMedia('(max-width: ' + BP + 'px)');
-          mq.addEventListener('change', function (e) {
-            if (e.matches) {
-              if (sessionStorage.getItem(KEY) !== '1') collapse(false);
-            } else {
-              strip.style.maxHeight = '';
-              strip.classList.remove('flow-strip--open');
-            }
-          });
+          return full;
         }
 
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFlowStrip);
-        else initFlowStrip();
-      })();
-    </script>
-  </body>
+        function collapse(save) {
+          strip.classList.remove('flow-strip--open');
+          setMax(COLLAPSED_H);
+          if (save) sessionStorage.setItem(KEY, '0');
+        }
+
+        function expand(save) {
+          strip.classList.add('flow-strip--open');
+          var full = resolveFull();
+          setMax(full);
+          if (save) sessionStorage.setItem(KEY, '1');
+        }
+
+        // Remove any existing toggle buttons inserted previously
+        var oldBtns = strip.parentNode.querySelectorAll('.flow-toggle');
+        oldBtns.forEach(function (b) { b.parentNode && b.parentNode.removeChild(b); });
+
+        var stored = sessionStorage.getItem(KEY);
+        var isSmall = window.matchMedia('(max-width: ' + BP + 'px)').matches;
+        if (isSmall) {
+          if (stored === '1') expand(false);
+          else collapse(false);
+        } else {
+          strip.classList.remove('flow-strip--open');
+          strip.style.maxHeight = '';
+        }
+
+        strip.addEventListener('transitionend', function () {
+          if (strip.classList.contains('flow-strip--open')) strip.style.maxHeight = 'none';
+        });
+
+        var mq = window.matchMedia('(max-width: ' + BP + 'px)');
+        mq.addEventListener('change', function (e) {
+          if (e.matches) {
+            if (sessionStorage.getItem(KEY) !== '1') collapse(false);
+          } else {
+            strip.style.maxHeight = '';
+            strip.classList.remove('flow-strip--open');
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFlowStrip);
+      else initFlowStrip();
+    })();
+  </script>
+</body>
+
 </html>

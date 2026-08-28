@@ -3034,7 +3034,7 @@ function handleModalClick(e) {
       keywords: (loc.name + " " + loc.addr).toLowerCase(),
       action: () =>
         (window.location.href =
-          "parkeringar.html?loc=" + encodeURIComponent(loc.name)),
+          "parkeringar/?loc=" + encodeURIComponent(loc.name)),
     }),
   );
 
