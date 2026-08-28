@@ -399,6 +399,44 @@ nav.scrolled {
   font-weight: 300;
   opacity: 0.55;
 }
+
+/* ===== Conservative flow-strip overrides (safe, appended rules) ===== */
+/* Keep this minimal: collapsed by default on very small screens (<=480px),
+   smooth max-height transition, hero CTAs higher z-index so they are not
+   blocked by the strip. */
+@media (max-width: 480px) {
+  .flow-strip {
+    overflow: hidden;
+    max-height: 56px; /* collapsed default */
+    transition: max-height 320ms cubic-bezier(.2,.9,.2,1);
+    position: relative;
+    z-index: 8; /* low so hero CTAs can sit above */
+  }
+
+  .flow-strip.flow-strip--open {
+    /* JS will set an exact max-height inline when expanding; this is a
+       permissive fallback */
+    max-height: 1000px;
+  }
+
+  /* Slightly reduce per-step height at very small widths to avoid clipping */
+  .flow-strip .flow-step {
+    min-height: 48px;
+    padding: 8px 12px;
+  }
+
+  .flow-strip .flow-info-btn { display: none; }
+
+  /* Ensure hero CTA/content sits above the flow strip */
+  .hero-tenant-card,
+  .hero-tenant-cta,
+  .hero-tenant-heading {
+    position: relative;
+    z-index: 20;
+  }
+
+  /* Toggle button removed — behavior is automatic; no visible button */
+}
 .hero-stat-label {
   font-size: 0.65rem;
   font-weight: 400;
@@ -7927,6 +7965,20 @@ a.card {
   /* Prevent horizontal overflow */
   section { overflow-x: hidden; }
   body { overflow-x: hidden; }
+}
+
+/* Collapse hero into single column earlier at <=1400px per request */
+@media (max-width: 1400px) {
+  /* Stronger, higher-specificity rule to ensure hero collapses at <=1400px */
+  html body.pg-home .hero-inner {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    max-width: 980px;
+  }
+  body.pg-home .hero-header {
+    margin-bottom: 28px;
+  }
 }
 
 /* =================================================================
