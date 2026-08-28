@@ -16,7 +16,12 @@
       "Bash(curl -s \"https://assets.icanet.se/image/upload/nzmtcvwodqpgdjuvjuyn.png\" -o \"c:/Users/sellg/Desktop/Webpage/images/logos/ica_test.png\")",
       "WebFetch(domain:commons.wikimedia.org)",
       "WebFetch(domain:sv.wikipedia.org)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)",
+      "Read(//c/Users/Julius/AppData/Local/Google/Chrome/Application/**)",
+      "Bash(node screenshot.mjs http://localhost:3000 clean)"
     ]
   }
 }

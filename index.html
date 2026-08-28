@@ -1869,7 +1869,26 @@
         // Init immediately if mobile, or on resize into mobile
         var mq = window.matchMedia("(max-width: 768px)");
         if (mq.matches) initCarousel();
-        mq.addEventListener("change", function (e) { if (e.matches) initCarousel(); });
+        mq.addEventListener("change", function (e) {
+          if (e.matches) initCarousel();
+          else {
+            // Teardown carousel when leaving mobile to restore original layout
+            if (!initialized) return;
+            // Move any steps back into the strip in-order
+            var track = strip.querySelector('.flow-carousel-track');
+            if (track) {
+              var stepsInTrack = Array.from(track.querySelectorAll('.flow-step'));
+              stepsInTrack.forEach(function(s) { strip.insertBefore(s, track); });
+              // remove the track element
+              track.parentNode && track.parentNode.removeChild(track);
+            }
+            // remove nav
+            var nav = strip.querySelector('.flow-carousel-nav');
+            if (nav) nav.parentNode && nav.parentNode.removeChild(nav);
+            strip.classList.remove('flow-strip--carousel');
+            initialized = false;
+          }
+        });
       });
     </script>
     <script>
@@ -2408,5 +2427,75 @@
     <!-- ============================================================
          SLUT PÅ TEMPORÄR LÖSENORDSÖVERLAY
          ============================================================ -->
+    <script>
+      (function () {
+        var KEY = 'flowStripExpanded_v1';
+        var BP = 480; // collapse breakpoint in px
+
+        function initFlowStrip() {
+          var strip = document.querySelector('.flow-strip');
+          if (!strip) return;
+
+          var COLLAPSED_H = 56; // px — matches CSS collapsed height
+
+          function setMax(h) { strip.style.maxHeight = (typeof h === 'number' ? h + 'px' : h); }
+
+          function resolveFull() {
+            var full = strip.scrollHeight;
+            if (!full) {
+              var prev = strip.style.maxHeight;
+              strip.style.maxHeight = 'none';
+              full = strip.scrollHeight || COLLAPSED_H;
+              strip.style.maxHeight = prev;
+            }
+            return full;
+          }
+
+          function collapse(save) {
+            strip.classList.remove('flow-strip--open');
+            setMax(COLLAPSED_H);
+            if (save) sessionStorage.setItem(KEY, '0');
+          }
+
+          function expand(save) {
+            strip.classList.add('flow-strip--open');
+            var full = resolveFull();
+            setMax(full);
+            if (save) sessionStorage.setItem(KEY, '1');
+          }
+
+          // Remove any existing toggle buttons inserted previously
+          var oldBtns = strip.parentNode.querySelectorAll('.flow-toggle');
+          oldBtns.forEach(function (b) { b.parentNode && b.parentNode.removeChild(b); });
+
+          var stored = sessionStorage.getItem(KEY);
+          var isSmall = window.matchMedia('(max-width: ' + BP + 'px)').matches;
+          if (isSmall) {
+            if (stored === '1') expand(false);
+            else collapse(false);
+          } else {
+            strip.classList.remove('flow-strip--open');
+            strip.style.maxHeight = '';
+          }
+
+          strip.addEventListener('transitionend', function () {
+            if (strip.classList.contains('flow-strip--open')) strip.style.maxHeight = 'none';
+          });
+
+          var mq = window.matchMedia('(max-width: ' + BP + 'px)');
+          mq.addEventListener('change', function (e) {
+            if (e.matches) {
+              if (sessionStorage.getItem(KEY) !== '1') collapse(false);
+            } else {
+              strip.style.maxHeight = '';
+              strip.classList.remove('flow-strip--open');
+            }
+          });
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFlowStrip);
+        else initFlowStrip();
+      })();
+    </script>
   </body>
 </html>

@@ -17,14 +17,23 @@ const filename = `screenshot-${n}${label ? '-' + label : ''}.png`;
 const filepath = path.join(screenshotDir, filename);
 
 const browser = await puppeteer.launch({
-  executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+  executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
   args: ['--no-sandbox'],
 });
 
 const page = await browser.newPage();
 await page.setViewport({ width: 1440, height: 900 });
 await page.goto(url, { waitUntil: 'networkidle2' });
-await new Promise(r => setTimeout(r, 2200)); // wait for count-up animations
+// Bypass preview password overlay
+await page.evaluate(() => { sessionStorage.setItem('pm_preview', '1'); const o = document.getElementById('pw-overlay'); if (o) o.style.display = 'none'; });
+await new Promise(r => setTimeout(r, 600));
+// Trigger fade-up animations by scrolling through the page
+await page.evaluate(() => {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('is-visible'));
+  const svg = document.getElementById('coverage-svg');
+  if (svg) svg.classList.add('coverage-dots-visible');
+});
+await new Promise(r => setTimeout(r, 1800)); // wait for animations
 await page.screenshot({ path: filepath, fullPage: true });
 await browser.close();
 
