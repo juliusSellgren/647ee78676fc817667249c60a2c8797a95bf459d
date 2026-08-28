@@ -21,7 +21,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)",
       "Read(//c/Users/Julius/AppData/Local/Google/Chrome/Application/**)",
-      "Bash(node screenshot.mjs http://localhost:3000 clean)"
+      "Bash(node screenshot.mjs http://localhost:3000 clean)",
+      "WebFetch(domain:docs.zerobot.net)"
     ]
   }
 }
