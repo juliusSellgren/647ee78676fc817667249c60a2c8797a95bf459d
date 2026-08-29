@@ -1946,7 +1946,7 @@ body.pg-home .hero-col--copy {
    flex-direction: column;
 }
 body.pg-home .hero-widget-card {
-   background: rgba(255, 255, 255, 0.12);
+   background: rgba(255, 255, 255, 0.06);
    border: 1px solid rgba(255, 255, 255, 0.13);
    border-radius: 18px;
    padding: 24px 28px 22px;
@@ -2157,7 +2157,7 @@ body.pg-home .hero-avail-chip svg {
 
 /* ── Hyreskunder card (right column) ── */
 body.pg-home .hero-tenant-card {
-   background: rgba(255, 255, 255, 0.12);
+   background: rgba(255, 255, 255, 0.06);
    border: 1px solid rgba(255, 255, 255, 0.13);
    border-radius: 18px;
    padding: 24px 28px 22px;
