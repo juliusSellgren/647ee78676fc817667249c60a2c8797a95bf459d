@@ -2042,26 +2042,28 @@ body.pg-home .hero-how-text span {
    line-height: 1.65;
 }
 
-/* ── Cross-sell länk (widget card middle) ── */
+/* ── Cross-sell länk (widget card middle) — color matched to tenant CTA ── */
 body.pg-home .hero-crosssell {
    display: flex;
    align-items: center;
    gap: 7px;
    padding: 11px 14px;
-   background: rgba(243, 153, 0, 0.25);
-   border: 1px solid rgba(243, 153, 0, 0.18);
+   /* Use same warm gradient as the tenant CTA to match color-wise */
+   background: linear-gradient(135deg, #f5a623 0%, #f39900 60%, #d98800 100%);
+   border: none;
    border-radius: 10px;
    margin-top: 18px;
+   box-shadow: 0 4px 12px rgba(243, 153, 0, 0.18);
 }
 body.pg-home .hero-crosssell svg:first-child {
    flex-shrink: 0;
-   color: var(--color-accent);
-   opacity: 0.75;
+   color: var(--color-primary);
+   opacity: 0.95;
 }
 body.pg-home .hero-crosssell > span {
    font-size: 0.78rem;
    font-weight: 600;
-   color: rgba(255, 255, 255, 0.75);
+   color: var(--color-primary);
    flex: 1;
 }
 body.pg-home .hero-crosssell-link {
@@ -2070,13 +2072,14 @@ body.pg-home .hero-crosssell-link {
    gap: 5px;
    font-size: 0.78rem;
    font-weight: 600;
-   color: var(--color-accent);
+   color: var(--color-primary);
    text-decoration: none;
    white-space: nowrap;
-   transition: opacity 0.15s ease;
+   transition: opacity 0.15s ease, transform 0.12s ease;
 }
 body.pg-home .hero-crosssell-link:hover {
-   opacity: 0.8;
+   opacity: 0.95;
+   transform: translateY(-1px);
 }
 
 /* ── Tillgänglighet / öppettider (bottom of widget card) ── */
