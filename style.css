@@ -2048,7 +2048,7 @@ body.pg-home .hero-crosssell {
    align-items: center;
    gap: 7px;
    padding: 11px 14px;
-   background: rgba(243, 153, 0, 0.07);
+   background: rgba(243, 153, 0, 0.25);
    border: 1px solid rgba(243, 153, 0, 0.18);
    border-radius: 10px;
    margin-top: 18px;
@@ -2060,8 +2060,8 @@ body.pg-home .hero-crosssell svg:first-child {
 }
 body.pg-home .hero-crosssell > span {
    font-size: 0.78rem;
-   font-weight: 300;
-   color: rgba(255, 255, 255, 0.55);
+   font-weight: 600;
+   color: rgba(255, 255, 255, 0.75);
    flex: 1;
 }
 body.pg-home .hero-crosssell-link {
