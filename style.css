@@ -8138,19 +8138,8 @@ a.card {
    }
 }
 
-/* Collapse hero into single column earlier at <=1400px per request */
-@media (max-width: 1400px) {
-   /* Stronger, higher-specificity rule to ensure hero collapses at <=1400px */
-   html body.pg-home .hero-inner {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 40px !important;
-      max-width: 980px;
-   }
-   body.pg-home .hero-header {
-      margin-bottom: 28px;
-   }
-}
+/* Previously collapsed hero at <=1400px here; removed so hero layout
+   changes only at the dedicated 800px breakpoint. */
 
 /* =================================================================
    <= 480px  —  Small mobile
